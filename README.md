@@ -79,6 +79,61 @@ Retrieve chunks and generate an answer from them:
 .venv/bin/python scripts/query_rag.py "Какая среда растворения используется?" --answer
 ```
 
+## 6. Predict chromatography conditions for a new molecule
+
+A predictive scaffold turns the extracted НД text into structured HPLC method
+labels and predicts likely conditions for an unseen molecule from its structure.
+
+Pipeline:
+
+```text
+dissolution_chunks.jsonl
+  -> scripts/extract_conditions.py   structured condition blocks (regex, no API key)
+  -> scripts/build_dataset.py        one labelled row per molecule + RDKit features
+  -> scripts/train_model.py          nearest-analog model + leave-one-out report
+  -> scripts/predict_conditions.py   conditions for a new SMILES / INN
+```
+
+Run it:
+
+```bash
+python3 scripts/extract_conditions.py     # -> data/processed/chromatography_conditions.jsonl
+python3 scripts/build_dataset.py          # -> data/processed/labels.csv + dataset.json
+python3 scripts/train_model.py            # -> models/nearest_analog.json (+ LOO metrics)
+python3 scripts/predict_conditions.py --smiles "CC(C)Cc1ccc(C(C)C(=O)O)cc1"
+python3 scripts/predict_conditions.py --inn ibuprofen
+```
+
+Predicted fields: stationary phase, column length / ID / particle size, column
+temperature, detector + wavelength, organic modifier, flow rate, injection
+volume, mobile-phase pH.
+
+### How it works
+
+- **Labels (y):** `extract_conditions.py` parses the "Хроматографические условия"
+  blocks; `build_dataset.py` consolidates all blocks of one document (median for
+  numbers, mode for categories) into a single method label.
+- **Features (X):** RDKit physicochemical descriptors + a Morgan fingerprint,
+  computed from each molecule's SMILES.
+- **Model:** with only a few dozen labelled molecules, a trained regressor would
+  overfit, so the baseline is *nearest-analog transfer* — it predicts the
+  conditions of the structurally most similar known molecules, weighted by
+  Tanimoto similarity. The class in `scripts/model.py` is model-shaped
+  (`fit`/`predict`/`save`/`load`) so a learned estimator can replace it once more
+  labelled data exists.
+
+### To improve accuracy
+
+1. **Fill `data/molecule_map.csv`.** Each row maps a source document to its INN
+   and **SMILES**. Only rows with SMILES enter the model. Add the missing SMILES,
+   verify the pre-filled ones, and flip `verified` to `true`. More molecules =
+   better predictions. Rows marked `EXCLUDE` (combinations, allergens,
+   homeopathic) are not single small molecules and should stay unmapped.
+2. Re-run `build_dataset.py` and `train_model.py`; check the leave-one-out report.
+
+> The prediction is a **method starting point** by analogy, not a validated
+> analytical procedure.
+
 ## Notes
 
 The extractor searches for Russian and English terms around dissolution and

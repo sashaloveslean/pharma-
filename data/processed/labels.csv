@@ -1,0 +1,31 @@
+source_file,trade_name,inn,smiles,n_blocks,column_length_mm,column_id_mm,particle_um,column_temp_c,flow_ml_min,injection_ul,mobile_phase_ph,primary_wavelength_nm,column_phase,detector,primary_organic,has_buffer
+Avodart ND 2012-05-15.pdf,Avodart,dutasteride,,8,,,5.0,25,1.0,50,,240,ФЕНИЛ,UV,acetonitrile,False
+veronika_majer_prakticheskaya_vysokoeffektivnaya_zhidkostnaya_hromatografiya.pdf,,,,86,,,5.0,41.0,0.85,10.0,5.2,254,C18,UV,acetonitrile,True
+БАКСДРОСТАТ Проект НД.pdf,Baxdrostat,baxdrostat,,2,,,2.7,45,0.8,30.0,,259,C18,UV,acetonitrile,False
+ЛП-№(000493)-(РГ-RU)-100122.pdf,,,,1,,,5.0,40,0.6,,,280,,UV,,False
+ЛП-№(000540)-(РГ-RU)-120124.pdf,,,,1,150.0,4.6,5.0,30,1.0,10,,239,CN,UV,,False
+ЛП-№(000590)-(РГ-RU)-230326.pdf,,amlodipine + olmesartan,,4,,,3.0,35,1.0,2,,250,C18,UV,acetonitrile,True
+ЛП-№(004037)-(РГ-RU)-181223.pdf,,,,4,250.0,4.0,5.0,45.0,1.5,80.0,,,C4,,,False
+ЛС-002514-080620.pdf,Акласта,zoledronic acid,OP(=O)(O)C(O)(Cn1ccnc1)P(=O)(O)O,2,,,,30.0,0.8,40.0,,215,,UV,acetonitrile,True
+НД.pdf,,,,3,125.0,4.6,12.5,25,1.0,100,,254,C30,UV,acetonitrile,True
+бипрол.pdf,Бипрол,bisoprolol,CC(C)NCC(O)COc1ccc(COCCOC(C)C)cc1,1,,,,,1.0,10,,,,,acetonitrile,False
+галвус.pdf,Галвус,vildagliptin,,4,,,3.5,35.0,2.15,10,,210,C18,UV,acetonitrile,True
+йокс.pdf,,,,2,250.0,4.6,25.0,22.5,1.0,20,,220,C18,UV,acetonitrile,False
+калетра.pdf,Калетра,lopinavir + ritonavir,,11,150.0,4.6,5.0,22,1.5,50,6.3,215,C8,UV,acetonitrile,True
+кеппра.pdf,Кеппра,levetiracetam,CCC(C(N)=O)N1CCCC1=O,2,150.0,3.9,25.0,,1.0,20,,205,C18,UV,acetonitrile,True
+ксафлом.pdf,Ксафлом,,,1,75.0,4.6,3.5,,,10,,,C18,,,False
+липримар.pdf,Липримар,atorvastatin,,1,,,,,,20,,254,,UV,acetonitrile,True
+лп-000035[2010]_0.pdf,Басиджен,ciprofloxacin,OC(=O)C1=CN(C2CC2)c2cc(N3CCNCC3)c(F)cc2C1=O,2,,,10.5,,0.6,20.0,,,,,acetonitrile,False
+лп-002639[2014]_0.pdf,,,,3,,,4.25,,2.15,5,4.0,366,C18,UV,acetonitrile,True
+лср-004199_08-150520.pdf,,,,4,100.0,4.6,5.0,,1.2,6.0,,350,C18,UV,methanol,False
+неотон.pdf,Неотон,phosphocreatine,NC(=N)N(C)CC(=O)O,2,,,7.5,,1.5,20,,220,C8,UV,,True
+нурофен_экспресс_форте.pdf,Нурофен Экспресс Форте,ibuprofen,CC(C)Cc1ccc(C(C)C(=O)O)cc1,1,150.0,4.6,5.0,,2.0,20,,250,C8,DAD,,False
+прамипексол.pdf,Прамипексол,pramipexole,CCCNC1CCc2nc(N)sc2C1,1,150.0,4.6,45.0,40,1.5,20,,264,C18,UV,acetonitrile,False
+р_n001426_01[2012]_0.pdf,,azathioprine,Cn1cnc([N+](=O)[O-])c1Sc1ncc2nc[nH]c2n1,2,250.0,4.6,25.0,,,,,280,,UV,methanol,False
+ремерон.pdf,Ремерон,mirtazapine,CN1CCN2c3ccccc3Cc3cccnc3C2C1,1,,,,,,,,254,,UV,methanol,False
+ренобрейн.pdf,,,,1,,,45.0,,0.5,,,276,,UV,acetonitrile,False
+рибоксин.pdf,Рибоксин,inosine,OCC1OC(n2cnc3c2NC=NC3=O)C(O)C1O,3,250.0,4.6,5.0,,1.0,10.0,,248,C18,UV,methanol,False
+ривар_крка.pdf,Ривароксабан Krka,rivaroxaban,O=C(NCC1CN(c2ccc(N3CCOCC3=O)cc2)C(=O)O1)c1ccc(Cl)s1,1,,,45.0,,1.0,,,,,,acetonitrile,False
+урорек.pdf,Урорек,silodosin,,4,150.0,4.6,25.0,,0.9,50,,270,C18,UV,acetonitrile,True
+физиотенз.pdf,Физиотенз,moxonidine,COc1nc(C)c(NC2=NCCN2)nc1Cl,7,125.0,3.0,24.0,40,1.0,100,3.5,230,C8,UV,acetonitrile,False
+ципралекс.pdf,Ципралекс,escitalopram,CN(C)CCCC1(c2ccc(C#N)cc2)OCc2cc(F)ccc21,2,,,5.0,,1.0,20.0,,239,C18,UV,acetonitrile,True

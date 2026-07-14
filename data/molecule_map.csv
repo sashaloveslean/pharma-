@@ -1,0 +1,42 @@
+source_file,trade_name,inn,smiles,verified,note
+Avodart ND 2012-05-15.pdf,Avodart,dutasteride,,false,steroid; add & verify SMILES
+БАКСДРОСТАТ Проект НД.pdf,Baxdrostat,baxdrostat,,false,novel API; add SMILES
+ЛП-005719-120819.pdf,Акаризакс,house dust mite allergen,,false,EXCLUDE: allergen extract not a small molecule
+ЛП-№(000493)-(РГ-RU)-100122.pdf,,,,false,unidentified; fill inn+smiles
+ЛП-№(000508)-(РГ-RU)-180122.pdf,,,,false,unidentified; fill inn+smiles
+ЛП-№(000540)-(РГ-RU)-120124.pdf,,,,false,oral solution (ethanol/glycerin/menthol); fill inn
+ЛП-№(000590)-(РГ-RU)-230326.pdf,,amlodipine + olmesartan,,false,EXCLUDE: combination product
+ЛП-№(004037)-(РГ-RU)-181223.pdf,,,,false,16 mg capsules; fill inn+smiles
+ЛП-№(004046)-(РГ-RU)-191223.pdf,Азнам-Лиоф,aztreonam,,false,beta-lactam; add & verify SMILES
+ЛС-002514-080620.pdf,Акласта,zoledronic acid,OP(=O)(O)C(O)(Cn1ccnc1)P(=O)(O)O,false,verify SMILES
+НД.pdf,,,,false,BMS product ЛСР-000035; fill inn+smiles
+аперомид.pdf,Аперомид,,,false,unidentified; fill inn+smiles
+бипрол.pdf,Бипрол,bisoprolol,CC(C)NCC(O)COc1ccc(COCCOC(C)C)cc1,false,verify SMILES
+галвус.pdf,Галвус,vildagliptin,,false,adamantane; add & verify SMILES
+йокс.pdf,Йокс,povidone-iodine,,false,EXCLUDE: polymer complex not a small molecule
+калетра.pdf,Калетра,lopinavir + ritonavir,,false,EXCLUDE: combination product
+кардиоксипин.pdf,Кардиоксипин,emoxypine,CCc1nc(C)cc(O)c1,false,verify SMILES
+кеппра.pdf,Кеппра,levetiracetam,CCC(C(N)=O)N1CCCC1=O,false,verify SMILES
+коронадерм.PDF,Коронадерм,,,false,topical; fill inn+smiles
+ксафлом.pdf,Ксафлом,,,false,unidentified; fill inn+smiles
+липримар.pdf,Липримар,atorvastatin,,false,complex; add & verify SMILES
+лп-000035[2010]_0.pdf,Басиджен,ciprofloxacin,OC(=O)C1=CN(C2CC2)c2cc(N3CCNCC3)c(F)cc2C1=O,false,verify SMILES
+лп-002639[2014]_0.pdf,,,,false,Bayer film tablet; fill inn+smiles
+лп-007200[2021]_0_мирамед.pdf,Мирамед,,,false,Evalar; fill inn+smiles
+лср-004199_08-150520.pdf,,,,false,Sotex product; fill inn+smiles
+небилет.pdf,Небилет,nebivolol,,false,complex; add & verify SMILES
+неотон.pdf,Неотон,phosphocreatine,NC(=N)N(C)CC(=O)O,false,PARTIAL SMILES (creatine core, no phosphate); verify
+ноокам.pdf,Ноокам,,,false,unidentified; fill inn+smiles
+нурофен_экспресс_форте.pdf,Нурофен Экспресс Форте,ibuprofen,CC(C)Cc1ccc(C(C)C(=O)O)cc1,false,verify SMILES
+остеостатикс.pdf,Остеостатикс,,,false,Farm-Sintez; fill inn+smiles
+прамипексол.pdf,Прамипексол,pramipexole,CCCNC1CCc2nc(N)sc2C1,false,verify SMILES
+р_n001426_01[2012]_0.pdf,,azathioprine,Cn1cnc([N+](=O)[O-])c1Sc1ncc2nc[nH]c2n1,false,verify SMILES
+ремерон.pdf,Ремерон,mirtazapine,CN1CCN2c3ccccc3Cc3cccnc3C2C1,false,verify SMILES
+ренобрейн.pdf,Ренобрейн,,,false,unidentified; fill inn+smiles
+рибоксин.pdf,Рибоксин,inosine,OCC1OC(n2cnc3c2NC=NC3=O)C(O)C1O,false,verify SMILES
+ривар_крка.pdf,Ривароксабан Krka,rivaroxaban,O=C(NCC1CN(c2ccc(N3CCOCC3=O)cc2)C(=O)O1)c1ccc(Cl)s1,false,verify SMILES
+ринитол.pdf,Ринитол ЭДАС-131,,,false,EXCLUDE: homeopathic
+симбалта.pdf,Симбалта,duloxetine,CNCCC(Oc1cccc2ccccc12)c1cccs1,false,verify SMILES
+урорек.pdf,Урорек,silodosin,,false,complex; add & verify SMILES
+физиотенз.pdf,Физиотенз,moxonidine,COc1nc(C)c(NC2=NCCN2)nc1Cl,false,verify SMILES
+ципралекс.pdf,Ципралекс,escitalopram,CN(C)CCCC1(c2ccc(C#N)cc2)OCc2cc(F)ccc21,false,verify SMILES
