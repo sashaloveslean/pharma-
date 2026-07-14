@@ -148,6 +148,8 @@ class Conditions:
     runtime_min: int | None = None
 
     reagents: list[dict] = field(default_factory=list)
+    mobile_phase_ratio: str | None = None
+    mobile_phase_components: list[dict] = field(default_factory=list)
 
     def completeness(self) -> int:
         core = [
@@ -271,6 +273,81 @@ def parse_operating(text: str) -> dict:
     return result
 
 
+# "(85:15)"  "(69: 18:8: 5)"  "(50 : 45 : 5)"
+RATIO_RE = re.compile(r"\(\s*(\d{1,3})\s*(?::\s*\d{1,3}\s*){1,4}\)")
+COMPONENT_SPLIT_RE = re.compile(r"\s*[:/]\s*|\s+[-–—]\s+|(?<=[а-яa-z])-(?=[а-яa-z])")
+
+
+# tokens that are labels/boilerplate, not real mobile-phase solutions
+COMPONENT_STOPWORDS = re.compile(
+    r"подвижн|аналогичн|\bили\b|состав|раствор\s+для|промывк|уравновеш|"
+    r"\bпф\b|\bсорбент|колонк|скорост|детектор|приготовл",
+    re.IGNORECASE,
+)
+
+
+def _canonical_component(raw: str) -> str | None:
+    token = re.sub(r"\s+", " ", raw).strip(" ,;.:-–—()")
+    if not token or len(token) < 3:
+        return None
+    if COMPONENT_STOPWORDS.search(token) or len(token.split()) > 4:
+        return None
+    lower = token.lower()
+    named = {
+        "ацетонитрил": r"ацетонитрил",
+        "метанол": r"метанол",
+        "вода": r"\bвод[аеоы]",
+        "фосфатный буфер": r"фосфат",
+        "ацетатный буфер": r"ацетат",
+        "буфер": r"буфер",
+        "тетрагидрофуран": r"тетрагидрофуран|тгф",
+        "бутанол": r"бутанол",
+        "изопропанол": r"изопропанол|пропанол",
+        "этилацетат": r"этилацетат|этил\W*ацетат",
+        "гептан": r"гептан",
+        "гексан": r"гексан",
+    }
+    for canonical, pattern in named.items():
+        if re.search(pattern, lower):
+            return canonical
+    # keep an unrecognised but plausible solvent word as-is (short, single phrase)
+    if len(token) <= 40 and re.search(r"[а-яёa-z]", lower):
+        return token
+    return None
+
+
+def parse_mobile_phase_composition(text: str) -> dict | None:
+    """Extract the mobile-phase solutions and their ratio, e.g.
+    'вода - ацетонитрил (85:15)' -> ratio '85:15', components вода/ацетонитрил."""
+    match = RATIO_RE.search(text)
+    if not match:
+        return None
+    ratio_numbers = [int(n) for n in re.findall(r"\d{1,3}", match.group(0))]
+
+    prefix = text[: match.start()].rstrip(" :")
+    prefix = prefix[-80:]  # component list sits right before the ratio
+    parts = [p for p in COMPONENT_SPLIT_RE.split(prefix) if p.strip()]
+    components: list[str] = []
+    for part in reversed(parts):  # walk back from the ratio
+        canonical = _canonical_component(part)
+        if canonical:
+            components.insert(0, canonical)
+        if len(components) >= len(ratio_numbers):
+            break
+
+    if len(components) != len(ratio_numbers):
+        # ratio found but components unclear — still return the ratio
+        return {"ratio": ":".join(str(n) for n in ratio_numbers), "components": []}
+
+    return {
+        "ratio": ":".join(str(n) for n in ratio_numbers),
+        "components": [
+            {"solution": name, "part": part}
+            for name, part in zip(components, ratio_numbers)
+        ],
+    }
+
+
 def parse_reagents(text: str) -> list[dict]:
     """Detect named reagents (solvents, buffer salts, acids, ion-pair agents)."""
     found: list[dict] = []
@@ -303,6 +380,10 @@ def extract_from_chunk(chunk: dict) -> Conditions | None:
             setattr(conditions, key, value)
 
     conditions.reagents = parse_reagents(text)
+    composition = parse_mobile_phase_composition(text)
+    if composition:
+        conditions.mobile_phase_ratio = composition["ratio"]
+        conditions.mobile_phase_components = composition["components"]
 
     # require at least a real column or a mobile phase to keep the record
     if conditions.completeness() < 2:

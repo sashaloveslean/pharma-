@@ -109,9 +109,17 @@ Predicted output, most actionable first:
 - **Reagents** — the chemicals the method needs, grouped by role: organic
   solvents, buffer salts, acids / bases for pH, ion-pairing agents. This is the
   primary output — the reagent shopping list for the method.
+- **Mobile phase** — the solutions and their ratio (e.g. `вода : ацетонитрил =
+  95 : 5`), parsed into structured components; falls back to the ratio alone when
+  the solution names are unclear.
 - **Conditions** — stationary phase, column length / ID / particle size, column
-  temperature, detector + wavelength, organic modifier, mobile phase + pH, flow
-  rate, injection volume.
+  temperature, detector + wavelength, organic modifier, pH, flow rate, injection
+  volume.
+
+Because prediction is *transfer of one real method* (not per-field regression),
+the reagents, the mobile-phase ratio, and the conditions always come from the
+same НД and stay mutually consistent — the model cannot mix a column from one
+method with a mobile phase from another.
 
 ### How it works
 

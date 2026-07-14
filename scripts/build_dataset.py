@@ -43,6 +43,8 @@ CATEGORICAL_TARGETS = [
 # free-text / boolean conditions carried alongside the method (not scored numerically)
 EXTRA_TARGETS = [
     "reagents",
+    "mobile_phase_components",
+    "mobile_phase_ratio",
     "mobile_phase",
     "has_buffer",
 ]
@@ -82,6 +84,18 @@ def consolidate(records: list[dict]) -> dict:
     wavelengths = _fill_from(ordered, "wavelengths_nm") or []
     primary_wavelength = min(wavelengths) if wavelengths else None
 
+    # mobile-phase ratio and its solutions must come from the *same* block to
+    # stay consistent; prefer a block that resolved both solutions and ratio
+    mp_ratio = None
+    mp_components: list[dict] = []
+    for record in ordered:
+        if record.get("mobile_phase_components"):
+            mp_ratio = record.get("mobile_phase_ratio")
+            mp_components = record["mobile_phase_components"]
+            break
+    if mp_ratio is None:
+        mp_ratio = _fill_from(ordered, "mobile_phase_ratio")
+
     # reagents are additive across the document's blocks: build one deduped
     # inventory of every named chemical the method needs
     reagents: list[dict] = []
@@ -118,6 +132,8 @@ def consolidate(records: list[dict]) -> dict:
         "detector": _fill_from(ordered, "detector"),
         "primary_organic": primary_organic,
         "reagents": reagents,
+        "mobile_phase_ratio": mp_ratio,
+        "mobile_phase_components": mp_components,
         "has_buffer": bool({"phosphate_buffer", "acetate_buffer"} & solvent_set),
         "source_page": best.get("start_page"),
     }

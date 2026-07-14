@@ -24,7 +24,6 @@ LABELS = {
     "detector": "Детектор",
     "primary_wavelength_nm": "Длина волны, нм",
     "primary_organic": "Органический модификатор",
-    "mobile_phase": "Подвижная фаза",
     "mobile_phase_ph": "pH подвижной фазы",
     "flow_ml_min": "Скорость потока, мл/мин",
     "injection_ul": "Объём ввода, мкл",
@@ -39,6 +38,21 @@ REAGENT_CATEGORIES = {
     "modifier": "Модификаторы",
     "ion_pairing": "Ион-парные агенты",
 }
+
+
+def print_mobile_phase(components, ratio, raw) -> None:
+    print("Подвижная фаза (растворы и соотношение):")
+    if components:
+        solutions = " : ".join(c["solution"] for c in components)
+        parts = " : ".join(str(c["part"]) for c in components)
+        print(f"  {solutions}")
+        print(f"  соотношение {parts}")
+    elif ratio:
+        print(f"  соотношение {ratio} (растворы не распознаны)")
+    elif raw:
+        print(f"  {raw}")
+    else:
+        print("  — (состав не распознан)")
 
 
 def print_reagents(reagents, source, top) -> None:
@@ -96,6 +110,13 @@ def main() -> None:
     print(f"SMILES: {smiles}\n")
 
     print_reagents(prediction.get("reagents"), field_source.get("reagents"), top)
+
+    print()
+    print_mobile_phase(
+        prediction.get("mobile_phase_components"),
+        prediction.get("mobile_phase_ratio"),
+        prediction.get("mobile_phase"),
+    )
 
     print("\nПрогнозируемые условия хроматографирования:")
     for key in ORDER:

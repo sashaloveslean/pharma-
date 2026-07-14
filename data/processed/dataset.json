@@ -32,6 +32,8 @@
   ],
   "extra_targets": [
     "reagents",
+    "mobile_phase_components",
+    "mobile_phase_ratio",
     "mobile_phase",
     "has_buffer"
   ],
@@ -1112,6 +1114,8 @@
             "category": "organic_solvent"
           }
         ],
+        "mobile_phase_components": [],
+        "mobile_phase_ratio": null,
         "mobile_phase": "0,89 г динатрия гидрофосфата дигидрата (5 мМ), 0,70 г натрия дигидрофосфата моногидрата (5 мМ) и 1,13 г тетрагексиламмония гидросульфата (5 мМ) помещают в подходящую колбу, приливают 950 мл воды и 5",
         "has_buffer": true
       }
@@ -2180,6 +2184,8 @@
             "category": "organic_solvent"
           }
         ],
+        "mobile_phase_components": [],
+        "mobile_phase_ratio": "80:20",
         "mobile_phase": "А, % 95 95 80 80 20 95 95 1,0 мл/мин; Подвижная фаза В, % 5 5 20 20 80 80 5 5",
         "has_buffer": false
       }
@@ -3256,6 +3262,17 @@
             "category": "organic_solvent"
           }
         ],
+        "mobile_phase_components": [
+          {
+            "solution": "вода",
+            "part": 95
+          },
+          {
+            "solution": "ацетонитрил",
+            "part": 5
+          }
+        ],
+        "mobile_phase_ratio": "95:5",
         "mobile_phase": "(ПФ): около 2 ,0 г (точная навеска) безводного гидроортофосфата калия (K2HPO4) растворяют 18 в 1000 мл воды очищенной . К 950 мл полученного раствора прибавляют 50 мл ацетонитрила. рН раствора р",
         "has_buffer": true
       }
@@ -4328,6 +4345,8 @@
             "category": "organic_solvent"
           }
         ],
+        "mobile_phase_components": [],
+        "mobile_phase_ratio": "85:15",
         "mobile_phase": "0,005 н раствор серной кислоты- ацетонитрил (85:15) Расход подвижной фазы: 0,6 мл/мин",
         "has_buffer": false
       }
@@ -5396,6 +5415,8 @@
             "category": "buffer_salt"
           }
         ],
+        "mobile_phase_components": [],
+        "mobile_phase_ratio": null,
         "mobile_phase": "0,005 М раствор тетрабутиламмония дигидрофосфата Р рН 7. Перед использованием подвижную фазу фильтруют через мембранный фильтр с диаметром пор 0,45 мкм и дегазируют любым способо м (ультразвуком",
         "has_buffer": true
       }
@@ -6459,6 +6480,8 @@
         "detector": "DAD",
         "primary_organic": null,
         "reagents": [],
+        "mobile_phase_components": [],
+        "mobile_phase_ratio": null,
         "mobile_phase": null,
         "has_buffer": false
       }
@@ -7527,6 +7550,8 @@
             "category": "organic_solvent"
           }
         ],
+        "mobile_phase_components": [],
+        "mobile_phase_ratio": null,
         "mobile_phase": "(ПФ). К 50 мл подвижной фазы А (см. раздел «Количественное определение») прибавляют 950 мл подвижной фазы Б (см. раздел «Количественное определение») и перемешивают. Срок годности подвижной фазы сос",
         "has_buffer": false
       }
@@ -8603,6 +8628,8 @@
             "category": "organic_solvent"
           }
         ],
+        "mobile_phase_components": [],
+        "mobile_phase_ratio": "3:7",
         "mobile_phase": "(ПФ) - смесь метанола и раствора 1,1 г натрия гексан- сульфоната в 700 мл воды (3:7) с рН 3,5 ≤ 0,05 (величина рН регулируется прибавлением 1 М раствора хлористоводородной кислоты); ФСП P N001426/01",
         "has_buffer": false
       }
@@ -9671,6 +9698,8 @@
             "category": "organic_solvent"
           }
         ],
+        "mobile_phase_components": [],
+        "mobile_phase_ratio": null,
         "mobile_phase": "хлороформ - метанол, 90:10 (об:об) Хроматографирование: горизонтальное, в камере, насыщенной парами Расстояние перемещения фронта подвижной фазы: 9 см от нижнего края пластинки *Для контроля качест",
         "has_buffer": false
       }
@@ -10739,6 +10768,8 @@
             "category": "organic_solvent"
           }
         ],
+        "mobile_phase_components": [],
+        "mobile_phase_ratio": "95:5",
         "mobile_phase": null,
         "has_buffer": false
       }
@@ -11807,6 +11838,8 @@
             "category": "organic_solvent"
           }
         ],
+        "mobile_phase_components": [],
+        "mobile_phase_ratio": "65:35",
         "mobile_phase": "изократическое элюирование; Подвижная фаза А - Подвижная фаза В (65 : 35) (об/об); Подвижная фаза А: 0,01 М буферный раствор рН 2,5; Подвижная фаза В: ацетонитрил Р1. Примечание. Перед использо",
         "has_buffer": false
       }
@@ -12887,6 +12920,8 @@
             "category": "organic_solvent"
           }
         ],
+        "mobile_phase_components": [],
+        "mobile_phase_ratio": null,
         "mobile_phase": "A/B=20% / 80% А: ацетонитрил В: 20 мМ раствор натрия пентансульфоната с pH 3,5",
         "has_buffer": false
       }
@@ -13963,6 +13998,21 @@
             "category": "acid"
           }
         ],
+        "mobile_phase_components": [
+          {
+            "solution": "ацетонитрил",
+            "part": 7
+          },
+          {
+            "solution": "метанол",
+            "part": 33
+          },
+          {
+            "solution": "25 мМ натрий",
+            "part": 60
+          }
+        ],
+        "mobile_phase_ratio": "7:33:60",
         "mobile_phase": "Ацетонитрил Р1/метанол Р2/25 мМ натрий-ацетатный буферный раствор рН 5,2 (7:33:60). Перемешивают по- движную фазу и измеряют рН. рН должен быть 6,0 ± 0,1",
         "has_buffer": true
       }
