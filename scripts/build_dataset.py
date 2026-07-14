@@ -43,6 +43,8 @@ CATEGORICAL_TARGETS = [
 # free-text / boolean conditions carried alongside the method (not scored numerically)
 EXTRA_TARGETS = [
     "reagents",
+    "elution_mode",
+    "gradient_steps",
     "mobile_phase_components",
     "mobile_phase_ratio",
     "mobile_phase",
@@ -96,6 +98,17 @@ def consolidate(records: list[dict]) -> dict:
     if mp_ratio is None:
         mp_ratio = _fill_from(ordered, "mobile_phase_ratio")
 
+    # elution mode: gradient wins if any block reports it; else isocratic if
+    # seen or if a fixed ratio was resolved
+    modes = {r.get("elution_mode") for r in ordered}
+    if "gradient" in modes:
+        elution_mode = "gradient"
+    elif "isocratic" in modes or mp_components or mp_ratio:
+        elution_mode = "isocratic"
+    else:
+        elution_mode = None
+    gradient_steps = _fill_from(ordered, "gradient_steps") or []
+
     # reagents are additive across the document's blocks: build one deduped
     # inventory of every named chemical the method needs
     reagents: list[dict] = []
@@ -132,6 +145,8 @@ def consolidate(records: list[dict]) -> dict:
         "detector": _fill_from(ordered, "detector"),
         "primary_organic": primary_organic,
         "reagents": reagents,
+        "elution_mode": elution_mode,
+        "gradient_steps": gradient_steps,
         "mobile_phase_ratio": mp_ratio,
         "mobile_phase_components": mp_components,
         "has_buffer": bool({"phosphate_buffer", "acetate_buffer"} & solvent_set),

@@ -150,6 +150,8 @@ class Conditions:
     reagents: list[dict] = field(default_factory=list)
     mobile_phase_ratio: str | None = None
     mobile_phase_components: list[dict] = field(default_factory=list)
+    elution_mode: str | None = None
+    gradient_steps: list[dict] = field(default_factory=list)
 
     def completeness(self) -> int:
         core = [
@@ -348,6 +350,45 @@ def parse_mobile_phase_composition(text: str) -> dict | None:
     }
 
 
+GRADIENT_RE = re.compile(r"градиент", re.IGNORECASE)
+ISOCRATIC_RE = re.compile(r"изократ", re.IGNORECASE)
+# flattened OCR gradient row, e.g. "Подвижная фаза B, % 0 85 15"
+GRADIENT_B_RE = re.compile(r"фаза\s*[BВ]\s*,?\s*%\s*((?:\d{1,3}[ ,]+){1,}\d{1,3})", re.I)
+GRADIENT_TIME_RE = re.compile(r"Время[^0-9\n]{0,20}((?:\d{1,3}[ ,]+){1,}\d{1,3})", re.I)
+
+
+def _int_series(raw: str) -> list[int]:
+    return [int(n) for n in re.findall(r"\d{1,3}", raw)]
+
+
+def parse_elution(text: str) -> dict:
+    """Detect isocratic vs gradient mode and, if present, the gradient steps."""
+    result: dict = {}
+
+    if GRADIENT_RE.search(text):
+        result["elution_mode"] = "gradient"
+    elif ISOCRATIC_RE.search(text):
+        result["elution_mode"] = "isocratic"
+
+    b_match = GRADIENT_B_RE.search(text)
+    if b_match:
+        percents = _int_series(b_match.group(1))
+        percents = [p for p in percents if p <= 100]
+        times: list[int] = []
+        time_match = GRADIENT_TIME_RE.search(text)
+        if time_match:
+            times = _int_series(time_match.group(1))
+        if len(percents) >= 2:
+            result["elution_mode"] = "gradient"
+            if len(times) == len(percents):
+                result["gradient_steps"] = [
+                    {"time_min": t, "percent_b": p} for t, p in zip(times, percents)
+                ]
+            else:
+                result["gradient_steps"] = [{"percent_b": p} for p in percents]
+    return result
+
+
 def parse_reagents(text: str) -> list[dict]:
     """Detect named reagents (solvents, buffer salts, acids, ion-pair agents)."""
     found: list[dict] = []
@@ -384,6 +425,9 @@ def extract_from_chunk(chunk: dict) -> Conditions | None:
     if composition:
         conditions.mobile_phase_ratio = composition["ratio"]
         conditions.mobile_phase_components = composition["components"]
+    elution = parse_elution(text)
+    conditions.elution_mode = elution.get("elution_mode")
+    conditions.gradient_steps = elution.get("gradient_steps", [])
 
     # require at least a real column or a mobile phase to keep the record
     if conditions.completeness() < 2:

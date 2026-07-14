@@ -40,8 +40,16 @@ REAGENT_CATEGORIES = {
 }
 
 
-def print_mobile_phase(components, ratio, raw) -> None:
-    print("Подвижная фаза (растворы и соотношение):")
+ELUTION_LABELS = {"isocratic": "изократический", "gradient": "градиентный"}
+
+
+def print_mobile_phase(components, ratio, raw, elution_mode, gradient_steps) -> None:
+    mode = ELUTION_LABELS.get(elution_mode)
+    header = "Подвижная фаза (растворы и соотношение)"
+    if mode:
+        header += f" — режим: {mode}"
+    print(header + ":")
+
     if components:
         solutions = " : ".join(c["solution"] for c in components)
         parts = " : ".join(str(c["part"]) for c in components)
@@ -50,9 +58,19 @@ def print_mobile_phase(components, ratio, raw) -> None:
     elif ratio:
         print(f"  соотношение {ratio} (растворы не распознаны)")
     elif raw:
-        print(f"  {raw}")
+        snippet = raw if len(raw) <= 100 else raw[:100].rstrip() + "…"
+        print(f"  {snippet}")
     else:
         print("  — (состав не распознан)")
+
+    if gradient_steps:
+        if all("time_min" in step for step in gradient_steps):
+            profile = ", ".join(
+                f"{step['time_min']} мин → {step['percent_b']}% B" for step in gradient_steps
+            )
+        else:
+            profile = " → ".join(f"{step['percent_b']}% B" for step in gradient_steps)
+        print(f"  профиль градиента: {profile}")
 
 
 def print_reagents(reagents, source, top) -> None:
@@ -116,6 +134,8 @@ def main() -> None:
         prediction.get("mobile_phase_components"),
         prediction.get("mobile_phase_ratio"),
         prediction.get("mobile_phase"),
+        prediction.get("elution_mode"),
+        prediction.get("gradient_steps"),
     )
 
     print("\nПрогнозируемые условия хроматографирования:")

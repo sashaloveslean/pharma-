@@ -109,9 +109,10 @@ Predicted output, most actionable first:
 - **Reagents** — the chemicals the method needs, grouped by role: organic
   solvents, buffer salts, acids / bases for pH, ion-pairing agents. This is the
   primary output — the reagent shopping list for the method.
-- **Mobile phase** — the solutions and their ratio (e.g. `вода : ацетонитрил =
-  95 : 5`), parsed into structured components; falls back to the ratio alone when
-  the solution names are unclear.
+- **Mobile phase** — elution mode (isocratic / gradient), the solutions and their
+  ratio (e.g. `вода : ацетонитрил = 95 : 5`) parsed into structured components,
+  and the gradient step profile when the source table is legible. Falls back to
+  the ratio alone when the solution names are unclear.
 - **Conditions** — stationary phase, column length / ID / particle size, column
   temperature, detector + wavelength, organic modifier, pH, flow rate, injection
   volume.
