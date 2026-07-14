@@ -40,28 +40,49 @@ CATEGORICAL_TARGETS = [
     "detector",
     "primary_organic",
 ]
+# free-text / boolean conditions carried alongside the method (not scored numerically)
+EXTRA_TARGETS = [
+    "mobile_phase",
+    "has_buffer",
+]
 
 
-def _median(values: list[float]) -> float | None:
-    values = [v for v in values if v is not None]
-    return round(statistics.median(values), 3) if values else None
+CORE_FIELDS = (
+    "column_phase", "column_length_mm", "column_id_mm", "particle_um",
+    "column_temp_c", "detector", "wavelengths_nm", "flow_ml_min",
+    "injection_ul", "mobile_phase_ph", "mobile_phase_raw",
+)
 
 
-def _mode(values: list) -> object | None:
-    values = [v for v in values if v not in (None, "")]
-    if not values:
-        return None
-    return Counter(values).most_common(1)[0][0]
+def _completeness(record: dict) -> int:
+    return sum(1 for field in CORE_FIELDS if record.get(field) not in (None, [], ""))
+
+
+def _fill_from(records: list[dict], field: str):
+    """First non-empty value for a field, scanning the most complete blocks first."""
+    for record in records:
+        value = record.get(field)
+        if value not in (None, [], ""):
+            return value
+    return None
 
 
 def consolidate(records: list[dict]) -> dict:
-    """Collapse many fragment-level condition blocks into one label row."""
-    wavelengths: list[int] = []
-    for record in records:
-        wavelengths.extend(record.get("wavelengths_nm") or [])
+    """Pick the single most complete real method as this molecule's conditions.
+
+    Blending across blocks produced non-physical values (e.g. 4.33 mm ID) and lost
+    the mobile-phase recipe. Instead we transfer one coherent, real method: the
+    most complete condition block, back-filling any missing field from the other
+    blocks of the same document (ordered by completeness).
+    """
+    ordered = sorted(records, key=_completeness, reverse=True)
+    best = ordered[0]
+
+    wavelengths = _fill_from(ordered, "wavelengths_nm") or []
+    primary_wavelength = min(wavelengths) if wavelengths else None
 
     solvents: list[str] = []
-    for record in records:
+    for record in ordered:
         solvents.extend(record.get("solvents") or [])
     solvent_set = set(solvents)
     if "acetonitrile" in solvent_set:
@@ -73,20 +94,20 @@ def consolidate(records: list[dict]) -> dict:
 
     return {
         "n_blocks": len(records),
-        "column_length_mm": _median([r.get("column_length_mm") for r in records]),
-        "column_id_mm": _median([r.get("column_id_mm") for r in records]),
-        "particle_um": _median([r.get("particle_um") for r in records]),
-        "column_temp_c": _median([r.get("column_temp_c") for r in records]),
-        "flow_ml_min": _median([r.get("flow_ml_min") for r in records]),
-        "injection_ul": _median([r.get("injection_ul") for r in records]),
-        "mobile_phase_ph": _median([r.get("mobile_phase_ph") for r in records]),
-        "primary_wavelength_nm": _mode(wavelengths),
-        "column_phase": _mode([r.get("column_phase") for r in records]),
-        "detector": _mode([r.get("detector") for r in records]),
+        "column_length_mm": _fill_from(ordered, "column_length_mm"),
+        "column_id_mm": _fill_from(ordered, "column_id_mm"),
+        "particle_um": _fill_from(ordered, "particle_um"),
+        "column_temp_c": _fill_from(ordered, "column_temp_c"),
+        "flow_ml_min": _fill_from(ordered, "flow_ml_min"),
+        "injection_ul": _fill_from(ordered, "injection_ul"),
+        "mobile_phase_ph": _fill_from(ordered, "mobile_phase_ph"),
+        "mobile_phase": _fill_from(ordered, "mobile_phase_raw"),
+        "primary_wavelength_nm": primary_wavelength,
+        "column_phase": _fill_from(ordered, "column_phase"),
+        "detector": _fill_from(ordered, "detector"),
         "primary_organic": primary_organic,
-        "has_buffer": bool(
-            {"phosphate_buffer", "acetate_buffer"} & solvent_set
-        ),
+        "has_buffer": bool({"phosphate_buffer", "acetate_buffer"} & solvent_set),
+        "source_page": best.get("start_page"),
     }
 
 
@@ -150,7 +171,7 @@ def main() -> None:
                 "fingerprint": fingerprint,
                 "targets": {
                     key: consolidated.get(key)
-                    for key in NUMERIC_TARGETS + CATEGORICAL_TARGETS
+                    for key in NUMERIC_TARGETS + CATEGORICAL_TARGETS + EXTRA_TARGETS
                 },
             }
         )
@@ -173,6 +194,7 @@ def main() -> None:
                 "descriptor_names": list(DESCRIPTOR_NAMES),
                 "numeric_targets": NUMERIC_TARGETS,
                 "categorical_targets": CATEGORICAL_TARGETS,
+                "extra_targets": EXTRA_TARGETS,
                 "rows": dataset_rows,
             },
             file,

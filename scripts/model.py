@@ -31,10 +31,19 @@ class Analog:
 
 
 class NearestAnalogPredictor:
-    def __init__(self, numeric_targets: list[str], categorical_targets: list[str], k: int = 3):
+    def __init__(
+        self,
+        numeric_targets: list[str],
+        categorical_targets: list[str],
+        extra_targets: list[str] | None = None,
+        k: int = 3,
+        min_backfill_sim: float = 0.35,
+    ):
         self.numeric_targets = numeric_targets
         self.categorical_targets = categorical_targets
+        self.extra_targets = extra_targets or []
         self.k = k
+        self.min_backfill_sim = min_backfill_sim
         self.reference: list[dict] = []
 
     def fit(self, rows: list[dict]) -> "NearestAnalogPredictor":
@@ -61,33 +70,37 @@ class NearestAnalogPredictor:
     def predict_from_fingerprint(
         self, fingerprint: list[int], exclude_source: str | None = None
     ) -> dict:
+        """Transfer the closest analog's real, coherent method.
+
+        The prediction is one actual method that appeared in an НД (not a blend of
+        several, which would give non-physical values and lose the mobile-phase
+        recipe). Any field the nearest analog is missing is back-filled from the
+        next-closest analogs so the returned method is complete.
+        """
         neighbors = self._neighbors(fingerprint, exclude_source=exclude_source)
+        all_fields = self.numeric_targets + self.categorical_targets + self.extra_targets
+
         prediction: dict = {}
-
-        for target in self.numeric_targets:
-            weighted: list[tuple[float, float]] = []
-            for analog in neighbors:
-                value = analog.targets.get(target)
-                if value is not None and analog.similarity > 0:
-                    weighted.append((float(value), analog.similarity))
-            if weighted:
-                total = sum(weight for _, weight in weighted)
-                prediction[target] = round(
-                    sum(value * weight for value, weight in weighted) / total, 2
-                )
+        field_source: dict = {}
+        for field in all_fields:
+            for position, analog in enumerate(neighbors):  # similarity-sorted
+                # the closest analog always donates what it has; further analogs
+                # only back-fill missing fields if they are similar enough, so a
+                # molecule-specific recipe is never copied from a distant match
+                if position > 0 and analog.similarity < self.min_backfill_sim:
+                    break
+                value = analog.targets.get(field)
+                if value not in (None, "", []):
+                    prediction[field] = value
+                    field_source[field] = analog.inn or analog.source_file
+                    break
             else:
-                prediction[target] = None
-
-        for target in self.categorical_targets:
-            votes: Counter = Counter()
-            for analog in neighbors:
-                value = analog.targets.get(target)
-                if value is not None:
-                    votes[value] += analog.similarity
-            prediction[target] = votes.most_common(1)[0][0] if votes else None
+                prediction[field] = None
+                field_source[field] = None
 
         return {
             "prediction": prediction,
+            "field_source": field_source,
             "analogs": [
                 {
                     "inn": a.inn,
@@ -108,7 +121,9 @@ class NearestAnalogPredictor:
         payload = {
             "numeric_targets": self.numeric_targets,
             "categorical_targets": self.categorical_targets,
+            "extra_targets": self.extra_targets,
             "k": self.k,
+            "min_backfill_sim": self.min_backfill_sim,
             "reference": self.reference,
         }
         path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
@@ -119,7 +134,9 @@ class NearestAnalogPredictor:
         model = cls(
             numeric_targets=payload["numeric_targets"],
             categorical_targets=payload["categorical_targets"],
+            extra_targets=payload.get("extra_targets", []),
             k=payload["k"],
+            min_backfill_sim=payload.get("min_backfill_sim", 0.35),
         )
         model.reference = payload["reference"]
         return model

@@ -111,16 +111,20 @@ volume, mobile-phase pH.
 ### How it works
 
 - **Labels (y):** `extract_conditions.py` parses the "Хроматографические условия"
-  blocks; `build_dataset.py` consolidates all blocks of one document (median for
-  numbers, mode for categories) into a single method label.
+  blocks; `build_dataset.py` selects, per document, the single **most complete
+  real method** (rather than blending blocks, which produced non-physical values
+  and lost the mobile-phase recipe) and back-fills any missing field from the
+  document's other blocks.
 - **Features (X):** RDKit physicochemical descriptors + a Morgan fingerprint,
   computed from each molecule's SMILES.
 - **Model:** with only a few dozen labelled molecules, a trained regressor would
-  overfit, so the baseline is *nearest-analog transfer* — it predicts the
-  conditions of the structurally most similar known molecules, weighted by
-  Tanimoto similarity. The class in `scripts/model.py` is model-shaped
-  (`fit`/`predict`/`save`/`load`) so a learned estimator can replace it once more
-  labelled data exists.
+  overfit, so the baseline is *nearest-analog transfer* — it returns the complete,
+  coherent method of the structurally closest known molecule (Tanimoto similarity
+  of Morgan fingerprints). A field the closest analog lacks is back-filled only
+  from other analogs above a similarity threshold, so a molecule-specific recipe
+  is never copied from a distant match; otherwise the field is left blank. The
+  class in `scripts/model.py` is model-shaped (`fit`/`predict`/`save`/`load`) so a
+  learned estimator can replace it once more labelled data exists.
 
 ### To improve accuracy
 

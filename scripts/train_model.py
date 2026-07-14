@@ -55,7 +55,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", default="data/processed/dataset.json")
     parser.add_argument("--model-out", default="models/nearest_analog.json")
-    parser.add_argument("--k", type=int, default=3)
+    parser.add_argument("--k", type=int, default=5)
     args = parser.parse_args()
 
     data = json.loads(Path(args.dataset).read_text(encoding="utf-8"))
@@ -66,6 +66,7 @@ def main() -> None:
     model = NearestAnalogPredictor(
         numeric_targets=data["numeric_targets"],
         categorical_targets=data["categorical_targets"],
+        extra_targets=data.get("extra_targets", []),
         k=args.k,
     ).fit(rows)
 

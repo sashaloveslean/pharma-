@@ -30,6 +30,10 @@
     "detector",
     "primary_organic"
   ],
+  "extra_targets": [
+    "mobile_phase",
+    "has_buffer"
+  ],
   "rows": [
     {
       "source_file": "ЛС-002514-080620.pdf",
@@ -1081,14 +1085,16 @@
         "column_length_mm": null,
         "column_id_mm": null,
         "particle_um": null,
-        "column_temp_c": 30.0,
+        "column_temp_c": 30,
         "flow_ml_min": 0.8,
-        "injection_ul": 40.0,
+        "injection_ul": 40,
         "mobile_phase_ph": null,
         "primary_wavelength_nm": 215,
         "column_phase": null,
         "detector": "UV",
-        "primary_organic": "acetonitrile"
+        "primary_organic": "acetonitrile",
+        "mobile_phase": "0,89 г динатрия гидрофосфата дигидрата (5 мМ), 0,70 г натрия дигидрофосфата моногидрата (5 мМ) и 1,13 г тетрагексиламмония гидросульфата (5 мМ) помещают в подходящую колбу, приливают 950 мл воды и 5",
+        "has_buffer": true
       }
     },
     {
@@ -2148,7 +2154,9 @@
         "primary_wavelength_nm": null,
         "column_phase": null,
         "detector": null,
-        "primary_organic": "acetonitrile"
+        "primary_organic": "acetonitrile",
+        "mobile_phase": "А, % 95 95 80 80 20 95 95 1,0 мл/мин; Подвижная фаза В, % 5 5 20 20 80 80 5 5",
+        "has_buffer": false
       }
     },
     {
@@ -3200,7 +3208,7 @@
       "targets": {
         "column_length_mm": 150.0,
         "column_id_mm": 3.9,
-        "particle_um": 25.0,
+        "particle_um": 5.0,
         "column_temp_c": null,
         "flow_ml_min": 1.0,
         "injection_ul": 20,
@@ -3208,7 +3216,9 @@
         "primary_wavelength_nm": 205,
         "column_phase": "C18",
         "detector": "UV",
-        "primary_organic": "acetonitrile"
+        "primary_organic": "acetonitrile",
+        "mobile_phase": "(ПФ): около 2 ,0 г (точная навеска) безводного гидроортофосфата калия (K2HPO4) растворяют 18 в 1000 мл воды очищенной . К 950 мл полученного раствора прибавляют 50 мл ацетонитрила. рН раствора р",
+        "has_buffer": true
       }
     },
     {
@@ -4260,15 +4270,17 @@
       "targets": {
         "column_length_mm": null,
         "column_id_mm": null,
-        "particle_um": 10.5,
+        "particle_um": 10.0,
         "column_temp_c": null,
         "flow_ml_min": 0.6,
-        "injection_ul": 20.0,
+        "injection_ul": 20,
         "mobile_phase_ph": null,
         "primary_wavelength_nm": null,
         "column_phase": null,
         "detector": null,
-        "primary_organic": "acetonitrile"
+        "primary_organic": "acetonitrile",
+        "mobile_phase": "0,005 н раствор серной кислоты- ацетонитрил (85:15) Расход подвижной фазы: 0,6 мл/мин",
+        "has_buffer": false
       }
     },
     {
@@ -5320,7 +5332,7 @@
       "targets": {
         "column_length_mm": null,
         "column_id_mm": null,
-        "particle_um": 7.5,
+        "particle_um": 10.0,
         "column_temp_c": null,
         "flow_ml_min": 1.5,
         "injection_ul": 20,
@@ -5328,7 +5340,9 @@
         "primary_wavelength_nm": 220,
         "column_phase": "C8",
         "detector": "UV",
-        "primary_organic": null
+        "primary_organic": null,
+        "mobile_phase": "0,005 М раствор тетрабутиламмония дигидрофосфата Р рН 7. Перед использованием подвижную фазу фильтруют через мембранный фильтр с диаметром пор 0,45 мкм и дегазируют любым способо м (ультразвуком",
+        "has_buffer": true
       }
     },
     {
@@ -6388,7 +6402,9 @@
         "primary_wavelength_nm": 250,
         "column_phase": "C8",
         "detector": "DAD",
-        "primary_organic": null
+        "primary_organic": null,
+        "mobile_phase": null,
+        "has_buffer": false
       }
     },
     {
@@ -7440,7 +7456,7 @@
       "targets": {
         "column_length_mm": 150.0,
         "column_id_mm": 4.6,
-        "particle_um": 45.0,
+        "particle_um": null,
         "column_temp_c": 40,
         "flow_ml_min": 1.5,
         "injection_ul": 20,
@@ -7448,7 +7464,9 @@
         "primary_wavelength_nm": 264,
         "column_phase": "C18",
         "detector": "UV",
-        "primary_organic": "acetonitrile"
+        "primary_organic": "acetonitrile",
+        "mobile_phase": "(ПФ). К 50 мл подвижной фазы А (см. раздел «Количественное определение») прибавляют 950 мл подвижной фазы Б (см. раздел «Количественное определение») и перемешивают. Срок годности подвижной фазы сос",
+        "has_buffer": false
       }
     },
     {
@@ -8500,15 +8518,17 @@
       "targets": {
         "column_length_mm": 250.0,
         "column_id_mm": 4.6,
-        "particle_um": 25.0,
+        "particle_um": 5.0,
         "column_temp_c": null,
         "flow_ml_min": null,
         "injection_ul": null,
         "mobile_phase_ph": null,
-        "primary_wavelength_nm": 280,
+        "primary_wavelength_nm": 254,
         "column_phase": null,
         "detector": "UV",
-        "primary_organic": "methanol"
+        "primary_organic": "methanol",
+        "mobile_phase": "(ПФ) - смесь метанола и раствора 1,1 г натрия гексан- сульфоната в 700 мл воды (3:7) с рН 3,5 ≤ 0,05 (величина рН регулируется прибавлением 1 М раствора хлористоводородной кислоты); ФСП P N001426/01",
+        "has_buffer": false
       }
     },
     {
@@ -9568,7 +9588,9 @@
         "primary_wavelength_nm": 254,
         "column_phase": null,
         "detector": "UV",
-        "primary_organic": "methanol"
+        "primary_organic": "methanol",
+        "mobile_phase": "хлороформ - метанол, 90:10 (об:об) Хроматографирование: горизонтальное, в камере, насыщенной парами Расстояние перемещения фронта подвижной фазы: 9 см от нижнего края пластинки *Для контроля качест",
+        "has_buffer": false
       }
     },
     {
@@ -10623,12 +10645,14 @@
         "particle_um": 5.0,
         "column_temp_c": null,
         "flow_ml_min": 1.0,
-        "injection_ul": 10.0,
+        "injection_ul": 10,
         "mobile_phase_ph": null,
         "primary_wavelength_nm": 248,
         "column_phase": "C18",
         "detector": "UV",
-        "primary_organic": "methanol"
+        "primary_organic": "methanol",
+        "mobile_phase": null,
+        "has_buffer": false
       }
     },
     {
@@ -11680,7 +11704,7 @@
       "targets": {
         "column_length_mm": null,
         "column_id_mm": null,
-        "particle_um": 45.0,
+        "particle_um": null,
         "column_temp_c": null,
         "flow_ml_min": 1.0,
         "injection_ul": null,
@@ -11688,7 +11712,9 @@
         "primary_wavelength_nm": null,
         "column_phase": null,
         "detector": null,
-        "primary_organic": "acetonitrile"
+        "primary_organic": "acetonitrile",
+        "mobile_phase": "изократическое элюирование; Подвижная фаза А - Подвижная фаза В (65 : 35) (об/об); Подвижная фаза А: 0,01 М буферный раствор рН 2,5; Подвижная фаза В: ацетонитрил Р1. Примечание. Перед использо",
+        "has_buffer": false
       }
     },
     {
@@ -12740,15 +12766,17 @@
       "targets": {
         "column_length_mm": 125.0,
         "column_id_mm": 3.0,
-        "particle_um": 24.0,
+        "particle_um": 3.0,
         "column_temp_c": 40,
         "flow_ml_min": 1.0,
-        "injection_ul": 100,
+        "injection_ul": 25,
         "mobile_phase_ph": 3.5,
         "primary_wavelength_nm": 230,
         "column_phase": "C8",
         "detector": "UV",
-        "primary_organic": "acetonitrile"
+        "primary_organic": "acetonitrile",
+        "mobile_phase": "A/B=20% / 80% А: ацетонитрил В: 20 мМ раствор натрия пентансульфоната с pH 3,5",
+        "has_buffer": false
       }
     },
     {
@@ -13803,12 +13831,14 @@
         "particle_um": 5.0,
         "column_temp_c": null,
         "flow_ml_min": 1.0,
-        "injection_ul": 20.0,
+        "injection_ul": 20,
         "mobile_phase_ph": null,
         "primary_wavelength_nm": 239,
         "column_phase": "C18",
         "detector": "UV",
-        "primary_organic": "acetonitrile"
+        "primary_organic": "acetonitrile",
+        "mobile_phase": "Ацетонитрил Р1/метанол Р2/25 мМ натрий-ацетатный буферный раствор рН 5,2 (7:33:60). Перемешивают по- движную фазу и измеряют рН. рН должен быть 6,0 ± 0,1",
+        "has_buffer": true
       }
     }
   ]

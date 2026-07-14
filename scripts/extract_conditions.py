@@ -173,12 +173,21 @@ def parse_mobile_phase(text: str) -> dict:
     if solvents:
         result["solvents"] = solvents
 
-    # capture the phrase around "подвижная фаза" as a raw description
+    # capture the phrase after "подвижная фаза" up to the next field label
     marker = re.search(r"подвижная\s+фаза", text, re.IGNORECASE)
     if marker:
-        window = text[marker.end(): marker.end() + 120]
-        window = re.sub(r"\s+", " ", window).strip(" :\n")
-        if window:
+        window = text[marker.end(): marker.end() + 200]
+        # stop at the next condition-block field so the recipe stays clean
+        cut = re.search(
+            r"(скорость\s+потока|температур|вводимый\s+объ|время\s+хроматограф|"
+            r"промывочн|раствор\s+для\s+промывки|детектор|\bНД\b\s*[СC]\.)",
+            window,
+            re.IGNORECASE,
+        )
+        if cut:
+            window = window[: cut.start()]
+        window = re.sub(r"\s+", " ", window).strip(" :\n-")
+        if len(window) >= 5:
             result["mobile_phase_raw"] = window
     return result
 

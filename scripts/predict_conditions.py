@@ -24,9 +24,10 @@ LABELS = {
     "detector": "Детектор",
     "primary_wavelength_nm": "Длина волны, нм",
     "primary_organic": "Органический модификатор",
+    "mobile_phase": "Подвижная фаза",
+    "mobile_phase_ph": "pH подвижной фазы",
     "flow_ml_min": "Скорость потока, мл/мин",
     "injection_ul": "Объём ввода, мкл",
-    "mobile_phase_ph": "pH подвижной фазы",
 }
 ORDER = list(LABELS.keys())
 
@@ -60,17 +61,35 @@ def main() -> None:
         return
 
     prediction = result["prediction"]
+    field_source = result.get("field_source", {})
+    analogs = result["analogs"]
+    top = analogs[0] if analogs else None
+
     print(f"SMILES: {smiles}\n")
-    print("Прогноз условий хроматографа:")
+    print("Прогнозируемые условия хроматографирования:")
     for key in ORDER:
         value = prediction.get(key)
-        print(f"  {LABELS[key]:28s}: {value if value is not None else '—'}")
+        origin = field_source.get(key)
+        note = ""
+        if top and origin and origin != (top["inn"] or top["source_file"]):
+            note = f"  (из {origin})"  # back-filled from a further analog
+        print(f"  {LABELS[key]:26s}: {value if value not in (None, '') else '—'}{note}")
 
-    print("\nПо аналогии с (структурное сходство Танимото):")
-    for analog in result["analogs"]:
-        print(f"  {analog['similarity']:.3f}  {analog['inn']}  [{analog['source_file']}]")
+    if prediction.get("has_buffer"):
+        print("  (подвижная фаза содержит буфер)")
+
+    print("\nМетод перенесён с ближайшего структурного аналога:")
+    for i, analog in enumerate(analogs):
+        mark = "→" if i == 0 else " "
+        print(f"  {mark} {analog['similarity']:.3f}  {analog['inn']}  [{analog['source_file']}]")
+
+    if top and top["similarity"] < 0.3:
+        print(
+            "\n⚠ Низкое сходство (<0.30): близкого аналога в базе нет, "
+            "прогноз ненадёжен — нужна ручная разработка метода."
+        )
     print(
-        "\nПрогноз — стартовая точка метода по ближайшим аналогам, "
+        "\nЭто стартовые условия по аналогии с реальным методом из НД, "
         "а не готовая валидированная методика."
     )
 
