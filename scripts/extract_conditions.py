@@ -72,6 +72,48 @@ SOLVENTS = {
     "triethylamine": re.compile(r"триэтиламин|triethylamine", re.IGNORECASE),
 }
 
+# Reagent catalog: canonical Russian name -> (category, regex of RU/EN synonyms).
+# These are the chemicals a chemist must have on hand to run the method — the most
+# actionable prediction. Ordered most-specific first so ion-pair salts and buffer
+# salts are matched before the generic "фосфат"/"ацетат" family words.
+REAGENTS: list[tuple[str, str, "re.Pattern[str]"]] = [
+    # ion-pairing agents
+    ("Натрия пентансульфонат", "ion_pairing", re.compile(r"пентансульфонат|pentanesulfonate", re.I)),
+    ("Натрия гексансульфонат", "ion_pairing", re.compile(r"гексансульфонат|hexanesulfonate", re.I)),
+    ("Натрия гептансульфонат", "ion_pairing", re.compile(r"гептансульфонат|heptanesulfonate", re.I)),
+    ("Натрия октансульфонат", "ion_pairing", re.compile(r"октансульфонат|octanesulfonate", re.I)),
+    ("Натрия додецилсульфат", "ion_pairing", re.compile(r"додецилсульфат|лаурилсульфат|dodecyl sulfate|SDS", re.I)),
+    # buffer / salts
+    ("Калия дигидрофосфат", "buffer_salt", re.compile(r"кали[йя]\s+дигидро(?:орто)?фосфат|дигидрофосфат\s+кали|однозамещ\w*\s+фосфорнокисл\w*\s+кали|KH2PO4", re.I)),
+    ("Натрия дигидрофосфат", "buffer_salt", re.compile(r"натри[йя]\s+дигидро(?:орто)?фосфат|дигидрофосфат\s+натри|NaH2PO4", re.I)),
+    ("Натрия гидрофосфат", "buffer_salt", re.compile(r"натри[йя]\s+гидро(?:орто)?фосфат|гидрофосфат\s+натри|Na2HPO4", re.I)),
+    ("Калия гидрофосфат", "buffer_salt", re.compile(r"кали[йя]\s+гидро(?:орто)?фосфат|K2HPO4", re.I)),
+    ("Аммония ацетат", "buffer_salt", re.compile(r"аммони[йя]\s+ацетат|ацетат\s+аммони|ammonium acetate", re.I)),
+    ("Аммония формиат", "buffer_salt", re.compile(r"аммони[йя]\s+формиат|формиат\s+аммони|ammonium formate", re.I)),
+    ("Аммония дигидрофосфат", "buffer_salt", re.compile(r"аммони[йя]\s+дигидрофосфат|ammonium.*phosphate", re.I)),
+    ("Натрия перхлорат", "buffer_salt", re.compile(r"перхлорат\s+натри|натри[йя]\s+перхлорат|perchlorate", re.I)),
+    # acids
+    ("Ортофосфорная кислота", "acid", re.compile(r"(?:орто)?фосфорн\w*\s+кислот|phosphoric acid", re.I)),
+    ("Трифторуксусная кислота", "acid", re.compile(r"трифторуксусн\w*\s+кислот|\bТФУ\b|trifluoroacetic|TFA", re.I)),
+    ("Хлористоводородная кислота", "acid", re.compile(r"хлористоводородн\w*\s+кислот|солян\w*\s+кислот|hydrochloric", re.I)),
+    ("Уксусная кислота", "acid", re.compile(r"уксусн\w*\s+кислот|acetic acid", re.I)),
+    ("Муравьиная кислота", "acid", re.compile(r"муравьин\w*\s+кислот|formic acid", re.I)),
+    ("Серная кислота", "acid", re.compile(r"серн\w*\s+кислот|sulfuric acid", re.I)),
+    # bases / modifiers
+    ("Триэтиламин", "modifier", re.compile(r"триэтиламин|triethylamine|\bТЭА\b", re.I)),
+    ("Диэтиламин", "modifier", re.compile(r"диэтиламин|diethylamine", re.I)),
+    ("Натрия гидроксид", "base", re.compile(r"натри[йя]\s+гидроксид|гидроксид\s+натри|едк\w*\s+натр|NaOH", re.I)),
+    ("Калия гидроксид", "base", re.compile(r"кали[йя]\s+гидроксид|гидроксид\s+кали|KOH", re.I)),
+    ("Аммиак", "base", re.compile(r"аммиак\w*|ammonia|аммони[йя]\s+гидроксид", re.I)),
+    # organic solvents
+    ("Ацетонитрил", "organic_solvent", re.compile(r"ацетонитрил|acetonitrile", re.I)),
+    ("Метанол", "organic_solvent", re.compile(r"метанол|methanol", re.I)),
+    ("Тетрагидрофуран", "organic_solvent", re.compile(r"тетрагидрофуран|\bТГФ\b|tetrahydrofuran|THF", re.I)),
+    ("Изопропанол", "organic_solvent", re.compile(r"изопропанол|пропанол-2|2-пропанол|изопропилов\w*\s+спирт|isopropanol", re.I)),
+    ("Бутанол", "organic_solvent", re.compile(r"бутанол|butanol", re.I)),
+    ("Этанол", "organic_solvent", re.compile(r"этанол|ethanol", re.I)),
+]
+
 # a chunk is treated as a chromatography-conditions block if it looks like one
 BLOCK_SIGNAL_RE = re.compile(
     r"хроматографическ\w*\s+услови|подвижная\s+фаза|скорость\s+потока",
@@ -104,6 +146,8 @@ class Conditions:
     flow_ml_min: float | None = None
     injection_ul: int | None = None
     runtime_min: int | None = None
+
+    reagents: list[dict] = field(default_factory=list)
 
     def completeness(self) -> int:
         core = [
@@ -227,6 +271,17 @@ def parse_operating(text: str) -> dict:
     return result
 
 
+def parse_reagents(text: str) -> list[dict]:
+    """Detect named reagents (solvents, buffer salts, acids, ion-pair agents)."""
+    found: list[dict] = []
+    seen: set[str] = set()
+    for name, category, pattern in REAGENTS:
+        if pattern.search(text) and name not in seen:
+            seen.add(name)
+            found.append({"name": name, "category": category})
+    return found
+
+
 def extract_from_chunk(chunk: dict) -> Conditions | None:
     text = chunk["text"]
     if not BLOCK_SIGNAL_RE.search(text):
@@ -246,6 +301,8 @@ def extract_from_chunk(chunk: dict) -> Conditions | None:
     ):
         for key, value in parsed.items():
             setattr(conditions, key, value)
+
+    conditions.reagents = parse_reagents(text)
 
     # require at least a real column or a mobile phase to keep the record
     if conditions.completeness() < 2:

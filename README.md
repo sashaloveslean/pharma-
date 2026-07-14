@@ -104,9 +104,14 @@ python3 scripts/predict_conditions.py --smiles "CC(C)Cc1ccc(C(C)C(=O)O)cc1"
 python3 scripts/predict_conditions.py --inn ibuprofen
 ```
 
-Predicted fields: stationary phase, column length / ID / particle size, column
-temperature, detector + wavelength, organic modifier, flow rate, injection
-volume, mobile-phase pH.
+Predicted output, most actionable first:
+
+- **Reagents** — the chemicals the method needs, grouped by role: organic
+  solvents, buffer salts, acids / bases for pH, ion-pairing agents. This is the
+  primary output — the reagent shopping list for the method.
+- **Conditions** — stationary phase, column length / ID / particle size, column
+  temperature, detector + wavelength, organic modifier, mobile phase + pH, flow
+  rate, injection volume.
 
 ### How it works
 

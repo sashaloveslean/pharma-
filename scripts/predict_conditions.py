@@ -31,6 +31,34 @@ LABELS = {
 }
 ORDER = list(LABELS.keys())
 
+REAGENT_CATEGORIES = {
+    "organic_solvent": "Органические растворители",
+    "buffer_salt": "Соли буфера",
+    "acid": "Кислоты (регулировка pH)",
+    "base": "Основания (регулировка pH)",
+    "modifier": "Модификаторы",
+    "ion_pairing": "Ион-парные агенты",
+}
+
+
+def print_reagents(reagents, source, top) -> None:
+    print("Прогнозируемые реагенты:")
+    if not reagents:
+        print("  — (в методе ближайшего аналога реагенты не распознаны)")
+        return
+    note = ""
+    if top and source and source != (top["inn"] or top["source_file"]):
+        note = f"  (из {source})"
+    by_category: dict[str, list[str]] = {}
+    for reagent in reagents:
+        by_category.setdefault(reagent["category"], []).append(reagent["name"])
+    for category, title in REAGENT_CATEGORIES.items():
+        names = by_category.get(category)
+        if names:
+            print(f"  {title}: {', '.join(names)}")
+    if note:
+        print(f" {note}")
+
 
 def resolve_smiles(args, molecule_map_path: Path) -> str:
     if args.smiles:
@@ -66,7 +94,10 @@ def main() -> None:
     top = analogs[0] if analogs else None
 
     print(f"SMILES: {smiles}\n")
-    print("Прогнозируемые условия хроматографирования:")
+
+    print_reagents(prediction.get("reagents"), field_source.get("reagents"), top)
+
+    print("\nПрогнозируемые условия хроматографирования:")
     for key in ORDER:
         value = prediction.get(key)
         origin = field_source.get(key)
