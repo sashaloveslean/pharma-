@@ -132,13 +132,14 @@ method with a mobile phase from another.
 - **Features (X):** RDKit physicochemical descriptors + a Morgan fingerprint,
   computed from each molecule's SMILES.
 - **Model:** with only a few dozen labelled molecules, a trained regressor would
-  overfit, so the baseline is *nearest-analog transfer* — it returns the complete,
-  coherent method of the structurally closest known molecule (Tanimoto similarity
-  of Morgan fingerprints). A field the closest analog lacks is back-filled only
-  from other analogs above a similarity threshold, so a molecule-specific recipe
-  is never copied from a distant match; otherwise the field is left blank. The
-  class in `scripts/model.py` is model-shaped (`fit`/`predict`/`save`/`load`) so a
-  learned estimator can replace it once more labelled data exists.
+  overfit, so the baseline is *nearest-analog transfer* — it returns the complete
+  method of the structurally closest known molecules (Tanimoto similarity of
+  Morgan fingerprints). Every field is filled from the closest analog that has it,
+  so even a brand-new molecule always gets concrete starting conditions.
+  Confidence is reported separately: the top-analog similarity (with a warning
+  below 0.30) and the donor analog shown per field. The class in
+  `scripts/model.py` is model-shaped (`fit`/`predict`/`save`/`load`) so a learned
+  estimator can replace it once more labelled data exists.
 
 ### To improve accuracy
 

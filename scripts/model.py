@@ -80,27 +80,30 @@ class NearestAnalogPredictor:
         neighbors = self._neighbors(fingerprint, exclude_source=exclude_source)
         all_fields = self.numeric_targets + self.categorical_targets + self.extra_targets
 
+        # A complete method is always returned: each field is taken from the
+        # closest analog that has it, so even a novel molecule gets concrete
+        # starting conditions. Confidence is conveyed separately by the top
+        # similarity and by field_confidence (the donor analog's similarity).
         prediction: dict = {}
         field_source: dict = {}
+        field_confidence: dict = {}
         for field in all_fields:
-            for position, analog in enumerate(neighbors):  # similarity-sorted
-                # the closest analog always donates what it has; further analogs
-                # only back-fill missing fields if they are similar enough, so a
-                # molecule-specific recipe is never copied from a distant match
-                if position > 0 and analog.similarity < self.min_backfill_sim:
-                    break
+            for analog in neighbors:  # similarity-sorted, closest first
                 value = analog.targets.get(field)
                 if value not in (None, "", []):
                     prediction[field] = value
                     field_source[field] = analog.inn or analog.source_file
+                    field_confidence[field] = round(analog.similarity, 3)
                     break
             else:
                 prediction[field] = None
                 field_source[field] = None
+                field_confidence[field] = None
 
         return {
             "prediction": prediction,
             "field_source": field_source,
+            "field_confidence": field_confidence,
             "analogs": [
                 {
                     "inn": a.inn,
