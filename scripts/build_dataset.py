@@ -21,7 +21,7 @@ import statistics
 from collections import Counter
 from pathlib import Path
 
-from features import DESCRIPTOR_NAMES, compute_descriptors, morgan_fingerprint
+from features import DESCRIPTOR_NAMES, compute_descriptors, merge_external_descriptors, morgan_fingerprint
 
 
 # Target fields the model will learn to predict.
@@ -162,12 +162,19 @@ def load_molecule_map(path: Path) -> dict[str, dict]:
     return mapping
 
 
+def load_compound_properties(path: Path) -> dict[str, dict]:
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--conditions", default="data/processed/chromatography_conditions.jsonl")
     parser.add_argument("--molecule-map", default="data/molecule_map.csv")
     parser.add_argument("--labels-out", default="data/processed/labels.csv")
     parser.add_argument("--dataset-out", default="data/processed/dataset.json")
+    parser.add_argument("--compound-properties", default="data/processed/compound_properties.json")
     args = parser.parse_args()
 
     # group fragment records by document
@@ -178,6 +185,7 @@ def main() -> None:
             by_source.setdefault(record["source"], []).append(record)
 
     molecule_map = load_molecule_map(Path(args.molecule_map))
+    compound_properties = load_compound_properties(Path(args.compound_properties))
 
     labels_rows: list[dict] = []
     dataset_rows: list[dict] = []
@@ -199,7 +207,11 @@ def main() -> None:
         if not smiles:
             continue
         try:
-            descriptors = compute_descriptors(smiles)
+            external_properties = compound_properties.get((mapping.get("inn") or "").strip().lower())
+            descriptors = merge_external_descriptors(
+                compute_descriptors(smiles),
+                external_properties,
+            )
             fingerprint = morgan_fingerprint(smiles)
         except (ValueError, RuntimeError) as exc:
             print(f"  skip {source}: {exc}")
@@ -211,6 +223,7 @@ def main() -> None:
                 "inn": mapping.get("inn", ""),
                 "smiles": smiles,
                 "descriptors": descriptors,
+                "external_properties": external_properties or {},
                 "fingerprint": fingerprint,
                 "targets": {
                     key: consolidated.get(key)

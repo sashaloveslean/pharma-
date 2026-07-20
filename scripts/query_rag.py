@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import textwrap
@@ -121,9 +122,12 @@ def answer_question(question: str, rows: list[dict], model: str) -> str:
             {
                 "role": "system",
                 "content": (
-                    "Answer in Russian using only the provided context. "
-                    "If the context is insufficient, say that the data is insufficient. "
-                    "Cite sources as [1], [2], etc."
+                    "Answer in Russian. Use the provided context as experimental analogs "
+                    "for predictive chromatography and dissolution recommendations. "
+                    "Clearly separate source facts from predicted recommendations for the "
+                    "new molecule. If the context does not directly contain the requested "
+                    "molecule, say that the recommendation is an extrapolation from analogs, "
+                    "not a confirmed method. Cite source facts as [1], [2], etc."
                 ),
             },
             {
@@ -154,7 +158,7 @@ def print_rows(rows: list[dict], max_chars: int) -> None:
         print(f"source: {metadata.get('source')}")
         print(f"pages: {page_label(metadata)}")
         print(f"section: {metadata.get('section')}")
-        print(f"terms: {', '.join(metadata.get('terms') or [])}")
+        print(f"terms: {format_terms(metadata.get('terms'))}")
         print(make_snippet(row["text"], width=max_chars))
 
 
@@ -187,6 +191,22 @@ def make_snippet(text: str, width: int) -> str:
     if start + width < len(flat_text):
         snippet = snippet + "..."
     return snippet
+
+
+def format_terms(terms: object) -> str:
+    if not terms:
+        return ""
+    if isinstance(terms, str):
+        try:
+            parsed = json.loads(terms)
+        except json.JSONDecodeError:
+            return terms
+        if isinstance(parsed, list):
+            return ", ".join(str(term) for term in parsed)
+        return str(parsed)
+    if isinstance(terms, list):
+        return ", ".join(str(term) for term in terms)
+    return str(terms)
 
 
 def main() -> None:

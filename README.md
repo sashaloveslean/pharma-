@@ -89,7 +89,8 @@ Pipeline:
 ```text
 dissolution_chunks.jsonl
   -> scripts/extract_conditions.py   structured condition blocks (regex, no API key)
-  -> scripts/build_dataset.py        one labelled row per molecule + RDKit features
+  -> scripts/compound_enrichment.py  optional PubChem/ChEMBL properties cache
+  -> scripts/build_dataset.py        one labelled row per molecule + RDKit/external features
   -> scripts/train_model.py          nearest-analog model + leave-one-out report
   -> scripts/predict_conditions.py   conditions for a new SMILES / INN
 ```
@@ -98,11 +99,34 @@ Run it:
 
 ```bash
 python3 scripts/extract_conditions.py     # -> data/processed/chromatography_conditions.jsonl
+python3 scripts/compound_enrichment.py --name ibuprofen
 python3 scripts/build_dataset.py          # -> data/processed/labels.csv + dataset.json
 python3 scripts/train_model.py            # -> models/nearest_analog.json (+ LOO metrics)
 python3 scripts/predict_conditions.py --smiles "CC(C)Cc1ccc(C(C)C(=O)O)cc1"
 python3 scripts/predict_conditions.py --inn ibuprofen
+python3 scripts/predict_conditions.py --name ketoprofen
 ```
+
+If `--name` / `--inn` is not found in `data/molecule_map.csv`, the script tries
+PubChem and uses the returned SMILES automatically. To only use the local map:
+
+```bash
+python3 scripts/predict_conditions.py --name ketoprofen --no-lookup-pubchem
+```
+
+Optional external enrichment:
+
+```bash
+python3 scripts/compound_enrichment.py --name celecoxib
+python3 scripts/compound_enrichment.py          # enrich every mapped molecule
+python3 scripts/predict_conditions.py --name celecoxib
+```
+
+This writes `data/processed/compound_properties.json` with PubChem / ChEMBL
+properties, source names and retrieval dates. Use the all-molecule command only
+when it is acceptable to send the mapped INN names to external PubChem/ChEMBL
+services. The predictor also works without this cache; it falls back to local
+RDKit descriptors.
 
 Predicted output, most actionable first:
 
@@ -118,9 +142,9 @@ Predicted output, most actionable first:
   volume.
 
 Because prediction is *transfer of one real method* (not per-field regression),
-the reagents, the mobile-phase ratio, and the conditions always come from the
-same НД and stay mutually consistent — the model cannot mix a column from one
-method with a mobile phase from another.
+the reagents, the mobile-phase ratio, and the conditions come from the same НД
+and stay mutually consistent. Missing fields stay missing and are reported
+explicitly instead of being borrowed from unrelated methods.
 
 ### How it works
 
@@ -130,16 +154,19 @@ method with a mobile phase from another.
   and lost the mobile-phase recipe) and back-fills any missing field from the
   document's other blocks.
 - **Features (X):** RDKit physicochemical descriptors + a Morgan fingerprint,
-  computed from each molecule's SMILES.
+  computed from each molecule's SMILES. If available, PubChem and ChEMBL
+  properties are added as a separate external profile with provenance.
 - **Model:** with only a few dozen labelled molecules, a trained regressor would
-  overfit, so the baseline is *nearest-analog transfer* — it returns the complete
-  method of the structurally closest known molecules (Tanimoto similarity of
-  Morgan fingerprints). Every field is filled from the closest analog that has it,
-  so even a brand-new molecule always gets concrete starting conditions.
-  Confidence is reported separately: the top-analog similarity (with a warning
-  below 0.30) and the donor analog shown per field. The class in
-  `scripts/model.py` is model-shaped (`fit`/`predict`/`save`/`load`) so a learned
-  estimator can replace it once more labelled data exists.
+  overfit, so the baseline is *nearest-analog transfer* — it returns one coherent
+  method from the closest known molecule. Analog similarity combines Morgan
+  fingerprint similarity with a descriptor correction for chromatographically
+  relevant properties such as LogP, TPSA, MW, H-bonding and aromaticity, plus a
+  small ionization/scaffold compatibility layer. The model does not fill missing
+  parameters from other molecules because that creates non-physical "chimera"
+  methods. It reports missing fields, confidence components and a screening
+  range around the transferred method. The class in `scripts/model.py` is
+  model-shaped (`fit`/`predict`/`save`/`load`) so a learned estimator can replace
+  it once more labelled data exists.
 
 ### To improve accuracy
 

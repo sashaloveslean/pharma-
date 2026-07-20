@@ -21,7 +21,11 @@ def leave_one_out(model: NearestAnalogPredictor, rows: list[dict]) -> dict:
 
     for row in rows:
         result = model.predict_from_fingerprint(
-            row["fingerprint"], exclude_source=row["source_file"]
+            row["fingerprint"],
+            descriptors=row.get("descriptors"),
+            smiles=row.get("smiles"),
+            external_properties=row.get("external_properties"),
+            exclude_source=row["source_file"],
         )
         predicted = result["prediction"]
         actual = row["targets"]
