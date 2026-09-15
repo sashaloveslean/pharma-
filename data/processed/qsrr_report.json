@@ -1,0 +1,18 @@
+{
+  "candidate_observations": 63,
+  "curated_observations": 0,
+  "provisional_rows": 0,
+  "training_ready_and_approved": 0,
+  "unique_molecules": 21,
+  "issue_counts": {
+    "missing_column": 26,
+    "missing_flow": 22,
+    "missing_t0": 32,
+    "missing_organic_percent": 35,
+    "missing_buffer_pH": 18,
+    "missing_exact_tR": 7,
+    "estimated_t0_not_measured": 30,
+    "missing_modifier": 20
+  },
+  "warning": "Do not train QSRR until rows are reviewed and include measured t0 and tR."
+}

@@ -29,7 +29,8 @@ PHASE_RE = re.compile(
 
 # 150 × 4,6 мм  /  250x4.6 mm  /  100 х 3,0 мм
 DIMENSIONS_RE = re.compile(
-    r"(\d{2,3})\s*[×xхX*]\s*(\d{1,2}[.,]?\d?)\s*мм",
+    r"(\d{2,3})\s*(см|мм)?\s*[×xхX*]\s*(\d{1,2}[.,]?\d?)\s*мм",
+    re.IGNORECASE,
 )
 
 PARTICLE_RE = re.compile(r"(\d[.,]?\d?)\s*мкм")
@@ -55,7 +56,7 @@ DETECTOR_RI_RE = re.compile(r"рефрактометр|refractive", re.IGNORECAS
 
 # --- mobile phase -------------------------------------------------------------
 
-PH_RE = re.compile(r"p\s?[HН]\s*[:=]?\s*(\d{1,2}[.,]\d|\d{1,2})")
+PH_RE = re.compile(r"p\s?[HН]\s*[:=]?\s*(\d{1,2}(?:[.,]\d{1,2})?)")
 FLOW_RE = re.compile(r"(\d{1,2}[.,]\d{1,2})\s*мл\s*/?\s*мин")
 INJECTION_RE = re.compile(r"(\d{1,3})\s*мкл")
 TEMPERATURE_RE = re.compile(r"(\d{2})\s*°?\s*[CС]\b")
@@ -172,13 +173,16 @@ def parse_column(text: str) -> dict:
         result["column_phase"] = re.sub(r"\s+", "", phase.group(1)).upper()
     dims = DIMENSIONS_RE.search(text)
     if dims:
-        result["column_length_mm"] = _num(dims.group(1))
-        result["column_id_mm"] = _num(dims.group(2))
-    particle = PARTICLE_RE.search(text)
-    if particle:
+        length = _num(dims.group(1))
+        if (dims.group(2) or "").lower() == "см":
+            length *= 10
+        result["column_length_mm"] = length
+        result["column_id_mm"] = _num(dims.group(3))
+    for particle in PARTICLE_RE.finditer(text):
         value = _num(particle.group(1))
         if 1.0 <= value <= 20.0:  # HPLC particle sizes; larger = pore/filter noise
             result["particle_um"] = value
+            break
     pore = PORE_RE.search(text)
     if pore:
         result["pore_a"] = int(pore.group(1))
@@ -276,7 +280,20 @@ def parse_operating(text: str) -> dict:
 
 
 # "(85:15)"  "(69: 18:8: 5)"  "(50 : 45 : 5)"
-RATIO_RE = re.compile(r"\(\s*(\d{1,3})\s*(?::\s*\d{1,3}\s*){1,4}\)")
+RATIO_RE = re.compile(
+    r"(?:\(\s*|соотношении\s*\(?\s*)(\d{1,3})\s*(?::\s*\d{1,3}\s*){1,4}\)?",
+    re.IGNORECASE,
+)
+PERCENT_COMPOSITION_RE = re.compile(
+    r"(\d{1,3})\s*%\s*(?:раствора?\s+)?([^,.;]{3,60}?)\s+и\s+"
+    r"(\d{1,3})\s*%\s*([^,.;\n]{3,60})",
+    re.IGNORECASE,
+)
+NAMED_RATIO_RE = re.compile(
+    r"смесь\s+([^.;\n]{3,80}?)\s+и\s+([^.;\n]{3,60}?)\s+"
+    r"в\s+соотношении\s*\(?\s*(\d{1,3}\s*(?::\s*\d{1,3}\s*){1,4})\s*\)?",
+    re.IGNORECASE,
+)
 COMPONENT_SPLIT_RE = re.compile(r"\s*[:/]\s*|\s+[-–—]\s+|(?<=[а-яa-z])-(?=[а-яa-z])")
 
 
@@ -291,8 +308,6 @@ COMPONENT_STOPWORDS = re.compile(
 def _canonical_component(raw: str) -> str | None:
     token = re.sub(r"\s+", " ", raw).strip(" ,;.:-–—()")
     if not token or len(token) < 3:
-        return None
-    if COMPONENT_STOPWORDS.search(token) or len(token.split()) > 4:
         return None
     lower = token.lower()
     named = {
@@ -312,6 +327,8 @@ def _canonical_component(raw: str) -> str | None:
     for canonical, pattern in named.items():
         if re.search(pattern, lower):
             return canonical
+    if COMPONENT_STOPWORDS.search(token) or len(token.split()) > 4:
+        return None
     # keep an unrecognised but plausible solvent word as-is (short, single phrase)
     if len(token) <= 40 and re.search(r"[а-яёa-z]", lower):
         return token
@@ -323,7 +340,38 @@ def parse_mobile_phase_composition(text: str) -> dict | None:
     'вода - ацетонитрил (85:15)' -> ratio '85:15', components вода/ацетонитрил."""
     match = RATIO_RE.search(text)
     if not match:
-        return None
+        percent_match = PERCENT_COMPOSITION_RE.search(text)
+        if not percent_match:
+            return None
+        numbers = [int(percent_match.group(1)), int(percent_match.group(3))]
+        components = [
+            _canonical_component(percent_match.group(2)),
+            _canonical_component(percent_match.group(4)),
+        ]
+        if any(component is None for component in components):
+            return {"ratio": ":".join(map(str, numbers)), "components": []}
+        return {
+            "ratio": ":".join(map(str, numbers)),
+            "components": [
+                {"solution": name, "part": part}
+                for name, part in zip(components, numbers)
+            ],
+        }
+    named_match = NAMED_RATIO_RE.search(text)
+    if named_match:
+        ratio_numbers = [int(n) for n in re.findall(r"\d{1,3}", named_match.group(3))]
+        components = [
+            _canonical_component(named_match.group(1)),
+            _canonical_component(named_match.group(2)),
+        ]
+        if len(ratio_numbers) == 2 and all(components):
+            return {
+                "ratio": ":".join(map(str, ratio_numbers)),
+                "components": [
+                    {"solution": name, "part": part}
+                    for name, part in zip(components, ratio_numbers)
+                ],
+            }
     ratio_numbers = [int(n) for n in re.findall(r"\d{1,3}", match.group(0))]
 
     prefix = text[: match.start()].rstrip(" :")
@@ -430,7 +478,10 @@ def extract_from_chunk(chunk: dict) -> Conditions | None:
     conditions.gradient_steps = elution.get("gradient_steps", [])
 
     # require at least a real column or a mobile phase to keep the record
-    if conditions.completeness() < 2:
+    # A standalone recipe is valuable and can be joined with the conditions
+    # block from another overlapping chunk of the same document.
+    has_mobile_recipe = bool(conditions.mobile_phase_raw and conditions.mobile_phase_ratio)
+    if conditions.completeness() < 2 and not has_mobile_recipe:
         return None
     return conditions
 

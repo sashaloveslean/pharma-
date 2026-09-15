@@ -9,8 +9,10 @@ import json
 import os
 import re
 import shutil
+import signal
 import subprocess
 import tempfile
+from contextlib import contextmanager
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -35,6 +37,14 @@ DISSOLUTION_TERMS = [
     "solvent",
     "diluent",
     "mobile phase",
+    "условия хроматографирования",
+    "хроматографические условия",
+    "скорость потока",
+    "объем вводимой пробы",
+    "объём вводимой пробы",
+    "температура колонки",
+    "column temperature",
+    "flow rate",
     "sample solution",
     "standard solution",
     "test solution",
@@ -56,6 +66,29 @@ class Paragraph:
     section: str | None = None
 
 
+class PageTextTimeout(RuntimeError):
+    pass
+
+
+@contextmanager
+def page_timeout(seconds: int):
+    def _handle_timeout(signum, frame):
+        raise PageTextTimeout(f"page text extraction exceeded {seconds}s")
+
+    if not hasattr(signal, "SIGALRM"):
+        yield
+        return
+
+    previous_handler = signal.getsignal(signal.SIGALRM)
+    previous_timer = signal.setitimer(signal.ITIMER_REAL, seconds)
+    signal.signal(signal.SIGALRM, _handle_timeout)
+    try:
+        yield
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, previous_timer[0], previous_timer[1])
+        signal.signal(signal.SIGALRM, previous_handler)
+
+
 def normalize_text(text: str) -> str:
     text = text.replace("\xa0", " ")
     text = re.sub(r"[ \t]+", " ", text)
@@ -72,7 +105,12 @@ def read_pdf(path: Path) -> list[Paragraph]:
     paragraphs: list[Paragraph] = []
     reader = PdfReader(str(path))
     for page_index, page in enumerate(reader.pages, start=1):
-        text = normalize_text(page.extract_text() or "")
+        try:
+            with page_timeout(10):
+                text = normalize_text(page.extract_text() or "")
+        except (PageTextTimeout, Exception) as exc:
+            print(f"Warning: skipped {path} page {page_index}: {exc}")
+            continue
         for block in split_paragraphs(text):
             paragraphs.append(
                 Paragraph(
@@ -86,7 +124,12 @@ def read_pdf(path: Path) -> list[Paragraph]:
     return paragraphs
 
 
-def read_pdf_ocr(path: Path, dpi: int = 220, engine: str = "auto") -> list[Paragraph]:
+def read_pdf_ocr(
+    path: Path,
+    dpi: int = 220,
+    engine: str = "auto",
+    page_numbers: set[int] | None = None,
+) -> list[Paragraph]:
     try:
         import fitz
         from PIL import Image
@@ -103,9 +146,15 @@ def read_pdf_ocr(path: Path, dpi: int = 220, engine: str = "auto") -> list[Parag
     ocr_engine = resolve_ocr_engine(engine)
 
     for page_index, page in enumerate(document, start=1):
+        if page_numbers is not None and page_index not in page_numbers:
+            continue
         pixmap = page.get_pixmap(matrix=matrix, alpha=False)
         image = Image.frombytes("RGB", (pixmap.width, pixmap.height), pixmap.samples)
-        text = normalize_text(ocr_image(image, engine=ocr_engine))
+        try:
+            text = normalize_text(ocr_image(image, engine=ocr_engine))
+        except (PageTextTimeout, Exception) as exc:
+            print(f"Warning: skipped OCR {path} page {page_index}: {exc}", flush=True)
+            continue
         for block in split_paragraphs(text):
             paragraphs.append(
                 Paragraph(
@@ -131,12 +180,16 @@ def ocr_image(image: "Image.Image", engine: str) -> str:
     if engine == "tesseract":
         with tempfile.NamedTemporaryFile(suffix=".png") as image_file:
             image.save(image_file.name)
-            result = subprocess.run(
-                ["tesseract", image_file.name, "stdout", "-l", "rus+eng", "--psm", "6"],
-                check=False,
-                text=True,
-                capture_output=True,
-            )
+            try:
+                result = subprocess.run(
+                    ["tesseract", image_file.name, "stdout", "-l", "rus+eng", "--psm", "6"],
+                    check=False,
+                    text=True,
+                    capture_output=True,
+                    timeout=30,
+                )
+            except subprocess.TimeoutExpired as exc:
+                raise PageTextTimeout("OCR exceeded 30s") from exc
         if result.returncode != 0:
             raise RuntimeError(result.stderr.strip() or "Tesseract OCR failed")
         return result.stdout
@@ -194,8 +247,30 @@ def read_document(
     suffix = path.suffix.lower()
     if suffix == ".pdf":
         paragraphs = read_pdf(path)
-        if ocr and sum(len(paragraph.text) for paragraph in paragraphs) < 200:
-            return read_pdf_ocr(path, dpi=ocr_dpi, engine=ocr_engine)
+        if ocr:
+            try:
+                import fitz
+            except ImportError as exc:
+                raise RuntimeError("Install pymupdf for per-page OCR fallback") from exc
+            with fitz.open(path) as document:
+                all_pages = set(range(1, document.page_count + 1))
+            text_by_page: dict[int, int] = {}
+            for paragraph in paragraphs:
+                if paragraph.page is not None:
+                    text_by_page[paragraph.page] = text_by_page.get(paragraph.page, 0) + len(paragraph.text)
+            sparse_pages = {page for page in all_pages if text_by_page.get(page, 0) < 80}
+            if sparse_pages:
+                ocr_paragraphs = read_pdf_ocr(
+                    path,
+                    dpi=ocr_dpi,
+                    engine=ocr_engine,
+                    page_numbers=sparse_pages,
+                )
+                # Replace sparse text-layer output with OCR for those pages.
+                paragraphs = [p for p in paragraphs if p.page not in sparse_pages] + ocr_paragraphs
+                paragraphs.sort(key=lambda p: (p.page or 0, p.index))
+                for index, paragraph in enumerate(paragraphs):
+                    paragraph.index = index
         return paragraphs
     if suffix == ".docx":
         return read_docx(path)
@@ -305,11 +380,25 @@ def iter_input_files(input_path: Path) -> Iterable[Path]:
         yield from sorted(input_path.rglob(suffix))
 
 
-def save_jsonl(chunks: list[dict], output_path: Path) -> None:
+def save_jsonl(
+    chunks: list[dict],
+    output_path: Path,
+    replace_sources: set[str] | None = None,
+) -> int:
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    combined = chunks
+    if replace_sources is not None and output_path.exists():
+        retained = []
+        with output_path.open(encoding="utf-8") as existing:
+            for line in existing:
+                row = json.loads(line)
+                if row.get("metadata", {}).get("source") not in replace_sources:
+                    retained.append(row)
+        combined = retained + chunks
     with output_path.open("w", encoding="utf-8") as file:
-        for chunk in chunks:
+        for chunk in combined:
             file.write(json.dumps(chunk, ensure_ascii=False) + "\n")
+    return len(combined)
 
 
 def embed_chroma(chunks: list[dict], persist_dir: Path, collection_name: str, model: str) -> None:
@@ -348,6 +437,11 @@ def main() -> None:
     parser.add_argument("--ocr", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--ocr-dpi", type=int, default=220)
     parser.add_argument("--ocr-engine", choices=["auto", "tesseract", "ocrmac"], default="auto")
+    parser.add_argument(
+        "--update-existing",
+        action="store_true",
+        help="Replace chunks only for input files while retaining other sources in output",
+    )
     parser.add_argument("--embed", action="store_true", help="Write embeddings into local Chroma")
     parser.add_argument("--persist-dir", default="vector_store")
     parser.add_argument("--collection", default="molecule_dissolution")
@@ -361,6 +455,7 @@ def main() -> None:
 
     all_chunks: list[dict] = []
     for path in files:
+        print(f"Reading {path}", flush=True)
         paragraphs = annotate_sections(
             read_document(
                 path,
@@ -372,8 +467,12 @@ def main() -> None:
         relevant = select_relevant(paragraphs, context=args.context)
         all_chunks.extend(merge_into_chunks(relevant, args.max_chars, args.overlap_chars))
 
-    save_jsonl(all_chunks, Path(args.output))
-    print(f"Saved {len(all_chunks)} chunks to {args.output}")
+    total = save_jsonl(
+        all_chunks,
+        Path(args.output),
+        replace_sources={str(path) for path in files} if args.update_existing else None,
+    )
+    print(f"Saved {total} chunks to {args.output} ({len(all_chunks)} from current input)")
 
     if args.embed:
         embed_chroma(

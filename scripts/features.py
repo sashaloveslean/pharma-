@@ -10,6 +10,7 @@ These are the model inputs (X). The chromatography conditions are the targets (y
 
 from __future__ import annotations
 
+from functools import lru_cache
 from typing import Sequence
 
 # Physicochemical descriptors most relevant to reversed-phase HPLC retention:
@@ -31,6 +32,14 @@ DESCRIPTOR_NAMES: tuple[str, ...] = (
     "LabuteASA",
     "MolMR",
     "FormalCharge",
+    "CarboxylicAcidCount",
+    "AmineCount",
+    "AmideCount",
+    "PhenolCount",
+    "SulfonamideCount",
+    "PhosphateCount",
+    "HeteroAromaticCount",
+    "HalogenCount",
     "PubChemMolWt",
     "PubChemXLogP",
     "PubChemTPSA",
@@ -43,7 +52,20 @@ DESCRIPTOR_NAMES: tuple[str, ...] = (
     "ChEMBLHDonors",
     "ChEMBLHAcceptors",
     "ChEMBLRotatableBonds",
+    "ChEMBLAcidicPka",
+    "ChEMBLBasicPka",
 )
+
+FUNCTIONAL_GROUP_SMARTS: dict[str, str] = {
+    "CarboxylicAcidCount": "C(=O)[O;H1,-1]",
+    "AmineCount": "[NX3;H2,H1,H0;!$(NC=O);!$(NS=O);!$(N[a])]",
+    "AmideCount": "[NX3][CX3](=[OX1])",
+    "PhenolCount": "[OX2H][c]",
+    "SulfonamideCount": "[NX3][SX4](=[OX1])(=[OX1])",
+    "PhosphateCount": "[PX4](=[OX1])([OX2])[OX2]",
+    "HeteroAromaticCount": "[n,o,s;R]",
+    "HalogenCount": "[F,Cl,Br,I]",
+}
 
 FINGERPRINT_BITS = 1024
 FINGERPRINT_RADIUS = 2
@@ -69,10 +91,11 @@ def mol_from_smiles(smiles: str):
 
 
 def normalize_smiles(smiles: str) -> str:
-    """Canonicalize a SMILES and keep the largest organic fragment.
+    """Return a normalized parent structure for stable analog comparison.
 
-    This prevents salts/counterions from dominating fingerprints when a user or
-    PubChem returns a multi-fragment representation.
+    RDKit cleanup, largest-fragment selection, neutralization and canonical
+    tautomerization prevent salts and alternative tautomer drawings from
+    dominating fingerprints. pH-specific charge is modelled separately.
     """
     _require_rdkit()
     from rdkit import Chem
@@ -81,10 +104,54 @@ def normalize_smiles(smiles: str) -> str:
     if mol is None:
         raise ValueError(f"RDKit could not parse SMILES: {smiles!r}")
 
-    fragments = Chem.GetMolFrags(mol, asMols=True, sanitizeFrags=True)
-    if fragments:
-        mol = max(fragments, key=lambda frag: frag.GetNumHeavyAtoms())
+    from rdkit.Chem.MolStandardize import rdMolStandardize
+
+    mol = rdMolStandardize.Cleanup(mol)
+    mol = rdMolStandardize.FragmentParent(mol, skipStandardize=True)
+    mol = rdMolStandardize.Uncharger().uncharge(mol)
+    mol = rdMolStandardize.CanonicalTautomer(mol)
     return Chem.MolToSmiles(mol, isomericSmiles=True)
+
+
+PH_PROFILE_POINTS: tuple[float, ...] = (2.0, 3.0, 5.0, 7.0)
+
+
+@lru_cache(maxsize=4096)
+def ph_charge_profile(smiles: str) -> dict[str, list[int]]:
+    """Enumerate plausible formal-charge states at selected pH values.
+
+    Dimorphite-DL returns possible protonation states, not quantitative species
+    fractions. Each pH is therefore represented by a set of possible net formal
+    charges. Failure is explicit so callers can fall back to motif-based logic.
+    """
+    _require_rdkit()
+    from rdkit import Chem, rdBase
+    try:
+        from dimorphite_dl import protonate_smiles
+    except ImportError as exc:  # pragma: no cover
+        raise RuntimeError(
+            "Dimorphite-DL is required for pH-aware ionization: pip install dimorphite-dl"
+        ) from exc
+
+    parent = normalize_smiles(smiles)
+    profile: dict[str, list[int]] = {}
+    for ph in PH_PROFILE_POINTS:
+        # Some discarded variants can be chemically invalid; Dimorphite-DL's
+        # validated output remains usable, so silence RDKit diagnostics here.
+        with rdBase.BlockLogs():
+            variants = protonate_smiles(
+                parent, ph_min=ph, ph_max=ph, precision=0.5, max_variants=32
+            )
+            charges = {
+                int(Chem.GetFormalCharge(mol))
+                for variant in variants
+                if (mol := Chem.MolFromSmiles(variant)) is not None
+            }
+        if not charges:
+            mol = Chem.MolFromSmiles(parent)
+            charges = {int(Chem.GetFormalCharge(mol))} if mol is not None else set()
+        profile[f"{ph:g}"] = sorted(charges)
+    return profile
 
 
 def compute_descriptors(smiles: str) -> dict[str, float]:
@@ -92,10 +159,13 @@ def compute_descriptors(smiles: str) -> dict[str, float]:
     from rdkit.Chem import Descriptors
 
     mol = mol_from_smiles(smiles)
+    functional_groups = functional_group_counts(mol=mol)
     values: dict[str, float] = {}
     for name in DESCRIPTOR_NAMES:
         if name.startswith(("PubChem", "ChEMBL")):
             values[name] = None
+        elif name in functional_groups:
+            values[name] = functional_groups[name]
         elif name == "FormalCharge":
             from rdkit import Chem
 
@@ -129,6 +199,8 @@ def merge_external_descriptors(
         "ChEMBLHDonors": (chembl, "hbd"),
         "ChEMBLHAcceptors": (chembl, "hba"),
         "ChEMBLRotatableBonds": (chembl, "rtb"),
+        "ChEMBLAcidicPka": (chembl, "cx_most_apka"),
+        "ChEMBLBasicPka": (chembl, "cx_most_bpka"),
     }
     for descriptor_name, (source, source_name) in mapping.items():
         value = source.get(source_name)
@@ -137,6 +209,21 @@ def merge_external_descriptors(
         except (TypeError, ValueError):
             merged[descriptor_name] = None
     return merged
+
+
+def functional_group_counts(smiles: str | None = None, mol=None) -> dict[str, float]:
+    """Count explicit chromatography-relevant functional groups with SMARTS."""
+    _require_rdkit()
+    from rdkit import Chem
+
+    if mol is None:
+        if not smiles:
+            raise ValueError("Either smiles or mol is required")
+        mol = mol_from_smiles(smiles)
+    return {
+        name: float(len(mol.GetSubstructMatches(Chem.MolFromSmarts(smarts))))
+        for name, smarts in FUNCTIONAL_GROUP_SMARTS.items()
+    }
 
 
 def descriptor_vector(smiles: str) -> list[float]:

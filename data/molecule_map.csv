@@ -1,42 +1,42 @@
 source_file,trade_name,inn,smiles,verified,note
-Avodart ND 2012-05-15.pdf,Avodart,dutasteride,,false,steroid; add & verify SMILES
-БАКСДРОСТАТ Проект НД.pdf,Baxdrostat,baxdrostat,,false,novel API; add SMILES
+Avodart ND 2012-05-15.pdf,Avodart,dutasteride,C[C@]12C=CC(=O)N[C@@H]1CC[C@@H]1[C@@H]2CC[C@]2(C)[C@@H](C(=O)Nc3cc(C(F)(F)F)ccc3C(F)(F)F)CC[C@@H]12,false,steroid; add & verify SMILES; auto-filled from PubChem CID 6918296; needs review
+БАКСДРОСТАТ Проект НД.pdf,Baxdrostat,baxdrostat,CCC(=O)N[C@@H]1CCCc2c(-c3ccc4c(c3)CCC(=O)N4C)cncc21,false,novel API; add SMILES; auto-filled from PubChem CID 71535962; needs review
 ЛП-005719-120819.pdf,Акаризакс,house dust mite allergen,,false,EXCLUDE: allergen extract not a small molecule
-ЛП-№(000493)-(РГ-RU)-100122.pdf,,,,false,unidentified; fill inn+smiles
-ЛП-№(000508)-(РГ-RU)-180122.pdf,,,,false,unidentified; fill inn+smiles
-ЛП-№(000540)-(РГ-RU)-120124.pdf,,,,false,oral solution (ethanol/glycerin/menthol); fill inn
+ЛП-№(000493)-(РГ-RU)-100122.pdf,,etoricoxib,Cc1ccc(-c2ncc(Cl)cc2-c2ccc(S(C)(=O)=O)cc2)cn1,false,auto-extracted INN; score=110; needs review; auto-filled from PubChem CID 123619; needs review
+ЛП-№(000508)-(РГ-RU)-180122.pdf,,etoricoxib,Cc1ccc(-c2ncc(Cl)cc2-c2ccc(S(C)(=O)=O)cc2)cn1,false,auto-extracted INN; score=110; needs review; auto-filled from PubChem CID 123619; needs review
+ЛП-№(000540)-(РГ-RU)-120124.pdf,,benzydamine,CN(C)CCCOc1nn(Cc2ccccc2)c2ccccc12,false,auto-extracted INN; score=30; needs review; auto-filled from PubChem CID 12555; needs review
 ЛП-№(000590)-(РГ-RU)-230326.pdf,,amlodipine + olmesartan,,false,EXCLUDE: combination product
-ЛП-№(004037)-(РГ-RU)-181223.pdf,,,,false,16 mg capsules; fill inn+smiles
-ЛП-№(004046)-(РГ-RU)-191223.pdf,Азнам-Лиоф,aztreonam,,false,beta-lactam; add & verify SMILES
+ЛП-№(004037)-(РГ-RU)-181223.pdf,,isotretinoin,CC1=C(/C=C/C(C)=C/C=C/C(C)=C\C(=O)O)C(C)(C)CCC1,false,auto-extracted INN; score=65; needs review; auto-filled from PubChem CID 5282379; needs review
+ЛП-№(004046)-(РГ-RU)-191223.pdf,Азнам-Лиоф,aztreonam,C[C@H]1[C@H](NC(=O)/C(=N\OC(C)(C)C(=O)O)c2csc(N)n2)C(=O)N1S(=O)(=O)O,false,beta-lactam; add & verify SMILES; auto-filled from PubChem CID 5742832; needs review
 ЛС-002514-080620.pdf,Акласта,zoledronic acid,OP(=O)(O)C(O)(Cn1ccnc1)P(=O)(O)O,false,verify SMILES
-НД.pdf,,,,false,BMS product ЛСР-000035; fill inn+smiles
-аперомид.pdf,Аперомид,,,false,unidentified; fill inn+smiles
+НД.pdf,,entecavir,C=C1[C@H](CO)[C@@H](O)C[C@@H]1n1cnc2c(=O)[nH]c(N)nc21,false,auto-extracted INN; score=110; needs review; auto-filled from PubChem CID 135398508; needs review
+аперомид.pdf,Аперомид,pipecuronium bromide,CC(=O)O[C@H]1C[C@@H]2CC[C@@H]3[C@H](CC[C@@]4(C)[C@H]3C[C@H](N3CC[N+](C)(C)CC3)[C@@H]4OC(C)=O)[C@@]2(C)C[C@@H]1N1CC[N+](C)(C)CC1.[Br-].[Br-],false,auto-extracted INN; score=105; needs review; auto-filled from PubChem CID 65332; needs review
 бипрол.pdf,Бипрол,bisoprolol,CC(C)NCC(O)COc1ccc(COCCOC(C)C)cc1,false,verify SMILES
-галвус.pdf,Галвус,vildagliptin,,false,adamantane; add & verify SMILES
+галвус.pdf,Галвус,vildagliptin,N#C[C@@H]1CCCN1C(=O)CNC12CC3CC(CC(O)(C3)C1)C2,false,adamantane; add & verify SMILES; auto-filled from PubChem CID 6918537; needs review
 йокс.pdf,Йокс,povidone-iodine,,false,EXCLUDE: polymer complex not a small molecule
 калетра.pdf,Калетра,lopinavir + ritonavir,,false,EXCLUDE: combination product
 кардиоксипин.pdf,Кардиоксипин,emoxypine,CCc1nc(C)cc(O)c1,false,verify SMILES
 кеппра.pdf,Кеппра,levetiracetam,CCC(C(N)=O)N1CCCC1=O,false,verify SMILES
 коронадерм.PDF,Коронадерм,,,false,topical; fill inn+smiles
-ксафлом.pdf,Ксафлом,,,false,unidentified; fill inn+smiles
-липримар.pdf,Липримар,atorvastatin,,false,complex; add & verify SMILES
+ксафлом.pdf,Ксафлом,moxifloxacin,COc1c(N2C[C@@H]3CCCN[C@@H]3C2)c(F)cc2c(=O)c(C(=O)O)cn(C3CC3)c12,false,auto-extracted INN; score=65; needs review; auto-filled from PubChem CID 152946; needs review
+липримар.pdf,Липримар,atorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CC[C@@H](O)C[C@@H](O)CC(=O)O,false,complex; add & verify SMILES; auto-filled from PubChem CID 60823; needs review
 лп-000035[2010]_0.pdf,Басиджен,ciprofloxacin,OC(=O)C1=CN(C2CC2)c2cc(N3CCNCC3)c(F)cc2C1=O,false,verify SMILES
-лп-002639[2014]_0.pdf,,,,false,Bayer film tablet; fill inn+smiles
-лп-007200[2021]_0_мирамед.pdf,Мирамед,,,false,Evalar; fill inn+smiles
-лср-004199_08-150520.pdf,,,,false,Sotex product; fill inn+smiles
-небилет.pdf,Небилет,nebivolol,,false,complex; add & verify SMILES
-неотон.pdf,Неотон,phosphocreatine,NC(=N)N(C)CC(=O)O,false,PARTIAL SMILES (creatine core, no phosphate); verify
-ноокам.pdf,Ноокам,,,false,unidentified; fill inn+smiles
+лп-002639[2014]_0.pdf,,riociguat,COC(=O)N(C)c1c(N)nc(-c2nn(Cc3ccccc3F)c3ncccc23)nc1N,false,auto-extracted INN; score=110; needs review; auto-filled from PubChem CID 11304743; needs review
+лп-007200[2021]_0_мирамед.pdf,Мирамед,miramistin,CCCCCCCCCCCCCC(=O)NCCC[N+](C)(C)Cc1ccccc1.[Cl-],false,auto-extracted INN; score=105; needs review; auto-filled from PubChem CID 72949; needs review
+лср-004199_08-150520.pdf,,meloxicam,Cc1cnc(NC(=O)C2=C(O)c3ccccc3S(=O)(=O)N2C)s1,false,auto-extracted INN; score=130; needs review; auto-filled from PubChem CID 54677470; needs review
+небилет.pdf,Небилет,nebivolol,OC(CNCC(O)C1CCc2cc(F)ccc2O1)C1CCc2cc(F)ccc2O1,false,complex; add & verify SMILES; auto-filled from PubChem CID 71301; needs review
+неотон.pdf,Неотон,phosphocreatine,NC(=N)N(C)CC(=O)O,false,"PARTIAL SMILES (creatine core, no phosphate); verify"
+ноокам.pdf,Ноокам,,,false,EXCLUDE: combination product: cinnarizine + piracetam; auto-detected; needs review
 нурофен_экспресс_форте.pdf,Нурофен Экспресс Форте,ibuprofen,CC(C)Cc1ccc(C(C)C(=O)O)cc1,false,verify SMILES
-остеостатикс.pdf,Остеостатикс,,,false,Farm-Sintez; fill inn+smiles
+остеостатикс.pdf,Остеостатикс,zoledronic acid,O=P(O)(O)C(O)(Cn1ccnc1)P(=O)(O)O,false,auto-extracted INN; score=105; needs review; auto-filled from PubChem CID 68740; needs review
 прамипексол.pdf,Прамипексол,pramipexole,CCCNC1CCc2nc(N)sc2C1,false,verify SMILES
 р_n001426_01[2012]_0.pdf,,azathioprine,Cn1cnc([N+](=O)[O-])c1Sc1ncc2nc[nH]c2n1,false,verify SMILES
 ремерон.pdf,Ремерон,mirtazapine,CN1CCN2c3ccccc3Cc3cccnc3C2C1,false,verify SMILES
-ренобрейн.pdf,Ренобрейн,,,false,unidentified; fill inn+smiles
+ренобрейн.pdf,Ренобрейн,,,false,EXCLUDE: biological mixture; auto-detected; needs review
 рибоксин.pdf,Рибоксин,inosine,OCC1OC(n2cnc3c2NC=NC3=O)C(O)C1O,false,verify SMILES
 ривар_крка.pdf,Ривароксабан Krka,rivaroxaban,O=C(NCC1CN(c2ccc(N3CCOCC3=O)cc2)C(=O)O1)c1ccc(Cl)s1,false,verify SMILES
 ринитол.pdf,Ринитол ЭДАС-131,,,false,EXCLUDE: homeopathic
 симбалта.pdf,Симбалта,duloxetine,CNCCC(Oc1cccc2ccccc12)c1cccs1,false,verify SMILES
-урорек.pdf,Урорек,silodosin,,false,complex; add & verify SMILES
+урорек.pdf,Урорек,silodosin,C[C@H](Cc1cc2c(c(C(N)=O)c1)N(CCCO)CC2)NCCOc1ccccc1OCC(F)(F)F,false,complex; add & verify SMILES; auto-filled from PubChem CID 5312125; needs review
 физиотенз.pdf,Физиотенз,moxonidine,COc1nc(C)c(NC2=NCCN2)nc1Cl,false,verify SMILES
 ципралекс.pdf,Ципралекс,escitalopram,CN(C)CCCC1(c2ccc(C#N)cc2)OCc2cc(F)ccc21,false,verify SMILES

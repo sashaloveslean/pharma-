@@ -160,8 +160,16 @@ explicitly instead of being borrowed from unrelated methods.
   overfit, so the baseline is *nearest-analog transfer* — it returns one coherent
   method from the closest known molecule. Analog similarity combines Morgan
   fingerprint similarity with a descriptor correction for chromatographically
-  relevant properties such as LogP, TPSA, MW, H-bonding and aromaticity, plus a
-  small ionization/scaffold compatibility layer. The model does not fill missing
+  relevant properties such as LogP, TPSA, MW, formal charge and H-bonding. It
+  Structures are first standardized with RDKit `rdMolStandardize` (cleanup,
+  largest fragment, neutral parent and canonical tautomer). The model also
+  compares explicit functional-group counts (acids, amines, amides,
+  phenols, sulfonamides, phosphates, heteroaromatics and halogens), scaffold and
+  ionization class. When ChEMBL supplies calculated acidic/basic pKa values they
+  participate in the ionization similarity. Dimorphite-DL enumerates plausible
+  net-charge states at pH 2, 3, 5 and 7; these are possible states rather than
+  quantitative species fractions. RDKit itself does not predict pKa,
+  so missing pKa is never replaced with a made-up numeric estimate. The model does not fill missing
   parameters from other molecules because that creates non-physical "chimera"
   methods. It reports missing fields, confidence components and a screening
   range around the transferred method. The class in `scripts/model.py` is
@@ -179,6 +187,44 @@ explicitly instead of being borrowed from unrelated methods.
 
 > The prediction is a **method starting point** by analogy, not a validated
 > analytical procedure.
+
+## 7. Prepare a QSRR retention dataset
+
+QSRR is trained on `molecule + HPLC conditions -> log(k)`, not directly on
+`SMILES -> method`. Build auditable retention candidates with:
+
+```bash
+PYTHONPATH=scripts .venv/bin/python scripts/build_qsrr_dataset.py
+```
+
+This creates `qsrr_observations.csv` with extraction candidates, an empty
+human-owned `data/qsrr_curated.csv` template (never overwritten), a strict
+`qsrr_training.csv`, a `qsrr_provisional.csv` with geometry-estimated `t0`, and
+`qsrr_report.json`. Copy verified candidate rows into
+the curated table and set `review_status=approved` only after checking source
+evidence. A row is training-ready only when exact
+`tR`, measured `t0`, column, modifier, organic percentage and flow are present
+(plus pH for a buffer). The target is calculated as
+`log10((tR - t0) / t0)`; run time is never substituted for `t0`.
+When measured `t0` is absent, the provisional table estimates it from column
+length, internal diameter, flow and `--porosity` (default `0.68`). Such rows are
+marked `t0_source=estimated_column_geometry` and are excluded from strict training.
+
+### Provisional direct retention-time model (without t0)
+
+For early pipeline testing, build a deduplicated dataset and train CatBoost
+directly on `tR`:
+
+```bash
+PYTHONPATH=scripts .venv/bin/python scripts/build_tr_dataset.py
+PYTHONPATH=scripts .venv/bin/python scripts/train_tr_model.py
+```
+
+This model accepts missing condition fields and downweights approximate or
+incomplete observations. It is kept separate from strict QSRR because `tR`
+depends on column geometry, flow and the instrument. Evaluate it with grouped
+cross-validation by molecule; do not treat training-set fit as evidence of
+predictive accuracy.
 
 ## Notes
 

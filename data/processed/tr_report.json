@@ -1,0 +1,9 @@
+{
+  "candidate_observations": 63,
+  "retention_rows_after_deduplication": 45,
+  "unique_molecules": 20,
+  "approximate_rows": 30,
+  "rows_with_all_condition_fields": 0,
+  "target": "retention_time_min",
+  "warning": "Provisional tR dataset; tR is system- and geometry-dependent and missing conditions remain informative missing values."
+}

@@ -20,8 +20,8 @@ from urllib.request import urlopen
 
 PUBCHEM_PROPERTIES = (
     "MolecularFormula,MolecularWeight,XLogP,TPSA,HBondDonorCount,"
-    "HBondAcceptorCount,RotatableBondCount,FormalCharge,CanonicalSMILES,"
-    "IsomericSMILES,InChIKey,IUPACName"
+    "HBondAcceptorCount,RotatableBondCount,Charge,ConnectivitySMILES,"
+    "SMILES,InChIKey,IUPACName"
 )
 PUBCHEM_URL = (
     "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/"
@@ -108,6 +108,9 @@ def fetch_chembl_properties(name: str) -> dict:
         "hba": props.get("hba"),
         "hbd": props.get("hbd"),
         "rtb": props.get("rtb"),
+        # Calculated pKa values supplied by ChEMBL (ChemAxon), when available.
+        "cx_most_apka": props.get("cx_most_apka"),
+        "cx_most_bpka": props.get("cx_most_bpka"),
         "source_name": "ChEMBL Web Services",
         "source_type": "curated_druglike_property",
         "retrieval_date": date.today().isoformat(),

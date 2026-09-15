@@ -90,10 +90,22 @@ def consolidate(records: list[dict]) -> dict:
     # stay consistent; prefer a block that resolved both solutions and ratio
     mp_ratio = None
     mp_components: list[dict] = []
-    for record in ordered:
+    mp_record: dict | None = None
+    # Prefer a recipe from the same/nearest pages as the selected method. A
+    # document can contain several assays with different mobile phases.
+    best_page = best.get("start_page")
+    recipe_records = [record for record in records if record.get("mobile_phase_components")]
+    recipe_records.sort(
+        key=lambda record: (
+            abs((record.get("start_page") or best_page or 0) - (best_page or 0)),
+            -_completeness(record),
+        )
+    )
+    for record in recipe_records:
         if record.get("mobile_phase_components"):
             mp_ratio = record.get("mobile_phase_ratio")
             mp_components = record["mobile_phase_components"]
+            mp_record = record
             break
     if mp_ratio is None:
         mp_ratio = _fill_from(ordered, "mobile_phase_ratio")
@@ -139,7 +151,9 @@ def consolidate(records: list[dict]) -> dict:
         "flow_ml_min": _fill_from(ordered, "flow_ml_min"),
         "injection_ul": _fill_from(ordered, "injection_ul"),
         "mobile_phase_ph": _fill_from(ordered, "mobile_phase_ph"),
-        "mobile_phase": _fill_from(ordered, "mobile_phase_raw"),
+        "mobile_phase": (
+            mp_record.get("mobile_phase_raw") if mp_record else _fill_from(ordered, "mobile_phase_raw")
+        ),
         "primary_wavelength_nm": primary_wavelength,
         "column_phase": _fill_from(ordered, "column_phase"),
         "detector": _fill_from(ordered, "detector"),
