@@ -1,0 +1,50 @@
+{
+  "overall": {
+    "n": 17498,
+    "previous_mae_min": 1.285438470703618,
+    "candidate_mae_min": 1.2057400455898677
+  },
+  "early": {
+    "n": 244,
+    "previous_mae_min": 1.8626891281365225,
+    "candidate_mae_min": 1.582839577377042
+  },
+  "other": {
+    "n": 17254,
+    "previous_mae_min": 1.2772751949175032,
+    "candidate_mae_min": 1.2004072366321727
+  },
+  "by_system": {
+    "report:0390": {
+      "n": 7333,
+      "previous_mae_min": 0.9524990766499631,
+      "candidate_mae_min": 0.9014678340350574
+    },
+    "report:0391": {
+      "n": 9685,
+      "previous_mae_min": 1.5600335099201514,
+      "candidate_mae_min": 1.4363355352358917
+    },
+    "report:0400": {
+      "n": 480,
+      "previous_mae_min": 0.8312543494188831,
+      "candidate_mae_min": 1.2013875666517102
+    }
+  },
+  "FTC": [
+    {
+      "observation_id": "report:0391_012294",
+      "system_id": "report:0391",
+      "compound_id": "XQSPYNMVSIKCOC-NTSWFWBYSA-N",
+      "observed_tr_min": 0.6455,
+      "absolute_tr_min": 4.1953118975753805,
+      "scaled_tr_min": 2.2429887338356123,
+      "molecule_seen_in_mcmrt": false,
+      "outside_program_window": false,
+      "candidate_tr_min": 2.125744453389573,
+      "early_by_observed_time": true
+    }
+  ],
+  "production_approved": false,
+  "external_status": "previously inspected external diagnostic, not a fresh final holdout"
+}

@@ -1,0 +1,22 @@
+{
+  "lab": {
+    "path": "reports/customer_multicolumn/lab_recommendation.json",
+    "sha256": "8f2d41e19f39d1e38ebae0f9ebb7c7fd45322d6ce93c84b02a1aa77f7b9a7221"
+  },
+  "pair": {
+    "path": "reports/customer_pair_check/result.json",
+    "sha256": "20c74e5d16f2bdf1f3e9a4f049e655dcd15a1940710e6c712d53e505f584e658"
+  },
+  "local": {
+    "path": "reports/local_calibration/evaluation.json",
+    "sha256": "9039e74b59adbc0adcc6c9a98f8976a0c2c6c39a2cfd7ca0011d4e48fa2b7d65"
+  },
+  "physical": {
+    "path": "reports/physical_features_audit/evaluation.json",
+    "sha256": "8927c6912fc6ab81d7ea78ea5e454df97ca096f8a7a9798ef9a30185f7025ff2"
+  },
+  "gradient": {
+    "path": "reports/gradient_change_audit/evaluation.json",
+    "sha256": "8bd484ad9267f9c1faabbd89abc6df218a45ac9927efa46528c1f0b00422f518"
+  }
+}

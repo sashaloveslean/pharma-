@@ -1,0 +1,124 @@
+[
+  {
+    "system_id": "report:0063",
+    "observations": {
+      "tenofovir": [
+        "report:0063_01658"
+      ],
+      "emtricitabine": [
+        "report:0063_00397"
+      ]
+    },
+    "pair_linkage": "same_method_not_verified_same_injection",
+    "run_id": null,
+    "reported_rs": null,
+    "derived_rs": null,
+    "separation_confirmed": false,
+    "training_ready": false
+  },
+  {
+    "system_id": "report:0186",
+    "observations": {
+      "tenofovir": [
+        "report:0186_03446"
+      ],
+      "emtricitabine": [
+        "report:0186_12950"
+      ]
+    },
+    "pair_linkage": "same_method_not_verified_same_injection",
+    "run_id": null,
+    "reported_rs": null,
+    "derived_rs": null,
+    "separation_confirmed": false,
+    "training_ready": false
+  },
+  {
+    "system_id": "report:0209",
+    "observations": {
+      "tenofovir": [
+        "report:0209_00082"
+      ],
+      "emtricitabine": [
+        "report:0209_00198"
+      ]
+    },
+    "pair_linkage": "same_method_not_verified_same_injection",
+    "run_id": null,
+    "reported_rs": null,
+    "derived_rs": null,
+    "separation_confirmed": false,
+    "training_ready": false
+  },
+  {
+    "system_id": "report:0262",
+    "observations": {
+      "tenofovir": [
+        "report:0262_00035",
+        "report:0262_00253"
+      ],
+      "emtricitabine": [
+        "report:0262_00265"
+      ]
+    },
+    "pair_linkage": "same_method_not_verified_same_injection",
+    "run_id": null,
+    "reported_rs": null,
+    "derived_rs": null,
+    "separation_confirmed": false,
+    "training_ready": false
+  },
+  {
+    "system_id": "report:0263",
+    "observations": {
+      "tenofovir": [
+        "report:0263_00347"
+      ],
+      "emtricitabine": [
+        "report:0263_00362"
+      ]
+    },
+    "pair_linkage": "same_method_not_verified_same_injection",
+    "run_id": null,
+    "reported_rs": null,
+    "derived_rs": null,
+    "separation_confirmed": false,
+    "training_ready": false
+  },
+  {
+    "system_id": "report:0382",
+    "observations": {
+      "tenofovir": [
+        "report:0382_01944"
+      ],
+      "emtricitabine": [
+        "report:0382_00779"
+      ]
+    },
+    "pair_linkage": "same_method_not_verified_same_injection",
+    "run_id": null,
+    "reported_rs": null,
+    "derived_rs": null,
+    "separation_confirmed": false,
+    "training_ready": false
+  },
+  {
+    "system_id": "report:0383",
+    "observations": {
+      "tenofovir": [
+        "report:0383_00553",
+        "report:0383_01944"
+      ],
+      "emtricitabine": [
+        "report:0383_00251",
+        "report:0383_00779"
+      ]
+    },
+    "pair_linkage": "same_method_not_verified_same_injection",
+    "run_id": null,
+    "reported_rs": null,
+    "derived_rs": null,
+    "separation_confirmed": false,
+    "training_ready": false
+  }
+]

@@ -1,0 +1,323 @@
+{
+  "origin": "flow/gradient copied from public method, not outputs of CatBoost",
+  "empty_geometric_volume_ml": 0.3463605900582747,
+  "segments": [
+    {
+      "start_min": 0.0,
+      "end_min": 4.0,
+      "duration_min": 4.0,
+      "b_slope_percentage_points_min": 10.0,
+      "volume_ml": 0.8,
+      "role": "analytical_ramp_or_initial_hold",
+      "empty_column_volumes": 2.3097316004265993,
+      "time_after_target_interval_upper_min": 0
+    },
+    {
+      "start_min": 4.0,
+      "end_min": 17.0,
+      "duration_min": 13.0,
+      "b_slope_percentage_points_min": 3.4615384615384617,
+      "volume_ml": 2.6,
+      "role": "analytical_ramp_or_initial_hold",
+      "empty_column_volumes": 7.5066277013864475,
+      "time_after_target_interval_upper_min": 8.567492309270765
+    },
+    {
+      "start_min": 17.0,
+      "end_min": 25.0,
+      "duration_min": 8.0,
+      "b_slope_percentage_points_min": 0.0,
+      "volume_ml": 1.6,
+      "role": "high_organic_wash",
+      "empty_column_volumes": 4.619463200853199
+    },
+    {
+      "start_min": 25.0,
+      "end_min": 25.1,
+      "duration_min": 0.10000000000000142,
+      "b_slope_percentage_points_min": -849.999999999988,
+      "volume_ml": 0.020000000000000285,
+      "role": "return_to_initial",
+      "empty_column_volumes": 0.0577432900106658
+    },
+    {
+      "start_min": 25.1,
+      "end_min": 30.0,
+      "duration_min": 4.899999999999999,
+      "b_slope_percentage_points_min": 0.0,
+      "volume_ml": 0.9799999999999998,
+      "role": "re_equilibration",
+      "empty_column_volumes": 2.8294212105225833
+    }
+  ],
+  "superficial_u_mm_s": 0.9623881668444163,
+  "pore_velocity_mm_s": null,
+  "porosity": null,
+  "predicted_last_target_peak_min": 4.513046586869609,
+  "last_peak_interval_upper_min": 8.432507690729235,
+  "typical_flow_ml_min": [
+    0.3,
+    0.8
+  ],
+  "typical_is_not_optimal": true,
+  "van_deemter_optimum": null,
+  "source_flow_below_typical": true,
+  "sources": [
+    "https://assets.thermofisher.com/TFS-Assets/CMD/manuals/Man-065184-Acclaim-RSLC-Columns-Man065184-EN.pdf",
+    "https://support.waters.com/KB_Chem/Columns/WKB51034_What_is_the_suggested_column_volumes_needed_to_clean_a_column_during_a_gradient_run"
+  ],
+  "flow_candidates": [
+    {
+      "flow_ml_min": 0.2,
+      "superficial_u_mm_s": 0.9623881668444163,
+      "pore_velocity_mm_s": null,
+      "gradient_program": [
+        {
+          "t [min]": 0.0,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 4.0,
+          "A [%]": "50",
+          "B [%]": "50",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 17.0,
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 25.0,
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 25.1,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 33.75901475145687,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.2
+        }
+      ],
+      "cycle_time_without_unknown_dwell_compensation_min": 33.75901475145687,
+      "pressure_status": "unknown; measured pressure and instrument limit required",
+      "predicted_tr_min": null,
+      "predicted_Rs": null,
+      "execution_ready": false,
+      "role": "volume-preserving screening proposal, not a Van Deemter optimum",
+      "policy": "preserve source ramp/wash volumes; minimum wash 3 and re-equilibration 5 empty CV",
+      "missing_dwell_compensation": true
+    },
+    {
+      "flow_ml_min": 0.35,
+      "superficial_u_mm_s": 1.6841792919777285,
+      "pore_velocity_mm_s": null,
+      "gradient_program": [
+        {
+          "t [min]": 0.0,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.35
+        },
+        {
+          "t [min]": 2.285714285714286,
+          "A [%]": "50",
+          "B [%]": "50",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.35
+        },
+        {
+          "t [min]": 9.714285714285715,
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.35
+        },
+        {
+          "t [min]": 14.285714285714288,
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.35
+        },
+        {
+          "t [min]": 14.342857142857145,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.35
+        },
+        {
+          "t [min]": 19.29086557226107,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.35
+        }
+      ],
+      "cycle_time_without_unknown_dwell_compensation_min": 19.29086557226107,
+      "pressure_status": "unknown; measured pressure and instrument limit required",
+      "predicted_tr_min": null,
+      "predicted_Rs": null,
+      "execution_ready": false,
+      "role": "volume-preserving screening proposal, not a Van Deemter optimum",
+      "policy": "preserve source ramp/wash volumes; minimum wash 3 and re-equilibration 5 empty CV",
+      "missing_dwell_compensation": true
+    },
+    {
+      "flow_ml_min": 0.4,
+      "superficial_u_mm_s": 1.9247763336888326,
+      "pore_velocity_mm_s": null,
+      "gradient_program": [
+        {
+          "t [min]": 0.0,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.4
+        },
+        {
+          "t [min]": 2.0,
+          "A [%]": "50",
+          "B [%]": "50",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.4
+        },
+        {
+          "t [min]": 8.5,
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.4
+        },
+        {
+          "t [min]": 12.5,
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.4
+        },
+        {
+          "t [min]": 12.55,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.4
+        },
+        {
+          "t [min]": 16.879507375728434,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.4
+        }
+      ],
+      "cycle_time_without_unknown_dwell_compensation_min": 16.879507375728434,
+      "pressure_status": "unknown; measured pressure and instrument limit required",
+      "predicted_tr_min": null,
+      "predicted_Rs": null,
+      "execution_ready": false,
+      "role": "volume-preserving screening proposal, not a Van Deemter optimum",
+      "policy": "preserve source ramp/wash volumes; minimum wash 3 and re-equilibration 5 empty CV",
+      "missing_dwell_compensation": true
+    },
+    {
+      "flow_ml_min": 0.5,
+      "superficial_u_mm_s": 2.4059704171110408,
+      "pore_velocity_mm_s": null,
+      "gradient_program": [
+        {
+          "t [min]": 0.0,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.5
+        },
+        {
+          "t [min]": 1.6,
+          "A [%]": "50",
+          "B [%]": "50",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.5
+        },
+        {
+          "t [min]": 6.800000000000001,
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.5
+        },
+        {
+          "t [min]": 10.0,
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.5
+        },
+        {
+          "t [min]": 10.040000000000001,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.5
+        },
+        {
+          "t [min]": 13.503605900582748,
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": 0.5
+        }
+      ],
+      "cycle_time_without_unknown_dwell_compensation_min": 13.503605900582748,
+      "pressure_status": "unknown; measured pressure and instrument limit required",
+      "predicted_tr_min": null,
+      "predicted_Rs": null,
+      "execution_ready": false,
+      "role": "volume-preserving screening proposal, not a Van Deemter optimum",
+      "policy": "preserve source ramp/wash volumes; minimum wash 3 and re-equilibration 5 empty CV",
+      "missing_dwell_compensation": true
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "sources": {
+    "mcmrt": {
+      "observations_with_row_level_ph": 0,
+      "total_systems": 30,
+      "rp_eligible_with_rt": 29,
+      "rp_reported_ph": 0,
+      "rp_salt_present": 24,
+      "rp_aqueous_ph_and_salt_units": 0,
+      "observations_in_these_systems": 0,
+      "source_urls_in_these_systems": 0,
+      "exact_targets_in_these_systems": {
+        "TFV": 0,
+        "FTC": 0
+      }
+    },
+    "metlin_smrt": {
+      "observations_with_row_level_ph": 0,
+      "total_systems": 1,
+      "rp_eligible_with_rt": 1,
+      "rp_reported_ph": 0,
+      "rp_salt_present": 0,
+      "rp_aqueous_ph_and_salt_units": 0,
+      "observations_in_these_systems": 0,
+      "source_urls_in_these_systems": 0,
+      "exact_targets_in_these_systems": {
+        "TFV": 0,
+        "FTC": 0
+      }
+    },
+    "report": {
+      "observations_with_row_level_ph": 0,
+      "total_systems": 421,
+      "rp_eligible_with_rt": 343,
+      "rp_reported_ph": 249,
+      "rp_salt_present": 41,
+      "rp_aqueous_ph_and_salt_units": 20,
+      "observations_in_these_systems": 1298,
+      "source_urls_in_these_systems": 3,
+      "exact_targets_in_these_systems": {
+        "TFV": 0,
+        "FTC": 0
+      }
+    },
+    "uliege": {
+      "observations_with_row_level_ph": 2718,
+      "total_systems": 5,
+      "rp_eligible_with_rt": 5,
+      "rp_reported_ph": 0,
+      "rp_salt_present": 0,
+      "rp_aqueous_ph_and_salt_units": 0,
+      "observations_in_these_systems": 0,
+      "source_urls_in_these_systems": 0,
+      "exact_targets_in_these_systems": {
+        "TFV": 0,
+        "FTC": 0
+      }
+    }
+  },
+  "strict_ph_comparison_groups": [
+    {
+      "source": "report",
+      "systems": [
+        "report:0286",
+        "report:0292"
+      ],
+      "shared_molecules": 73,
+      "status": "metadata_matched_only_not_causal_proof"
+    },
+    {
+      "source": "report",
+      "systems": [
+        "report:0287",
+        "report:0293"
+      ],
+      "shared_molecules": 73,
+      "status": "metadata_matched_only_not_causal_proof"
+    },
+    {
+      "source": "report",
+      "systems": [
+        "report:0290",
+        "report:0294"
+      ],
+      "shared_molecules": 35,
+      "status": "metadata_matched_only_not_causal_proof"
+    },
+    {
+      "source": "report",
+      "systems": [
+        "report:0291",
+        "report:0295"
+      ],
+      "shared_molecules": 36,
+      "status": "metadata_matched_only_not_causal_proof"
+    }
+  ],
+  "model_audit": {
+    "model": "evaluate_mcmrt_transfer.feature/base",
+    "salt_concentrations_already_features": true,
+    "pH_is_feature": false,
+    "buffer_effect_validated": false
+  },
+  "decision": "Curate aqueous pH + salt subset and validate source-disjoint models before phase ranking.",
+  "limitations": [
+    "Reported pH is not necessarily measured pH; no pH inferred from acid concentration.",
+    "System-level counts do not include variable row-level metadata; inspect observations_with_row_level_ph.",
+    "Positive salt concentration does not prove buffering capacity.",
+    "Counts are raw observations, not independent experiments or deduplicated training rows.",
+    "Matched metadata can omit instrument details and does not establish causation.",
+    "No new model trained; no peak shape or Rs prediction."
+  ]
+}

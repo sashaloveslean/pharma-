@@ -1,0 +1,100 @@
+{
+  "overall": {
+    "n": 440,
+    "catboost_mae_min": 3.640489482588556,
+    "constant_offset_mae_min": 2.6888431085839732,
+    "local_slope_mae_min": 2.8736962527215972,
+    "local_clipped_to_zero": 24
+  },
+  "by_test_program": {
+    "mcmrt:01": {
+      "n": 62,
+      "catboost_mae_min": 2.947665260892037,
+      "constant_offset_mae_min": 2.441938125682808,
+      "local_slope_mae_min": 5.0178448424255375,
+      "local_clipped_to_zero": 20
+    },
+    "mcmrt:02": {
+      "n": 64,
+      "catboost_mae_min": 1.9254257610762304,
+      "constant_offset_mae_min": 1.4428575957248162,
+      "local_slope_mae_min": 1.2563627900434278,
+      "local_clipped_to_zero": 2
+    },
+    "mcmrt:06": {
+      "n": 62,
+      "catboost_mae_min": 1.7893314109000815,
+      "constant_offset_mae_min": 2.9389971045928203,
+      "local_slope_mae_min": 2.696235384159713,
+      "local_clipped_to_zero": 0
+    },
+    "mcmrt:08": {
+      "n": 64,
+      "catboost_mae_min": 1.8450232635115733,
+      "constant_offset_mae_min": 0.7273859702040525,
+      "local_slope_mae_min": 0.7251750865341404,
+      "local_clipped_to_zero": 0
+    },
+    "mcmrt:12": {
+      "n": 64,
+      "catboost_mae_min": 3.022005155048892,
+      "constant_offset_mae_min": 1.5024382845385678,
+      "local_slope_mae_min": 1.1008081656488722,
+      "local_clipped_to_zero": 0
+    },
+    "mcmrt:13": {
+      "n": 62,
+      "catboost_mae_min": 4.21289289502591,
+      "constant_offset_mae_min": 2.3266564346308285,
+      "local_slope_mae_min": 3.2784452013945216,
+      "local_clipped_to_zero": 2
+    },
+    "mcmrt:16": {
+      "n": 62,
+      "catboost_mae_min": 9.874276640314484,
+      "constant_offset_mae_min": 7.583365260045678,
+      "local_slope_mae_min": 6.219671418713946,
+      "local_clipped_to_zero": 0
+    }
+  },
+  "by_scale_mode": {
+    "interpolation": {
+      "n": 188,
+      "catboost_mae_min": 2.6075499778305966,
+      "constant_offset_mae_min": 1.984166071941093,
+      "local_slope_mae_min": 2.217241499162487,
+      "local_clipped_to_zero": 2
+    },
+    "extrapolation": {
+      "n": 252,
+      "catboost_mae_min": 4.411095144868302,
+      "constant_offset_mae_min": 3.214554548619138,
+      "local_slope_mae_min": 3.3634323387101395,
+      "local_clipped_to_zero": 22
+    }
+  },
+  "unique_molecules": 126,
+  "column_series": [
+    [
+      "mcmrt:01",
+      "mcmrt:06",
+      "mcmrt:13",
+      "mcmrt:16"
+    ],
+    [
+      "mcmrt:02",
+      "mcmrt:08",
+      "mcmrt:12"
+    ]
+  ],
+  "production_approved": false,
+  "limitations": [
+    "Retrospective development folds, not a new independent validation.",
+    "Each analyte must have measured RT at 2 or 3 calibration programs on this column.",
+    "No measurements from the held-out program enter fitting. Same molecules across calibration and test are intentional.",
+    "Program changes are compressed to one analytical time scale; not a general gradient simulator.",
+    "Interpolation refers only to time scale, not the full multivariate gradient shape.",
+    "Same molecules recur across folds; rows are not independent trials.",
+    "No TFV/FTC measurements, widths, Rs or calibrated uncertainty. Customer method unchanged."
+  ]
+}

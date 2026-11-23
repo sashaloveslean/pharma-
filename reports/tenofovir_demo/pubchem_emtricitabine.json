@@ -1,0 +1,17 @@
+{
+  "source_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/emtricitabine/property/SMILES,InChIKey,MolecularWeight,XLogP,TPSA/JSON",
+  "payload": {
+    "PropertyTable": {
+      "Properties": [
+        {
+          "CID": 60877,
+          "MolecularWeight": "247.25",
+          "SMILES": "C1[C@H](O[C@H](S1)CO)N2C=C(C(=NC2=O)N)F",
+          "InChIKey": "XQSPYNMVSIKCOC-NTSWFWBYSA-N",
+          "XLogP": -0.6,
+          "TPSA": 113
+        }
+      ]
+    }
+  }
+}

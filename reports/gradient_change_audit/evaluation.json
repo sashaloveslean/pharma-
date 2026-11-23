@@ -1,0 +1,256 @@
+{
+  "overall": {
+    "unseen_column_known_molecules": {
+      "n": 3591,
+      "delta_mae_min": 2.314552749467988,
+      "no_change_mae_min": 14.032033973823447,
+      "time_scaling_mae_min": 9.42722989351686,
+      "direction_n": 3408,
+      "time_scaling_direction_accuracy": 0.9688967136150235,
+      "direction_accuracy": 0.965962441314554
+    },
+    "unseen_column_and_molecules": {
+      "n": 695,
+      "delta_mae_min": 3.167645868958603,
+      "no_change_mae_min": 14.398848920863308,
+      "time_scaling_mae_min": 9.257931825967798,
+      "direction_n": 659,
+      "time_scaling_direction_accuracy": 0.9726858877086495,
+      "direction_accuracy": 0.9711684370257967
+    }
+  },
+  "by_pair": {
+    "unseen_column_known_molecules": {
+      "mcmrt:01 -> mcmrt:06": {
+        "n": 325,
+        "delta_mae_min": 1.253742625866756,
+        "no_change_mae_min": 4.686569230769231,
+        "time_scaling_mae_min": 5.098692307692308,
+        "direction_n": 318,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 1.0
+      },
+      "mcmrt:01 -> mcmrt:13": {
+        "n": 325,
+        "delta_mae_min": 1.0196052764804833,
+        "no_change_mae_min": 16.0004,
+        "time_scaling_mae_min": 20.96669743589744,
+        "direction_n": 314,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 0.9936305732484076
+      },
+      "mcmrt:01 -> mcmrt:16": {
+        "n": 325,
+        "delta_mae_min": 5.51650560269728,
+        "no_change_mae_min": 37.561107692307694,
+        "time_scaling_mae_min": 32.02414358974358,
+        "direction_n": 315,
+        "time_scaling_direction_accuracy": 0.9968253968253968,
+        "direction_accuracy": 0.9968253968253968
+      },
+      "mcmrt:06 -> mcmrt:13": {
+        "n": 325,
+        "delta_mae_min": 1.243675074709292,
+        "no_change_mae_min": 11.329,
+        "time_scaling_mae_min": 7.370184615384614,
+        "direction_n": 316,
+        "time_scaling_direction_accuracy": 0.9651898734177216,
+        "direction_accuracy": 0.9841772151898734
+      },
+      "mcmrt:06 -> mcmrt:16": {
+        "n": 325,
+        "delta_mae_min": 6.227008373037322,
+        "no_change_mae_min": 32.883523076923076,
+        "time_scaling_mae_min": 8.253487179487184,
+        "direction_n": 315,
+        "time_scaling_direction_accuracy": 0.9746031746031746,
+        "direction_accuracy": 0.9746031746031746
+      },
+      "mcmrt:13 -> mcmrt:16": {
+        "n": 325,
+        "delta_mae_min": 5.205650107361062,
+        "no_change_mae_min": 21.561261538461537,
+        "time_scaling_mae_min": 5.318869230769231,
+        "direction_n": 310,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 1.0
+      },
+      "mcmrt:02 -> mcmrt:08": {
+        "n": 325,
+        "delta_mae_min": 1.0595597881159995,
+        "no_change_mae_min": 7.123907692307694,
+        "time_scaling_mae_min": 4.974830769230769,
+        "direction_n": 306,
+        "time_scaling_direction_accuracy": 0.9934640522875817,
+        "direction_accuracy": 0.9934640522875817
+      },
+      "mcmrt:02 -> mcmrt:12": {
+        "n": 325,
+        "delta_mae_min": 1.6639342637083323,
+        "no_change_mae_min": 13.530036923076924,
+        "time_scaling_mae_min": 10.66534769230769,
+        "direction_n": 304,
+        "time_scaling_direction_accuracy": 0.9967105263157895,
+        "direction_accuracy": 0.9967105263157895
+      },
+      "mcmrt:08 -> mcmrt:12": {
+        "n": 325,
+        "delta_mae_min": 0.7940631314745706,
+        "no_change_mae_min": 6.4093599999999995,
+        "time_scaling_mae_min": 2.792983589743589,
+        "direction_n": 299,
+        "time_scaling_direction_accuracy": 0.9966555183946488,
+        "direction_accuracy": 0.9966555183946488
+      },
+      "mcmrt:25 -> mcmrt:27": {
+        "n": 333,
+        "delta_mae_min": 0.5880011093352623,
+        "no_change_mae_min": 2.1207957957957957,
+        "time_scaling_mae_min": 3.366552981552982,
+        "direction_n": 315,
+        "time_scaling_direction_accuracy": 0.8825396825396825,
+        "direction_accuracy": 0.8571428571428571
+      },
+      "mcmrt:26 -> mcmrt:28": {
+        "n": 333,
+        "delta_mae_min": 0.9640771015294183,
+        "no_change_mae_min": 1.7421321321321324,
+        "time_scaling_mae_min": 3.1709266409266412,
+        "direction_n": 296,
+        "time_scaling_direction_accuracy": 0.847972972972973,
+        "direction_accuracy": 0.8277027027027027
+      }
+    },
+    "unseen_column_and_molecules": {
+      "mcmrt:01 -> mcmrt:06": {
+        "n": 62,
+        "delta_mae_min": 1.9085764649677217,
+        "no_change_mae_min": 4.673064516129034,
+        "time_scaling_mae_min": 5.113709677419356,
+        "direction_n": 60,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 1.0
+      },
+      "mcmrt:01 -> mcmrt:13": {
+        "n": 62,
+        "delta_mae_min": 2.8635235259401024,
+        "no_change_mae_min": 15.97967741935484,
+        "time_scaling_mae_min": 20.992580645161294,
+        "direction_n": 60,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 1.0
+      },
+      "mcmrt:01 -> mcmrt:16": {
+        "n": 62,
+        "delta_mae_min": 7.567656144110983,
+        "no_change_mae_min": 38.0141935483871,
+        "time_scaling_mae_min": 31.58064516129032,
+        "direction_n": 60,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 1.0
+      },
+      "mcmrt:06 -> mcmrt:13": {
+        "n": 62,
+        "delta_mae_min": 2.5288812352812324,
+        "no_change_mae_min": 11.309516129032257,
+        "time_scaling_mae_min": 7.356021505376344,
+        "direction_n": 59,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 1.0
+      },
+      "mcmrt:06 -> mcmrt:16": {
+        "n": 62,
+        "delta_mae_min": 8.338166267940055,
+        "no_change_mae_min": 33.344032258064516,
+        "time_scaling_mae_min": 7.737096774193551,
+        "direction_n": 59,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 1.0
+      },
+      "mcmrt:13 -> mcmrt:16": {
+        "n": 62,
+        "delta_mae_min": 6.045154400132227,
+        "no_change_mae_min": 22.035161290322577,
+        "time_scaling_mae_min": 5.58701612903226,
+        "direction_n": 59,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 1.0
+      },
+      "mcmrt:02 -> mcmrt:08": {
+        "n": 64,
+        "delta_mae_min": 1.1837637480298424,
+        "no_change_mae_min": 8.202890625,
+        "time_scaling_mae_min": 4.723125,
+        "direction_n": 61,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 1.0
+      },
+      "mcmrt:02 -> mcmrt:12": {
+        "n": 64,
+        "delta_mae_min": 1.9444330486277348,
+        "no_change_mae_min": 15.624921874999998,
+        "time_scaling_mae_min": 10.226015624999999,
+        "direction_n": 61,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 1.0
+      },
+      "mcmrt:08 -> mcmrt:12": {
+        "n": 64,
+        "delta_mae_min": 1.1982470990616678,
+        "no_change_mae_min": 7.422499999999999,
+        "time_scaling_mae_min": 2.747734374999999,
+        "direction_n": 61,
+        "time_scaling_direction_accuracy": 1.0,
+        "direction_accuracy": 1.0
+      },
+      "mcmrt:25 -> mcmrt:27": {
+        "n": 65,
+        "delta_mae_min": 0.7597458886336891,
+        "no_change_mae_min": 2.0083076923076923,
+        "time_scaling_mae_min": 3.5613406593406602,
+        "direction_n": 60,
+        "time_scaling_direction_accuracy": 0.8666666666666667,
+        "direction_accuracy": 0.8666666666666667
+      },
+      "mcmrt:26 -> mcmrt:28": {
+        "n": 66,
+        "delta_mae_min": 0.933584673635205,
+        "no_change_mae_min": 1.5846969696969695,
+        "time_scaling_mae_min": 3.203290043290044,
+        "direction_n": 59,
+        "time_scaling_direction_accuracy": 0.8305084745762712,
+        "direction_accuracy": 0.8135593220338984
+      }
+    }
+  },
+  "small_observed_changes": {
+    "unseen_column_known_molecules": {
+      "n": 488,
+      "delta_mae_min": 1.3778042082389241,
+      "no_change_mae_min": 0.8737090163934427,
+      "time_scaling_mae_min": 5.195646443208431,
+      "direction_n": 488,
+      "time_scaling_direction_accuracy": 0.7827868852459017,
+      "direction_accuracy": 0.7622950819672131
+    },
+    "unseen_column_and_molecules": {
+      "n": 84,
+      "delta_mae_min": 1.3841767710384272,
+      "no_change_mae_min": 0.90125,
+      "time_scaling_mae_min": 4.32072973356009,
+      "direction_n": 84,
+      "time_scaling_direction_accuracy": 0.7857142857142857,
+      "direction_accuracy": 0.7738095238095238
+    }
+  },
+  "production_approved": false,
+  "limitations": [
+    "Repeated compounds/pairs are dependent observations, not independent trials.",
+    "Both programs predicted by the same model with the entire column held out.",
+    "Known-molecule scenario can use the same molecules on other columns; joint scenario excludes their connectivity globally.",
+    "Time-scaling baseline uses one measured starting tR; it is an anchored baseline, not a zero-shot prediction.",
+    "Matching recorded conditions cannot exclude unreported pH/dwell differences.",
+    "TFV/FTC absent; changes to the customer gradient are not validated.",
+    "Entire programs differ: this does not isolate one gradient segment or establish Rs."
+  ]
+}

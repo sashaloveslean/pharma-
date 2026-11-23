@@ -1,0 +1,228 @@
+{
+  "status": "WAITING_FOR_MEASURED_TIMINGS_AND_CALIBRATION_SERIES",
+  "source_candidate_id": "report:0386:time_x1.0",
+  "source_gradient_sha256": "b90f018722690d67a0aac042cbf80a26446de97ec1a41832eb1268e99a6905e0",
+  "selected_program": [
+    {
+      "time_min": 0.0,
+      "phi": 0.1
+    },
+    {
+      "time_min": 4.0,
+      "phi": 0.5
+    },
+    {
+      "time_min": 17.0,
+      "phi": 0.95
+    },
+    {
+      "time_min": 25.0,
+      "phi": 0.95
+    },
+    {
+      "time_min": 25.1,
+      "phi": 0.1
+    },
+    {
+      "time_min": 30.0,
+      "phi": 0.1
+    }
+  ],
+  "original_gradient_program": [
+    {
+      "t [min]": "0.0",
+      "A [%]": "90",
+      "B [%]": "10",
+      "C [%]": "0",
+      "D [%]": "0",
+      "flow rate [ml/min]": "0.2"
+    },
+    {
+      "t [min]": "4.0",
+      "A [%]": "50",
+      "B [%]": "50",
+      "C [%]": "0",
+      "D [%]": "0",
+      "flow rate [ml/min]": "0.2"
+    },
+    {
+      "t [min]": "17.0",
+      "A [%]": "5",
+      "B [%]": "95",
+      "C [%]": "0",
+      "D [%]": "0",
+      "flow rate [ml/min]": "0.2"
+    },
+    {
+      "t [min]": "25.0",
+      "A [%]": "5",
+      "B [%]": "95",
+      "C [%]": "0",
+      "D [%]": "0",
+      "flow rate [ml/min]": "0.2"
+    },
+    {
+      "t [min]": "25.1",
+      "A [%]": "90",
+      "B [%]": "10",
+      "C [%]": "0",
+      "D [%]": "0",
+      "flow rate [ml/min]": "0.2"
+    },
+    {
+      "t [min]": "30.0",
+      "A [%]": "90",
+      "B [%]": "10",
+      "C [%]": "0",
+      "D [%]": "0",
+      "flow rate [ml/min]": "0.2"
+    }
+  ],
+  "system": {
+    "reviewed": false,
+    "time_reference": null,
+    "context": {
+      "column": {
+        "column.name": "Thermo Scientific Acclaim RSLC 120 C18",
+        "column.length": "100",
+        "column.id": "2.1",
+        "column.particle.size": "2.2"
+      },
+      "modifier": "methanol",
+      "phase_recipes": {
+        "eluent.A.h2o": "100",
+        "eluent.A.meoh": "0",
+        "eluent.A.acn": "0",
+        "eluent.A.iproh": "0",
+        "eluent.A.acetone": "0",
+        "eluent.A.hex": "0",
+        "eluent.A.chcl3": "0",
+        "eluent.A.ch2cl2": "0",
+        "eluent.A.hept": "0",
+        "eluent.A.formic": "0.1",
+        "eluent.A.formic.unit": "%",
+        "eluent.A.acetic": "0",
+        "eluent.A.acetic.unit": "",
+        "eluent.A.trifluoroacetic": "0",
+        "eluent.A.trifluoroacetic.unit": "",
+        "eluent.A.phosphor": "0",
+        "eluent.A.phosphor.unit": "",
+        "eluent.A.nh4ac": "0",
+        "eluent.A.nh4ac.unit": "",
+        "eluent.A.nh4form": "0",
+        "eluent.A.nh4form.unit": "",
+        "eluent.A.nh4carb": "0",
+        "eluent.A.nh4carb.unit": "",
+        "eluent.A.nh4bicarb": "0",
+        "eluent.A.nh4bicarb.unit": "",
+        "eluent.A.nh4f": "0",
+        "eluent.A.nh4f.unit": "",
+        "eluent.A.nh4oh": "0",
+        "eluent.A.nh4oh.unit": "",
+        "eluent.A.trieth": "0",
+        "eluent.A.trieth.unit": "",
+        "eluent.A.triprop": "0",
+        "eluent.A.triprop.unit": "",
+        "eluent.A.tribut": "0",
+        "eluent.A.tribut.unit": "",
+        "eluent.A.nndimethylhex": "0",
+        "eluent.A.nndimethylhex.unit": "",
+        "eluent.A.medronic": "0",
+        "eluent.A.medronic.unit": "",
+        "eluent.A.pH": "2.6",
+        "eluent.A.heptafluorobutyric": "0",
+        "eluent.A.heptafluorobutyric.unit": "",
+        "eluent.B.h2o": "0",
+        "eluent.B.meoh": "100",
+        "eluent.B.acn": "0",
+        "eluent.B.iproh": "0",
+        "eluent.B.acetone": "0",
+        "eluent.B.hex": "0",
+        "eluent.B.chcl3": "0",
+        "eluent.B.ch2cl2": "0",
+        "eluent.B.hept": "0",
+        "eluent.B.formic": "0.1",
+        "eluent.B.formic.unit": "%",
+        "eluent.B.acetic": "0",
+        "eluent.B.acetic.unit": "",
+        "eluent.B.trifluoroacetic": "0",
+        "eluent.B.trifluoroacetic.unit": "",
+        "eluent.B.phosphor": "0",
+        "eluent.B.phosphor.unit": "",
+        "eluent.B.nh4ac": "0",
+        "eluent.B.nh4ac.unit": "",
+        "eluent.B.nh4form": "0",
+        "eluent.B.nh4form.unit": "",
+        "eluent.B.nh4carb": "0",
+        "eluent.B.nh4carb.unit": "",
+        "eluent.B.nh4bicarb": "0",
+        "eluent.B.nh4bicarb.unit": "",
+        "eluent.B.nh4f": "0",
+        "eluent.B.nh4f.unit": "",
+        "eluent.B.nh4oh": "0",
+        "eluent.B.nh4oh.unit": "",
+        "eluent.B.trieth": "0",
+        "eluent.B.trieth.unit": "",
+        "eluent.B.triprop": "0",
+        "eluent.B.triprop.unit": "",
+        "eluent.B.tribut": "0",
+        "eluent.B.tribut.unit": "",
+        "eluent.B.nndimethylhex": "0",
+        "eluent.B.nndimethylhex.unit": "",
+        "eluent.B.medronic": "0",
+        "eluent.B.medronic.unit": "",
+        "eluent.B.pH": "2.6",
+        "eluent.B.heptafluorobutyric": "0",
+        "eluent.B.heptafluorobutyric.unit": ""
+      },
+      "pH": 2.6,
+      "pH_convention": null,
+      "temperature_c": 30.0,
+      "flow_ml_min": 0.2,
+      "instrument_id": null
+    },
+    "t0_column_min": null,
+    "t0_column_min_evidence": null,
+    "dwell_time_min": null,
+    "dwell_time_min_evidence": null,
+    "extra_column_time_min": null,
+    "extra_column_time_min_evidence": null
+  },
+  "full_inchikey": null,
+  "observations": [],
+  "observation_template": {
+    "observation_id": null,
+    "program": [
+      {
+        "time_min": 0.0,
+        "phi": 0.1
+      },
+      {
+        "time_min": 4.0,
+        "phi": 0.5
+      },
+      {
+        "time_min": 17.0,
+        "phi": 0.95
+      },
+      {
+        "time_min": 25.0,
+        "phi": 0.95
+      },
+      {
+        "time_min": 25.1,
+        "phi": 0.1
+      },
+      {
+        "time_min": 30.0,
+        "phi": 0.1
+      }
+    ],
+    "tr_min": null,
+    "split": null,
+    "source": null,
+    "label_origin": "experiment",
+    "reviewed": false
+  },
+  "note": "One campaign per exact molecule. Preserve selected gradient. Add actual calibration/held-out programs; CatBoost predictions are not measurements."
+}

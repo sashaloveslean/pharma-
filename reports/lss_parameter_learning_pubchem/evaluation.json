@@ -1,0 +1,33 @@
+{
+  "status": "research_only_not_promoted",
+  "series": 500,
+  "molecular_groups": 94,
+  "evaluation": "5 folds grouped by molecular connectivity; all temperatures of a molecule held together",
+  "parameter_label_sha256": "5cf2d878f52c8dd08082a0b030bcbcbe1170a0bb377b31d796ca8e80c98cd449",
+  "split_reference_sha256": "70bb5e40b4154c4a82473a8eac0f072746d9ee8a183fcf9b4a2df7638b062825",
+  "target": [
+    "log10_kw",
+    "S"
+  ],
+  "held_out_composition_predictions": 1640,
+  "mae_log10_k": 0.1826497468199871,
+  "baseline_mae_log10_k": 0.49214192177781896,
+  "macro_molecule_mae_log10_k": 0.19989093146243037,
+  "median_absolute_error_log10_k": 0.14946720040074768,
+  "beats_baseline_in_this_experiment": true,
+  "production_approved": false,
+  "limitations": [
+    "Provisional automatic name-to-structure matches, not fully curated identities.",
+    "One BEH C18 column, ACN/phosphoric acid only: no transfer to Acclaim/MeOH demonstrated.",
+    "No TFV/FTC validation and no peak widths or Rs.",
+    "Published k values; unknown t0 methodology and pH not invented.",
+    "First research cross-validation, not a separate final validation dataset."
+  ],
+  "same_cases_comparison": {
+    "cases": 794,
+    "previous_mae_log10_k": 0.24934613094948294,
+    "current_mae_log10_k": 0.2132496222775549,
+    "baseline_predictions_sha256": "0b006460abf570e9cef2ced4dad5f1b7f29dfab04708e55048d5f4bc7556e6fa",
+    "note": "Same molecules, compositions and test folds; data expansion and identity filtering both changed."
+  }
+}

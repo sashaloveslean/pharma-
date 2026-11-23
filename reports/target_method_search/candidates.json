@@ -1,0 +1,47 @@
+{
+  "search_date": "2026-11-06",
+  "targets": ["TFV", "FTC"],
+  "production_method_changed": false,
+  "training_approved": false,
+  "candidates": [
+    {
+      "id": "PMC2714254",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2714254/",
+      "evidence": "Primary experimental simultaneous plasma LC-MS/MS assay; TFV precursor 288, FTC 248",
+      "column": "Phenomenex Synergi Polar RP",
+      "length_mm": 150,
+      "id_mm": 2.0,
+      "particle_um": 4,
+      "pore_angstrom": 80,
+      "guard": "Polar RP",
+      "elution": "isocratic",
+      "mobile_phase_source_description": "3% acetonitrile / 1% acetic acid in DI water",
+      "flow_ml_min": 0.2,
+      "temperature_c": [22, 25],
+      "injection_ul": 10,
+      "observed_mean_tr_min": {"TFV": 3.51, "FTC": 7.05},
+      "within_run_sd_min": {"TFV": 0.013, "FTC": 0.039},
+      "within_run_n": 35,
+      "pH": null,
+      "Rs": null,
+      "total_cycle_min": null,
+      "status": "literature_candidate_requires_transfer_verification",
+      "limitations": ["Not validated for customer instrument or UV detection", "Not a prediction of our model", "Source sample preparation must accompany plasma assay transfer", "Do not apply 97% aqueous conditions to the existing Acclaim column", "Current increasing-gradient model does not support this isocratic recipe"]
+    },
+    {
+      "id": "PMID16005269",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/16005269/",
+      "doi": "10.1016/j.jchromb.2005.06.019",
+      "evidence": "Primary abstract; simultaneous TFV/FTC plasma HPLC UV assay",
+      "column": "Atlantis dC18",
+      "mobile_phase": "phosphate buffer pH 5.7 and methanol",
+      "gradient_duration_min": 18,
+      "detection_nm": {"TFV": 259, "FTC": 280},
+      "gradient_nodes": null,
+      "flow_ml_min": null,
+      "geometry": null,
+      "status": "incomplete_recipe_full_text_required",
+      "limitations": ["Previously listed lead, not a newly discovered method", "Do not reconstruct missing proportions or gradient nodes from abstract"]
+    }
+  ]
+}

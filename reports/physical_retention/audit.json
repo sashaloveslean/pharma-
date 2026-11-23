@@ -1,0 +1,45 @@
+{
+  "datasets": {
+    "metlin_smrt": {
+      "counts": {
+        "observations": 79957,
+        "incomplete_program": 79957
+      },
+      "systems": 1,
+      "observation_sha256": "325ff43fe6787ecfaf2bf94c931ebd52c3d797a8f43e160ad1c0161117e0cfea",
+      "systems_sha256": "685a269e57757d825a4ceabea5965f6fd74474ec63090aa8237a97b5645799bd",
+      "constant_composition_candidates": []
+    },
+    "report": {
+      "counts": {
+        "observations": 183818,
+        "gradient": 140593,
+        "positive_t0_field_unverified_origin": 168757,
+        "invalid_program": 36445,
+        "incomplete_program": 6780
+      },
+      "systems": 421,
+      "observation_sha256": "03137e3d6afef266fe589853e56b3a2dfd167a38287f2bedaa1175fbeabd0370",
+      "systems_sha256": "2a84bc3980c1774cacbcc1f955324686f9d83fd09dad495de7c344e935f3338b",
+      "constant_composition_candidates": []
+    },
+    "uliege": {
+      "counts": {
+        "observations": 2718,
+        "incomplete_program": 2718
+      },
+      "systems": 5,
+      "observation_sha256": "3f538f6e0704a188a081e95e7c501b1659e8d37fcbea888e3fd3f38969817bed",
+      "systems_sha256": "669284b1e390c8b4c68888850163b2b8bf95787d1d5848e5fe8770883902a356",
+      "constant_composition_candidates": []
+    }
+  },
+  "scope": "Locally normalized public datasets, not all available literature",
+  "status": "NO_AUTOMATICALLY_APPROVED_CALIBRATION_SERIES",
+  "limitations": [
+    "A t0 field is not evidence of a measured void time.",
+    "Constant pump composition is only a candidate; source review, exact identity, fixed pH/recipe/column and measured t0 remain required.",
+    "No widths, Rs or gradient retention predictions are fabricated."
+  ],
+  "selected_gradient": "Preserved; this audit does not modify or judge the selected gradient."
+}

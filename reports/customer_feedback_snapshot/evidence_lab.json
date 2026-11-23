@@ -1,0 +1,1507 @@
+{
+  "status": "FIRST_EXPERIMENT_PROPOSED",
+  "selection_policy": "source completeness, checked manufacturer geometry, published provenance, existing low-pH reference, coverage; ML gap ignored",
+  "primary": {
+    "role": "primary",
+    "priority": 1,
+    "candidate": {
+      "candidate_id": "report:0386:time_x1.0",
+      "source_system": "report:0386",
+      "column": "Thermo Scientific Acclaim RSLC 120 C18",
+      "conditions": {
+        "id": "0386",
+        "column.name": "Thermo Scientific Acclaim RSLC 120 C18",
+        "column.usp.code": "L1",
+        "column.length": "100",
+        "column.id": "2.1",
+        "column.particle.size": "2.2",
+        "column.temperature": "30",
+        "column.flowrate": "0.2",
+        "column.t0": "1.1025",
+        "eluent.A.h2o": "100",
+        "eluent.A.meoh": "0",
+        "eluent.A.acn": "0",
+        "eluent.A.iproh": "0",
+        "eluent.A.acetone": "0",
+        "eluent.A.hex": "0",
+        "eluent.A.chcl3": "0",
+        "eluent.A.ch2cl2": "0",
+        "eluent.A.hept": "0",
+        "eluent.A.formic": "0.1",
+        "eluent.A.formic.unit": "%",
+        "eluent.A.acetic": "0",
+        "eluent.A.acetic.unit": "",
+        "eluent.A.trifluoroacetic": "0",
+        "eluent.A.trifluoroacetic.unit": "",
+        "eluent.A.phosphor": "0",
+        "eluent.A.phosphor.unit": "",
+        "eluent.A.nh4ac": "0",
+        "eluent.A.nh4ac.unit": "",
+        "eluent.A.nh4form": "0",
+        "eluent.A.nh4form.unit": "",
+        "eluent.A.nh4carb": "0",
+        "eluent.A.nh4carb.unit": "",
+        "eluent.A.nh4bicarb": "0",
+        "eluent.A.nh4bicarb.unit": "",
+        "eluent.A.nh4f": "0",
+        "eluent.A.nh4f.unit": "",
+        "eluent.A.nh4oh": "0",
+        "eluent.A.nh4oh.unit": "",
+        "eluent.A.trieth": "0",
+        "eluent.A.trieth.unit": "",
+        "eluent.A.triprop": "0",
+        "eluent.A.triprop.unit": "",
+        "eluent.A.tribut": "0",
+        "eluent.A.tribut.unit": "",
+        "eluent.A.nndimethylhex": "0",
+        "eluent.A.nndimethylhex.unit": "",
+        "eluent.A.medronic": "0",
+        "eluent.A.medronic.unit": "",
+        "eluent.A.pH": "2.6",
+        "eluent.A.heptafluorobutyric": "0",
+        "eluent.A.heptafluorobutyric.unit": "",
+        "eluent.B.h2o": "0",
+        "eluent.B.meoh": "100",
+        "eluent.B.acn": "0",
+        "eluent.B.iproh": "0",
+        "eluent.B.acetone": "0",
+        "eluent.B.hex": "0",
+        "eluent.B.chcl3": "0",
+        "eluent.B.ch2cl2": "0",
+        "eluent.B.hept": "0",
+        "eluent.B.formic": "0.1",
+        "eluent.B.formic.unit": "%",
+        "eluent.B.acetic": "0",
+        "eluent.B.acetic.unit": "",
+        "eluent.B.trifluoroacetic": "0",
+        "eluent.B.trifluoroacetic.unit": "",
+        "eluent.B.phosphor": "0",
+        "eluent.B.phosphor.unit": "",
+        "eluent.B.nh4ac": "0",
+        "eluent.B.nh4ac.unit": "",
+        "eluent.B.nh4form": "0",
+        "eluent.B.nh4form.unit": "",
+        "eluent.B.nh4carb": "0",
+        "eluent.B.nh4carb.unit": "",
+        "eluent.B.nh4bicarb": "0",
+        "eluent.B.nh4bicarb.unit": "",
+        "eluent.B.nh4f": "0",
+        "eluent.B.nh4f.unit": "",
+        "eluent.B.nh4oh": "0",
+        "eluent.B.nh4oh.unit": "",
+        "eluent.B.trieth": "0",
+        "eluent.B.trieth.unit": "",
+        "eluent.B.triprop": "0",
+        "eluent.B.triprop.unit": "",
+        "eluent.B.tribut": "0",
+        "eluent.B.tribut.unit": "",
+        "eluent.B.nndimethylhex": "0",
+        "eluent.B.nndimethylhex.unit": "",
+        "eluent.B.medronic": "0",
+        "eluent.B.medronic.unit": "",
+        "eluent.B.pH": "2.6",
+        "eluent.B.heptafluorobutyric": "0",
+        "eluent.B.heptafluorobutyric.unit": "",
+        "eluent.C.h2o": "0",
+        "eluent.C.meoh": "0",
+        "eluent.C.acn": "0",
+        "eluent.C.iproh": "0",
+        "eluent.C.acetone": "0",
+        "eluent.C.hex": "0",
+        "eluent.C.chcl3": "0",
+        "eluent.C.ch2cl2": "0",
+        "eluent.C.hept": "0",
+        "eluent.C.formic": "0",
+        "eluent.C.formic.unit": "",
+        "eluent.C.acetic": "0",
+        "eluent.C.acetic.unit": "",
+        "eluent.C.trifluoroacetic": "0",
+        "eluent.C.trifluoroacetic.unit": "",
+        "eluent.C.phosphor": "0",
+        "eluent.C.phosphor.unit": "",
+        "eluent.C.nh4ac": "0",
+        "eluent.C.nh4ac.unit": "",
+        "eluent.C.nh4form": "0",
+        "eluent.C.nh4form.unit": "",
+        "eluent.C.nh4carb": "0",
+        "eluent.C.nh4carb.unit": "",
+        "eluent.C.nh4bicarb": "0",
+        "eluent.C.nh4bicarb.unit": "",
+        "eluent.C.nh4f": "0",
+        "eluent.C.nh4f.unit": "",
+        "eluent.C.nh4oh": "0",
+        "eluent.C.nh4oh.unit": "",
+        "eluent.C.trieth": "0",
+        "eluent.C.trieth.unit": "",
+        "eluent.C.triprop": "0",
+        "eluent.C.triprop.unit": "",
+        "eluent.C.tribut": "0",
+        "eluent.C.tribut.unit": "",
+        "eluent.C.nndimethylhex": "0",
+        "eluent.C.nndimethylhex.unit": "",
+        "eluent.C.medronic": "0",
+        "eluent.C.medronic.unit": "",
+        "eluent.C.pH": null,
+        "eluent.C.heptafluorobutyric": "0",
+        "eluent.C.heptafluorobutyric.unit": "",
+        "eluent.D.h2o": "0",
+        "eluent.D.meoh": "0",
+        "eluent.D.acn": "0",
+        "eluent.D.iproh": "0",
+        "eluent.D.acetone": "0",
+        "eluent.D.hex": "0",
+        "eluent.D.chcl3": "0",
+        "eluent.D.ch2cl2": "0",
+        "eluent.D.hept": "0",
+        "eluent.D.formic": "0",
+        "eluent.D.formic.unit": "",
+        "eluent.D.acetic": "0",
+        "eluent.D.acetic.unit": "",
+        "eluent.D.trifluoroacetic": "0",
+        "eluent.D.trifluoroacetic.unit": "",
+        "eluent.D.phosphor": "0",
+        "eluent.D.phosphor.unit": "",
+        "eluent.D.nh4ac": "0",
+        "eluent.D.nh4ac.unit": "",
+        "eluent.D.nh4form": "0",
+        "eluent.D.nh4form.unit": "",
+        "eluent.D.nh4carb": "0",
+        "eluent.D.nh4carb.unit": "",
+        "eluent.D.nh4bicarb": "0",
+        "eluent.D.nh4bicarb.unit": "",
+        "eluent.D.nh4f": "0",
+        "eluent.D.nh4f.unit": "",
+        "eluent.D.nh4oh": "0",
+        "eluent.D.nh4oh.unit": "",
+        "eluent.D.trieth": "0",
+        "eluent.D.trieth.unit": "",
+        "eluent.D.triprop": "0",
+        "eluent.D.triprop.unit": "",
+        "eluent.D.tribut": "0",
+        "eluent.D.tribut.unit": "",
+        "eluent.D.nndimethylhex": "0",
+        "eluent.D.nndimethylhex.unit": "",
+        "eluent.D.medronic": "0",
+        "eluent.D.medronic.unit": "",
+        "eluent.D.pH": null,
+        "eluent.D.heptafluorobutyric": "0",
+        "eluent.D.heptafluorobutyric.unit": "",
+        "gradient.start.A": "90",
+        "gradient.start.B": "10",
+        "gradient.start.C": "0",
+        "gradient.start.D": "0",
+        "gradient.end.A": "90",
+        "gradient.end.B": "10",
+        "gradient.end.C": "0",
+        "gradient.end.D": "0"
+      },
+      "gradient_program": [
+        {
+          "t [min]": "0.0",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "4.0",
+          "A [%]": "50",
+          "B [%]": "50",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "17.0",
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "25.0",
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "25.1",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "30.0",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        }
+      ],
+      "origin": "source_program",
+      "time_scale": 1.0,
+      "predicted_tr_min": {
+        "tenofovir": 4.783732716988662,
+        "emtricitabine": 3.0822024342992926
+      },
+      "individual_interval_90_nominal_min": {
+        "tenofovir": [
+          1.2510602310498564,
+          8.316405202927466
+        ],
+        "emtricitabine": [
+          0,
+          6.614874920238098
+        ]
+      },
+      "time_gap_min": 1.7015302826893692,
+      "possible_gap_min": [
+        0,
+        8.316405202927466
+      ],
+      "cycle_time_min": 30.0,
+      "same_system_training_rows": 64,
+      "local_coverage": {
+        "tenofovir": {
+          "unique_full_inchikeys_same_column_product": 551,
+          "fp_gt_0_3": 1,
+          "fp_gt_0_2": 2,
+          "max_tanimoto": 0.32786885245901637,
+          "scope": "same product name, not necessarily same geometry/conditions"
+        },
+        "emtricitabine": {
+          "unique_full_inchikeys_same_column_product": 551,
+          "fp_gt_0_3": 0,
+          "fp_gt_0_2": 1,
+          "max_tanimoto": 0.23076923076923078,
+          "scope": "same product name, not necessarily same geometry/conditions"
+        }
+      },
+      "method_source": [
+        {
+          "id": "0386",
+          "name": "AA_LC5",
+          "method.type": "RP",
+          "source": "Publication - Aalizadeh",
+          "url": "https://doi.org/10.1021/acs.analchem.2c02893",
+          "pmid": "36347512",
+          "authors": "R. Aalizadeh, V. Nikolopoulou, N. S. Thomaidis",
+          "missing information": "",
+          "comment": "",
+          "model.flags": "ESSENTIAL_METADATA_FEATURES_UNAVAILABLE"
+        }
+      ],
+      "metadata_source": "https://github.com/michaelwitting/RepoRT/blob/1115f14202b3ff29a0fb3dd0d410a03969fe0d89/processed_data/0386/0386_metadata.tsv",
+      "predicted_rs": null,
+      "pressure_bar": null,
+      "execution_ready": false,
+      "manufacturer_limits_checked": true,
+      "warnings": [
+        "No peak width/Rs model",
+        "Dwell volume and pressure unknown",
+        "Point predictions do not establish separation",
+        "90% nominal intervals are not validated on generated programs"
+      ],
+      "surrogate_rank_not_separation_rank": 11
+    },
+    "status": "FOR_ANALYST_REVIEW_BEFORE_LAB_TEST",
+    "critical_cycle_issues": [],
+    "why_selected": [
+      "Исходная программа без масштабирования времени",
+      "Пройдена проверка обязательных полей и баланса растворителей",
+      "Паспортные границы известны для этой геометрии",
+      "Приоритет источника и покрытия, а не максимального предсказанного ΔtR"
+    ],
+    "column_spec": {
+      "name": "Thermo Scientific Acclaim RSLC 120 C18",
+      "part_number": "068982",
+      "length_mm": 100,
+      "id_mm": 2.1,
+      "particle_um": 2.2,
+      "ph_range": [
+        2,
+        8
+      ],
+      "max_temperature_c": 60,
+      "max_water_percent": 90,
+      "typical_flow_ml_min": [
+        0.3,
+        0.8
+      ],
+      "max_flow_ml_min": 1.2,
+      "max_pressure_psi": 11000,
+      "source_url": "https://assets.thermofisher.com/TFS-Assets/CMD/manuals/Man-065184-Acclaim-RSLC-Columns-Man065184-EN.pdf"
+    },
+    "screening_assumptions_not_source": {
+      "sample": "TFV + FTC reference standards, no matrix assumed",
+      "concentration_ug_ml_each": 10,
+      "injection_ul": 1,
+      "diluent": "initial mobile phase, only if solubility confirmed",
+      "detector": "DAD 200–320 nm; exploratory channels 260 and 280 nm"
+    },
+    "preflight": [
+      "Аналитик подтверждает TFV (не TDF/TAF), FTC, чистоту стандартов и состав матрицы.",
+      "Подтвердить точный артикул/геометрию колонки и паспортные пределы pH, растворителей, температуры и давления.",
+      "Проверить совместимость прибора; предел давления задать не выше меньшего предела прибора и колонки.",
+      "Уточнить способ задания/измерения pH в источнике и проверить приготовленные фазы; не считать процент кислоты измеренным pH.",
+      "Измерить/учесть dwell volume и проверить достаточность уравновешивания повторными инъекциями.",
+      "Согласовать предложенные объём ввода, концентрацию, растворитель пробы и UV-детекцию; проверить растворимость и чувствительность."
+    ],
+    "record_in_lab": [
+      "tR TFV/FTC",
+      "ширины на полувысоте и измеренный Rs",
+      "идентичность/чистота и хвостование пиков",
+      "давление",
+      "повторяемость",
+      "t0 с указанием маркера и способа измерения, если измерен"
+    ],
+    "separation_confirmed": false,
+    "instrument_execution_authorized": false
+  },
+  "backups": [
+    {
+      "role": "backup",
+      "priority": 2,
+      "candidate": {
+        "candidate_id": "report:0180:time_x1.0",
+        "source_system": "report:0180",
+        "column": "Phenomenex Kinetex C18",
+        "conditions": {
+          "id": "0180",
+          "column.name": "Phenomenex Kinetex C18",
+          "column.usp.code": "L1",
+          "column.length": "150",
+          "column.id": "2.1",
+          "column.particle.size": "1.7",
+          "column.temperature": "30",
+          "column.flowrate": "0.3",
+          "column.t0": "1.1025",
+          "eluent.A.h2o": "100",
+          "eluent.A.meoh": "0",
+          "eluent.A.acn": "0",
+          "eluent.A.iproh": "0",
+          "eluent.A.acetone": "0",
+          "eluent.A.hex": "0",
+          "eluent.A.chcl3": "0",
+          "eluent.A.ch2cl2": "0",
+          "eluent.A.hept": "0",
+          "eluent.A.formic": "0.1",
+          "eluent.A.formic.unit": "%",
+          "eluent.A.acetic": "0",
+          "eluent.A.acetic.unit": "",
+          "eluent.A.trifluoroacetic": "0",
+          "eluent.A.trifluoroacetic.unit": "",
+          "eluent.A.phosphor": "0",
+          "eluent.A.phosphor.unit": "",
+          "eluent.A.nh4ac": "0",
+          "eluent.A.nh4ac.unit": "",
+          "eluent.A.nh4form": "0",
+          "eluent.A.nh4form.unit": "",
+          "eluent.A.nh4carb": "0",
+          "eluent.A.nh4carb.unit": "",
+          "eluent.A.nh4bicarb": "0",
+          "eluent.A.nh4bicarb.unit": "",
+          "eluent.A.nh4f": "0",
+          "eluent.A.nh4f.unit": "",
+          "eluent.A.nh4oh": "0",
+          "eluent.A.nh4oh.unit": "",
+          "eluent.A.trieth": "0",
+          "eluent.A.trieth.unit": "",
+          "eluent.A.triprop": "0",
+          "eluent.A.triprop.unit": "",
+          "eluent.A.tribut": "0",
+          "eluent.A.tribut.unit": "",
+          "eluent.A.nndimethylhex": "0",
+          "eluent.A.nndimethylhex.unit": "",
+          "eluent.A.medronic": "0",
+          "eluent.A.medronic.unit": "",
+          "eluent.A.pH": "3",
+          "eluent.A.heptafluorobutyric": "0",
+          "eluent.A.heptafluorobutyric.unit": "",
+          "eluent.B.h2o": "0",
+          "eluent.B.meoh": "0",
+          "eluent.B.acn": "100",
+          "eluent.B.iproh": "0",
+          "eluent.B.acetone": "0",
+          "eluent.B.hex": "0",
+          "eluent.B.chcl3": "0",
+          "eluent.B.ch2cl2": "0",
+          "eluent.B.hept": "0",
+          "eluent.B.formic": "0.1",
+          "eluent.B.formic.unit": "%",
+          "eluent.B.acetic": "0",
+          "eluent.B.acetic.unit": "",
+          "eluent.B.trifluoroacetic": "0",
+          "eluent.B.trifluoroacetic.unit": "",
+          "eluent.B.phosphor": "0",
+          "eluent.B.phosphor.unit": "",
+          "eluent.B.nh4ac": "0",
+          "eluent.B.nh4ac.unit": "",
+          "eluent.B.nh4form": "0",
+          "eluent.B.nh4form.unit": "",
+          "eluent.B.nh4carb": "0",
+          "eluent.B.nh4carb.unit": "",
+          "eluent.B.nh4bicarb": "0",
+          "eluent.B.nh4bicarb.unit": "",
+          "eluent.B.nh4f": "0",
+          "eluent.B.nh4f.unit": "",
+          "eluent.B.nh4oh": "0",
+          "eluent.B.nh4oh.unit": "",
+          "eluent.B.trieth": "0",
+          "eluent.B.trieth.unit": "",
+          "eluent.B.triprop": "0",
+          "eluent.B.triprop.unit": "",
+          "eluent.B.tribut": "0",
+          "eluent.B.tribut.unit": "",
+          "eluent.B.nndimethylhex": "0",
+          "eluent.B.nndimethylhex.unit": "",
+          "eluent.B.medronic": "0",
+          "eluent.B.medronic.unit": "",
+          "eluent.B.pH": "3",
+          "eluent.B.heptafluorobutyric": "0",
+          "eluent.B.heptafluorobutyric.unit": "",
+          "eluent.C.h2o": "0",
+          "eluent.C.meoh": "0",
+          "eluent.C.acn": "0",
+          "eluent.C.iproh": "0",
+          "eluent.C.acetone": "0",
+          "eluent.C.hex": "0",
+          "eluent.C.chcl3": "0",
+          "eluent.C.ch2cl2": "0",
+          "eluent.C.hept": "0",
+          "eluent.C.formic": "0",
+          "eluent.C.formic.unit": "",
+          "eluent.C.acetic": "0",
+          "eluent.C.acetic.unit": "",
+          "eluent.C.trifluoroacetic": "0",
+          "eluent.C.trifluoroacetic.unit": "",
+          "eluent.C.phosphor": "0",
+          "eluent.C.phosphor.unit": "",
+          "eluent.C.nh4ac": "0",
+          "eluent.C.nh4ac.unit": "",
+          "eluent.C.nh4form": "0",
+          "eluent.C.nh4form.unit": "",
+          "eluent.C.nh4carb": "0",
+          "eluent.C.nh4carb.unit": "",
+          "eluent.C.nh4bicarb": "0",
+          "eluent.C.nh4bicarb.unit": "",
+          "eluent.C.nh4f": "0",
+          "eluent.C.nh4f.unit": "",
+          "eluent.C.nh4oh": "0",
+          "eluent.C.nh4oh.unit": "",
+          "eluent.C.trieth": "0",
+          "eluent.C.trieth.unit": "",
+          "eluent.C.triprop": "0",
+          "eluent.C.triprop.unit": "",
+          "eluent.C.tribut": "0",
+          "eluent.C.tribut.unit": "",
+          "eluent.C.nndimethylhex": "0",
+          "eluent.C.nndimethylhex.unit": "",
+          "eluent.C.medronic": "0",
+          "eluent.C.medronic.unit": "",
+          "eluent.C.pH": null,
+          "eluent.C.heptafluorobutyric": "0",
+          "eluent.C.heptafluorobutyric.unit": "",
+          "eluent.D.h2o": "0",
+          "eluent.D.meoh": "0",
+          "eluent.D.acn": "0",
+          "eluent.D.iproh": "0",
+          "eluent.D.acetone": "0",
+          "eluent.D.hex": "0",
+          "eluent.D.chcl3": "0",
+          "eluent.D.ch2cl2": "0",
+          "eluent.D.hept": "0",
+          "eluent.D.formic": "0",
+          "eluent.D.formic.unit": "",
+          "eluent.D.acetic": "0",
+          "eluent.D.acetic.unit": "",
+          "eluent.D.trifluoroacetic": "0",
+          "eluent.D.trifluoroacetic.unit": "",
+          "eluent.D.phosphor": "0",
+          "eluent.D.phosphor.unit": "",
+          "eluent.D.nh4ac": "0",
+          "eluent.D.nh4ac.unit": "",
+          "eluent.D.nh4form": "0",
+          "eluent.D.nh4form.unit": "",
+          "eluent.D.nh4carb": "0",
+          "eluent.D.nh4carb.unit": "",
+          "eluent.D.nh4bicarb": "0",
+          "eluent.D.nh4bicarb.unit": "",
+          "eluent.D.nh4f": "0",
+          "eluent.D.nh4f.unit": "",
+          "eluent.D.nh4oh": "0",
+          "eluent.D.nh4oh.unit": "",
+          "eluent.D.trieth": "0",
+          "eluent.D.trieth.unit": "",
+          "eluent.D.triprop": "0",
+          "eluent.D.triprop.unit": "",
+          "eluent.D.tribut": "0",
+          "eluent.D.tribut.unit": "",
+          "eluent.D.nndimethylhex": "0",
+          "eluent.D.nndimethylhex.unit": "",
+          "eluent.D.medronic": "0",
+          "eluent.D.medronic.unit": "",
+          "eluent.D.pH": null,
+          "eluent.D.heptafluorobutyric": "0",
+          "eluent.D.heptafluorobutyric.unit": "",
+          "gradient.start.A": "98",
+          "gradient.start.B": "2",
+          "gradient.start.C": "0",
+          "gradient.start.D": "0",
+          "gradient.end.A": "0",
+          "gradient.end.B": "100",
+          "gradient.end.C": "0",
+          "gradient.end.D": "0"
+        },
+        "gradient_program": [
+          {
+            "t [min]": "0.0",
+            "A [%]": "98",
+            "B [%]": "2",
+            "C [%]": "0",
+            "D [%]": "0",
+            "flow rate [ml/min]": "0.3"
+          },
+          {
+            "t [min]": "14.0",
+            "A [%]": "0",
+            "B [%]": "100",
+            "C [%]": "0",
+            "D [%]": "0",
+            "flow rate [ml/min]": "0.3"
+          },
+          {
+            "t [min]": "17.0",
+            "A [%]": "0",
+            "B [%]": "100",
+            "C [%]": "0",
+            "D [%]": "0",
+            "flow rate [ml/min]": "0.3"
+          },
+          {
+            "t [min]": "17.1",
+            "A [%]": "98",
+            "B [%]": "2",
+            "C [%]": "0",
+            "D [%]": "0",
+            "flow rate [ml/min]": "0.3"
+          },
+          {
+            "t [min]": "25.0",
+            "A [%]": "98",
+            "B [%]": "2",
+            "C [%]": "0",
+            "D [%]": "0",
+            "flow rate [ml/min]": "0.3"
+          }
+        ],
+        "origin": "source_program",
+        "time_scale": 1.0,
+        "predicted_tr_min": {
+          "tenofovir": 4.044504868410614,
+          "emtricitabine": 3.0100331812644043
+        },
+        "individual_interval_90_nominal_min": {
+          "tenofovir": [
+            0.511832382471809,
+            7.57717735434942
+          ],
+          "emtricitabine": [
+            0,
+            6.54270566720321
+          ]
+        },
+        "time_gap_min": 1.03447168714621,
+        "possible_gap_min": [
+          0,
+          7.57717735434942
+        ],
+        "cycle_time_min": 25.0,
+        "same_system_training_rows": 84,
+        "local_coverage": {
+          "tenofovir": {
+            "unique_full_inchikeys_same_column_product": 382,
+            "fp_gt_0_3": 8,
+            "fp_gt_0_2": 15,
+            "max_tanimoto": 0.390625,
+            "scope": "same product name, not necessarily same geometry/conditions"
+          },
+          "emtricitabine": {
+            "unique_full_inchikeys_same_column_product": 382,
+            "fp_gt_0_3": 0,
+            "fp_gt_0_2": 11,
+            "max_tanimoto": 0.2923076923076923,
+            "scope": "same product name, not necessarily same geometry/conditions"
+          }
+        },
+        "method_source": [
+          {
+            "id": "0180",
+            "name": "RP Geneva DB maXisQTOF neg",
+            "method.type": "RP",
+            "source": "Publication - Pezzatti",
+            "url": "https://doi.org/10.1016/j.chroma.2019.01.023",
+            "pmid": "",
+            "authors": "J. Pezzatti, V. González-Ruiz, S. Codesido, Y. Gagnebin, A. Joshi, D. Guillarme, J. Schappler, D. Picard, J. Boccard, S. Rudaz",
+            "missing information": "",
+            "comment": ""
+          }
+        ],
+        "metadata_source": "https://github.com/michaelwitting/RepoRT/blob/1115f14202b3ff29a0fb3dd0d410a03969fe0d89/processed_data/0180/0180_metadata.tsv",
+        "predicted_rs": null,
+        "pressure_bar": null,
+        "execution_ready": false,
+        "manufacturer_limits_checked": false,
+        "warnings": [
+          "No peak width/Rs model",
+          "Dwell volume and pressure unknown",
+          "Point predictions do not establish separation",
+          "90% nominal intervals are not validated on generated programs"
+        ],
+        "surrogate_rank_not_separation_rank": 28
+      },
+      "status": "FOR_ANALYST_REVIEW_BEFORE_LAB_TEST",
+      "critical_cycle_issues": [],
+      "why_selected": [
+        "Исходная программа без масштабирования времени",
+        "Пройдена проверка обязательных полей и баланса растворителей",
+        "Паспортные границы ещё нужно проверить",
+        "Приоритет источника и покрытия, а не максимального предсказанного ΔtR"
+      ],
+      "column_spec": null,
+      "screening_assumptions_not_source": {
+        "sample": "TFV + FTC reference standards, no matrix assumed",
+        "concentration_ug_ml_each": 10,
+        "injection_ul": 1,
+        "diluent": "initial mobile phase, only if solubility confirmed",
+        "detector": "DAD 200–320 nm; exploratory channels 260 and 280 nm"
+      },
+      "preflight": [
+        "Аналитик подтверждает TFV (не TDF/TAF), FTC, чистоту стандартов и состав матрицы.",
+        "Подтвердить точный артикул/геометрию колонки и паспортные пределы pH, растворителей, температуры и давления.",
+        "Проверить совместимость прибора; предел давления задать не выше меньшего предела прибора и колонки.",
+        "Уточнить способ задания/измерения pH в источнике и проверить приготовленные фазы; не считать процент кислоты измеренным pH.",
+        "Измерить/учесть dwell volume и проверить достаточность уравновешивания повторными инъекциями.",
+        "Согласовать предложенные объём ввода, концентрацию, растворитель пробы и UV-детекцию; проверить растворимость и чувствительность.",
+        "Блокер варианта: паспорт колонки ещё не проверен."
+      ],
+      "record_in_lab": [
+        "tR TFV/FTC",
+        "ширины на полувысоте и измеренный Rs",
+        "идентичность/чистота и хвостование пиков",
+        "давление",
+        "повторяемость",
+        "t0 с указанием маркера и способа измерения, если измерен"
+      ],
+      "separation_confirmed": false,
+      "instrument_execution_authorized": false
+    },
+    {
+      "role": "backup",
+      "priority": 3,
+      "candidate": {
+        "candidate_id": "report:0274:time_x1.0",
+        "source_system": "report:0274",
+        "column": "Phenomenex Kinetex PS C18",
+        "conditions": {
+          "id": "0274",
+          "column.name": "Phenomenex Kinetex PS C18",
+          "column.usp.code": "L1",
+          "column.length": "150",
+          "column.id": "3",
+          "column.particle.size": "2.6",
+          "column.temperature": "40",
+          "column.flowrate": "0.35",
+          "column.t0": "1.9285714285714288",
+          "eluent.A.h2o": "100",
+          "eluent.A.meoh": "0",
+          "eluent.A.acn": "0",
+          "eluent.A.iproh": "0",
+          "eluent.A.acetone": "0",
+          "eluent.A.hex": "0",
+          "eluent.A.chcl3": "0",
+          "eluent.A.ch2cl2": "0",
+          "eluent.A.hept": "0",
+          "eluent.A.formic": "0.1",
+          "eluent.A.formic.unit": "%",
+          "eluent.A.acetic": "0",
+          "eluent.A.acetic.unit": "",
+          "eluent.A.trifluoroacetic": "0",
+          "eluent.A.trifluoroacetic.unit": "",
+          "eluent.A.phosphor": "0",
+          "eluent.A.phosphor.unit": "",
+          "eluent.A.nh4ac": "0",
+          "eluent.A.nh4ac.unit": "",
+          "eluent.A.nh4form": "0",
+          "eluent.A.nh4form.unit": "",
+          "eluent.A.nh4carb": "0",
+          "eluent.A.nh4carb.unit": "",
+          "eluent.A.nh4bicarb": "0",
+          "eluent.A.nh4bicarb.unit": "",
+          "eluent.A.nh4f": "0",
+          "eluent.A.nh4f.unit": "",
+          "eluent.A.nh4oh": "0",
+          "eluent.A.nh4oh.unit": "",
+          "eluent.A.trieth": "0",
+          "eluent.A.trieth.unit": "",
+          "eluent.A.triprop": "0",
+          "eluent.A.triprop.unit": "",
+          "eluent.A.tribut": "0",
+          "eluent.A.tribut.unit": "",
+          "eluent.A.nndimethylhex": "0",
+          "eluent.A.nndimethylhex.unit": "",
+          "eluent.A.medronic": "0",
+          "eluent.A.medronic.unit": "",
+          "eluent.A.pH": "3",
+          "eluent.A.heptafluorobutyric": "0",
+          "eluent.A.heptafluorobutyric.unit": "",
+          "eluent.B.h2o": "0",
+          "eluent.B.meoh": "0",
+          "eluent.B.acn": "100",
+          "eluent.B.iproh": "0",
+          "eluent.B.acetone": "0",
+          "eluent.B.hex": "0",
+          "eluent.B.chcl3": "0",
+          "eluent.B.ch2cl2": "0",
+          "eluent.B.hept": "0",
+          "eluent.B.formic": "0",
+          "eluent.B.formic.unit": "",
+          "eluent.B.acetic": "0",
+          "eluent.B.acetic.unit": "",
+          "eluent.B.trifluoroacetic": "0",
+          "eluent.B.trifluoroacetic.unit": "",
+          "eluent.B.phosphor": "0",
+          "eluent.B.phosphor.unit": "",
+          "eluent.B.nh4ac": "0",
+          "eluent.B.nh4ac.unit": "",
+          "eluent.B.nh4form": "0",
+          "eluent.B.nh4form.unit": "",
+          "eluent.B.nh4carb": "0",
+          "eluent.B.nh4carb.unit": "",
+          "eluent.B.nh4bicarb": "0",
+          "eluent.B.nh4bicarb.unit": "",
+          "eluent.B.nh4f": "0",
+          "eluent.B.nh4f.unit": "",
+          "eluent.B.nh4oh": "0",
+          "eluent.B.nh4oh.unit": "",
+          "eluent.B.trieth": "0",
+          "eluent.B.trieth.unit": "",
+          "eluent.B.triprop": "0",
+          "eluent.B.triprop.unit": "",
+          "eluent.B.tribut": "0",
+          "eluent.B.tribut.unit": "",
+          "eluent.B.nndimethylhex": "0",
+          "eluent.B.nndimethylhex.unit": "",
+          "eluent.B.medronic": "0",
+          "eluent.B.medronic.unit": "",
+          "eluent.B.pH": null,
+          "eluent.B.heptafluorobutyric": "0",
+          "eluent.B.heptafluorobutyric.unit": "",
+          "eluent.C.h2o": "0",
+          "eluent.C.meoh": "0",
+          "eluent.C.acn": "0",
+          "eluent.C.iproh": "0",
+          "eluent.C.acetone": "0",
+          "eluent.C.hex": "0",
+          "eluent.C.chcl3": "0",
+          "eluent.C.ch2cl2": "0",
+          "eluent.C.hept": "0",
+          "eluent.C.formic": "0",
+          "eluent.C.formic.unit": "",
+          "eluent.C.acetic": "0",
+          "eluent.C.acetic.unit": "",
+          "eluent.C.trifluoroacetic": "0",
+          "eluent.C.trifluoroacetic.unit": "",
+          "eluent.C.phosphor": "0",
+          "eluent.C.phosphor.unit": "",
+          "eluent.C.nh4ac": "0",
+          "eluent.C.nh4ac.unit": "",
+          "eluent.C.nh4form": "0",
+          "eluent.C.nh4form.unit": "",
+          "eluent.C.nh4carb": "0",
+          "eluent.C.nh4carb.unit": "",
+          "eluent.C.nh4bicarb": "0",
+          "eluent.C.nh4bicarb.unit": "",
+          "eluent.C.nh4f": "0",
+          "eluent.C.nh4f.unit": "",
+          "eluent.C.nh4oh": "0",
+          "eluent.C.nh4oh.unit": "",
+          "eluent.C.trieth": "0",
+          "eluent.C.trieth.unit": "",
+          "eluent.C.triprop": "0",
+          "eluent.C.triprop.unit": "",
+          "eluent.C.tribut": "0",
+          "eluent.C.tribut.unit": "",
+          "eluent.C.nndimethylhex": "0",
+          "eluent.C.nndimethylhex.unit": "",
+          "eluent.C.medronic": "0",
+          "eluent.C.medronic.unit": "",
+          "eluent.C.pH": null,
+          "eluent.C.heptafluorobutyric": "0",
+          "eluent.C.heptafluorobutyric.unit": "",
+          "eluent.D.h2o": "0",
+          "eluent.D.meoh": "0",
+          "eluent.D.acn": "0",
+          "eluent.D.iproh": "0",
+          "eluent.D.acetone": "0",
+          "eluent.D.hex": "0",
+          "eluent.D.chcl3": "0",
+          "eluent.D.ch2cl2": "0",
+          "eluent.D.hept": "0",
+          "eluent.D.formic": "0",
+          "eluent.D.formic.unit": "",
+          "eluent.D.acetic": "0",
+          "eluent.D.acetic.unit": "",
+          "eluent.D.trifluoroacetic": "0",
+          "eluent.D.trifluoroacetic.unit": "",
+          "eluent.D.phosphor": "0",
+          "eluent.D.phosphor.unit": "",
+          "eluent.D.nh4ac": "0",
+          "eluent.D.nh4ac.unit": "",
+          "eluent.D.nh4form": "0",
+          "eluent.D.nh4form.unit": "",
+          "eluent.D.nh4carb": "0",
+          "eluent.D.nh4carb.unit": "",
+          "eluent.D.nh4bicarb": "0",
+          "eluent.D.nh4bicarb.unit": "",
+          "eluent.D.nh4f": "0",
+          "eluent.D.nh4f.unit": "",
+          "eluent.D.nh4oh": "0",
+          "eluent.D.nh4oh.unit": "",
+          "eluent.D.trieth": "0",
+          "eluent.D.trieth.unit": "",
+          "eluent.D.triprop": "0",
+          "eluent.D.triprop.unit": "",
+          "eluent.D.tribut": "0",
+          "eluent.D.tribut.unit": "",
+          "eluent.D.nndimethylhex": "0",
+          "eluent.D.nndimethylhex.unit": "",
+          "eluent.D.medronic": "0",
+          "eluent.D.medronic.unit": "",
+          "eluent.D.pH": null,
+          "eluent.D.heptafluorobutyric": "0",
+          "eluent.D.heptafluorobutyric.unit": "",
+          "gradient.start.A": "95",
+          "gradient.start.B": "5",
+          "gradient.start.C": "0",
+          "gradient.start.D": "0",
+          "gradient.end.A": "0",
+          "gradient.end.B": "100",
+          "gradient.end.C": "0",
+          "gradient.end.D": "0"
+        },
+        "gradient_program": [
+          {
+            "t [min]": "0.0",
+            "A [%]": "95",
+            "B [%]": "5",
+            "C [%]": "0",
+            "D [%]": "0",
+            "flow rate [ml/min]": "0.35"
+          },
+          {
+            "t [min]": "20.0",
+            "A [%]": "0",
+            "B [%]": "100",
+            "C [%]": "0",
+            "D [%]": "0",
+            "flow rate [ml/min]": "0.35"
+          },
+          {
+            "t [min]": "25.0",
+            "A [%]": "0",
+            "B [%]": "100",
+            "C [%]": "0",
+            "D [%]": "0",
+            "flow rate [ml/min]": "0.35"
+          },
+          {
+            "t [min]": "30.0",
+            "A [%]": "95",
+            "B [%]": "5",
+            "C [%]": "0",
+            "D [%]": "0",
+            "flow rate [ml/min]": "0.35"
+          }
+        ],
+        "origin": "source_program",
+        "time_scale": 1.0,
+        "predicted_tr_min": {
+          "tenofovir": 6.471889568594673,
+          "emtricitabine": 5.296664805448229
+        },
+        "individual_interval_90_nominal_min": {
+          "tenofovir": [
+            2.9392170826558672,
+            10.004562054533478
+          ],
+          "emtricitabine": [
+            1.7639923195094234,
+            8.829337291387034
+          ]
+        },
+        "time_gap_min": 1.1752247631464439,
+        "possible_gap_min": [
+          0,
+          8.240569735024055
+        ],
+        "cycle_time_min": 30.0,
+        "same_system_training_rows": 46,
+        "local_coverage": {
+          "tenofovir": {
+            "unique_full_inchikeys_same_column_product": 46,
+            "fp_gt_0_3": 0,
+            "fp_gt_0_2": 0,
+            "max_tanimoto": 0.16,
+            "scope": "same product name, not necessarily same geometry/conditions"
+          },
+          "emtricitabine": {
+            "unique_full_inchikeys_same_column_product": 46,
+            "fp_gt_0_3": 0,
+            "fp_gt_0_2": 0,
+            "max_tanimoto": 0.14516129032258066,
+            "scope": "same product name, not necessarily same geometry/conditions"
+          }
+        },
+        "method_source": [
+          {
+            "id": "0274",
+            "name": "Kruve Lab_9",
+            "method.type": "RP",
+            "source": "Publication - Souihi",
+            "url": "https://doi.org/10.1016/j.chroma.2022.462867",
+            "pmid": "",
+            "authors": "A. Souihi, M.P. Mohai, E. Palm, L. Malm, A. Kruve",
+            "missing information": "",
+            "comment": "",
+            "model.flags": "ESSENTIAL_METADATA_FEATURES_UNAVAILABLE"
+          }
+        ],
+        "metadata_source": "https://github.com/michaelwitting/RepoRT/blob/1115f14202b3ff29a0fb3dd0d410a03969fe0d89/processed_data/0274/0274_metadata.tsv",
+        "predicted_rs": null,
+        "pressure_bar": null,
+        "execution_ready": false,
+        "manufacturer_limits_checked": false,
+        "warnings": [
+          "No peak width/Rs model",
+          "Dwell volume and pressure unknown",
+          "Point predictions do not establish separation",
+          "90% nominal intervals are not validated on generated programs"
+        ],
+        "surrogate_rank_not_separation_rank": 21
+      },
+      "status": "BLOCKED_REEQUILIBRATION_PROTOCOL",
+      "critical_cycle_issues": [
+        "missing_explicit_reequilibration_hold"
+      ],
+      "why_selected": [
+        "Исходная программа без масштабирования времени",
+        "Пройдена проверка обязательных полей и баланса растворителей",
+        "Паспортные границы ещё нужно проверить",
+        "Приоритет источника и покрытия, а не максимального предсказанного ΔtR"
+      ],
+      "column_spec": null,
+      "screening_assumptions_not_source": {
+        "sample": "TFV + FTC reference standards, no matrix assumed",
+        "concentration_ug_ml_each": 10,
+        "injection_ul": 1,
+        "diluent": "initial mobile phase, only if solubility confirmed",
+        "detector": "DAD 200–320 nm; exploratory channels 260 and 280 nm"
+      },
+      "preflight": [
+        "Аналитик подтверждает TFV (не TDF/TAF), FTC, чистоту стандартов и состав матрицы.",
+        "Подтвердить точный артикул/геометрию колонки и паспортные пределы pH, растворителей, температуры и давления.",
+        "Проверить совместимость прибора; предел давления задать не выше меньшего предела прибора и колонки.",
+        "Уточнить способ задания/измерения pH в источнике и проверить приготовленные фазы; не считать процент кислоты измеренным pH.",
+        "Измерить/учесть dwell volume и проверить достаточность уравновешивания повторными инъекциями.",
+        "Согласовать предложенные объём ввода, концентрацию, растворитель пробы и UV-детекцию; проверить растворимость и чувствительность.",
+        "Блокер варианта: паспорт колонки ещё не проверен.",
+        "Блокер: источник не задаёт выдержку после возврата к исходному составу. Аналитик должен определить и проверить уравновешивание до повторных инъекций."
+      ],
+      "record_in_lab": [
+        "tR TFV/FTC",
+        "ширины на полувысоте и измеренный Rs",
+        "идентичность/чистота и хвостование пиков",
+        "давление",
+        "повторяемость",
+        "t0 с указанием маркера и способа измерения, если измерен"
+      ],
+      "separation_confirmed": false,
+      "instrument_execution_authorized": false
+    }
+  ],
+  "rejected": [
+    {
+      "candidate_id": "report:0386:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0267:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0271:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0275:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0276:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0191:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0386:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0201:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0204:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0275:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0271:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0267:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0276:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0266:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0274:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0385:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0179:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0180:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0181:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0056:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0057:time_x1.2",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0057:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0056:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0274:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0266:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0385:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0191:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0354:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0201:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0204:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0354:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0354:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0179:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0180:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0181:time_x0.8",
+      "reasons": [
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0191:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0201:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0204:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0239:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0241:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0345:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0348:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0254:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0258:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0236:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0247:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0250:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0252:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0244:time_x1.2",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0239:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0241:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0345:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0348:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0254:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0258:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0239:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0241:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0236:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0247:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0250:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0345:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0348:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0254:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0258:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0252:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0236:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0247:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0250:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0244:time_x1.0",
+      "reasons": [
+        "missing_return_to_initial"
+      ]
+    },
+    {
+      "candidate_id": "report:0252:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    },
+    {
+      "candidate_id": "report:0244:time_x0.8",
+      "reasons": [
+        "missing_return_to_initial",
+        "not_an_unmodified_source_program"
+      ]
+    }
+  ],
+  "backup_count": 2,
+  "separation_rank_status": "UNRESOLVED_WITHOUT_PEAK_WIDTHS_AND_VALIDATED_UNCERTAINTY",
+  "instrument_execution_authorized": false,
+  "warning": "Первый предлагаемый эксперимент, не лучший доказанный метод. Проверки аналитика обязательны.",
+  "active_gradient_exports": [
+    "lab_backup_2_gradient.csv",
+    "lab_backup_3_gradient.csv",
+    "lab_primary_1_gradient.csv"
+  ]
+}

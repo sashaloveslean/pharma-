@@ -10,3 +10,11 @@ vector_store/
 .DS_Store
 
 data/raw/
+data/external/
+data/processed/open_retention/
+models/open_retention/
+data/processed/public_retention/
+models/public_retention/
+data/lab/
+data/processed/lss_research/
+data/processed/lss_identity_audited/

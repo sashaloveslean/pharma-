@@ -1,0 +1,25 @@
+{
+  "status": "research_only_not_promoted",
+  "series": 261,
+  "molecular_groups": 49,
+  "evaluation": "5 folds grouped by molecular connectivity; all temperatures of a molecule held together",
+  "parameter_label_sha256": "70bb5e40b4154c4a82473a8eac0f072746d9ee8a183fcf9b4a2df7638b062825",
+  "target": [
+    "log10_kw",
+    "S"
+  ],
+  "held_out_composition_predictions": 794,
+  "mae_log10_k": 0.24934613094948294,
+  "baseline_mae_log10_k": 0.5286135632756207,
+  "macro_molecule_mae_log10_k": 0.27613844171010765,
+  "median_absolute_error_log10_k": 0.20425373206832798,
+  "beats_baseline_in_this_experiment": true,
+  "production_approved": false,
+  "limitations": [
+    "Provisional automatic name-to-structure matches, not fully curated identities.",
+    "One BEH C18 column, ACN/phosphoric acid only: no transfer to Acclaim/MeOH demonstrated.",
+    "No TFV/FTC validation and no peak widths or Rs.",
+    "Published k values; unknown t0 methodology and pH not invented.",
+    "First research cross-validation, not a separate final validation dataset."
+  ]
+}

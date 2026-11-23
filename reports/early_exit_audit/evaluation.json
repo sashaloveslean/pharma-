@@ -1,0 +1,118 @@
+{
+  "results": {
+    "previous": {
+      "unseen_column_and_molecules": {
+        "all": {
+          "n": 1871,
+          "mae_min": 2.4747928279075904,
+          "bias_min": -0.5498091063311077
+        },
+        "early": {
+          "n": 61,
+          "mae_min": 2.7196187509012484,
+          "bias_min": 2.624743303660022
+        },
+        "other": {
+          "n": 1810,
+          "mae_min": 2.466541788513881,
+          "bias_min": -0.6567967842368861
+        }
+      },
+      "unseen_column_known_molecules": {
+        "all": {
+          "n": 9443,
+          "mae_min": 1.6624690013522692,
+          "bias_min": -0.44705573591974507
+        },
+        "early": {
+          "n": 332,
+          "mae_min": 0.9389891064943388,
+          "bias_min": 0.6055550648652608
+        },
+        "other": {
+          "n": 9111,
+          "mae_min": 1.6888322243895684,
+          "bias_min": -0.48541231432613535
+        }
+      },
+      "unseen_method": {
+        "all": {
+          "n": 9443,
+          "mae_min": 1.3299177920769518,
+          "bias_min": -0.1260534682913737
+        },
+        "early": {
+          "n": 332,
+          "mae_min": 1.2046383418739093,
+          "bias_min": 0.9025938846479271
+        },
+        "other": {
+          "n": 9111,
+          "mae_min": 1.334482908690651,
+          "bias_min": -0.16353683138827282
+        }
+      }
+    },
+    "candidate": {
+      "unseen_column_and_molecules": {
+        "all": {
+          "n": 1871,
+          "mae_min": 2.5959724957960923,
+          "bias_min": -0.8779882232377715
+        },
+        "early": {
+          "n": 61,
+          "mae_min": 1.8077701593982103,
+          "bias_min": 1.710409957813939
+        },
+        "other": {
+          "n": 1810,
+          "mae_min": 2.6225362209454133,
+          "bias_min": -0.9652215321019448
+        }
+      },
+      "unseen_column_known_molecules": {
+        "all": {
+          "n": 9443,
+          "mae_min": 1.728087067017531,
+          "bias_min": -0.5635727554749441
+        },
+        "early": {
+          "n": 332,
+          "mae_min": 0.5899141048095363,
+          "bias_min": 0.33903774536603304
+        },
+        "other": {
+          "n": 9111,
+          "mae_min": 1.769561485133331,
+          "bias_min": -0.596463402635432
+        }
+      },
+      "unseen_method": {
+        "all": {
+          "n": 9443,
+          "mae_min": 1.438137861123722,
+          "bias_min": -0.3260524388458818
+        },
+        "early": {
+          "n": 332,
+          "mae_min": 0.6557321455715349,
+          "bias_min": 0.4218909874858734
+        },
+        "other": {
+          "n": 9111,
+          "mae_min": 1.4666483097641927,
+          "bias_min": -0.35330709997442344
+        }
+      }
+    }
+  },
+  "passes_internal_research_gate": true,
+  "production_approved": false,
+  "external_labels_used_for_selection": false,
+  "limitations": [
+    "Early = first 10% of analytical scale, not measured void time or proven weak retention.",
+    "MCMRT groups already informed development. Gate is a research screen, not independent validation.",
+    "No external FTC prediction is used to choose the change."
+  ]
+}

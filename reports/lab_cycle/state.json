@@ -1,0 +1,23 @@
+{
+  "status": "WAITING_FOR_APPROVED_PROTOCOL",
+  "issues": [
+    "analyst_approval_required",
+    "common_recipe_family_not_confirmed",
+    "equilibration_not_confirmed",
+    "missing_column_serial",
+    "missing_detection_protocol_id",
+    "missing_diluent_recipe",
+    "missing_dwell_measurement_method",
+    "missing_fixed_sample_ftc_concentration_ug_ml",
+    "missing_fixed_sample_injection_ul",
+    "missing_fixed_sample_tfv_concentration_ug_ml",
+    "missing_instrument_id",
+    "missing_matrix_id",
+    "missing_measured_dwell_volume",
+    "missing_pressure_limit",
+    "recipe_preparation_or_ph_convention_missing:pH_high",
+    "recipe_preparation_or_ph_convention_missing:pH_low"
+  ],
+  "local_model_fitted": false,
+  "instrument_execution_authorized": false
+}

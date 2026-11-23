@@ -1,0 +1,109 @@
+{
+  "candidate_id": "report:0386:time_x1.0",
+  "system_id": "report:0386",
+  "model": "reports/external_transfer/research_scaled.cbm",
+  "model_sha256": "3b11211a097fb3c6cb9bed53bb36dcc1429fb40f464cefd1afaf151577bcdece",
+  "target": "log1p(tR / time_to_first_maximum_organic)",
+  "metadata": {
+    "column.length": 100.0,
+    "column.id": 2.1,
+    "column.particle.size": 2.2,
+    "column.temperature": 30.0,
+    "column.flowrate": 0.2,
+    "column.name": "Thermo Scientific Acclaim RSLC 120 C18",
+    "eluent.A.h2o": 100.0,
+    "eluent.A.meoh": 0.0,
+    "eluent.A.acn": 0.0,
+    "eluent.A.formic": 0.1,
+    "eluent.A.nh4form": 0.0,
+    "eluent.A.nh4ac": 0.0,
+    "eluent.B.h2o": 0.0,
+    "eluent.B.meoh": 100.0,
+    "eluent.B.acn": 0.0,
+    "eluent.B.formic": 0.1,
+    "eluent.B.nh4form": 0.0,
+    "eluent.B.nh4ac": 0.0
+  },
+  "gradient_program": [
+    {
+      "t [min]": 0.0,
+      "A [%]": 90.0,
+      "B [%]": 10.0,
+      "flow rate [ml/min]": 0.2
+    },
+    {
+      "t [min]": 4.0,
+      "A [%]": 50.0,
+      "B [%]": 50.0,
+      "flow rate [ml/min]": 0.2
+    },
+    {
+      "t [min]": 17.0,
+      "A [%]": 5.0,
+      "B [%]": 95.0,
+      "flow rate [ml/min]": 0.2
+    },
+    {
+      "t [min]": 25.0,
+      "A [%]": 5.0,
+      "B [%]": 95.0,
+      "flow rate [ml/min]": 0.2
+    },
+    {
+      "t [min]": 25.1,
+      "A [%]": 90.0,
+      "B [%]": 10.0,
+      "flow rate [ml/min]": 0.2
+    },
+    {
+      "t [min]": 30.0,
+      "A [%]": 90.0,
+      "B [%]": 10.0,
+      "flow rate [ml/min]": 0.2
+    }
+  ],
+  "predictions": [
+    {
+      "name": "tenofovir",
+      "inchikey": "SGOIRFVFHAKUTI-ZCFIWIBFSA-N",
+      "smiles": "C[C@H](CN1C=NC2=C(N=CN=C21)N)OCP(=O)(O)O",
+      "predicted_tr_min": 7.52480059290854,
+      "identity_source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/tenofovir/property/SMILES,InChIKey,MolecularWeight,XLogP,TPSA/JSON"
+    },
+    {
+      "name": "emtricitabine",
+      "inchikey": "XQSPYNMVSIKCOC-NTSWFWBYSA-N",
+      "smiles": "C1[C@H](O[C@H](S1)CO)N2C=C(C(=NC2=O)N)F",
+      "predicted_tr_min": 5.366931576181545,
+      "identity_source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/emtricitabine/property/SMILES,InChIKey,MolecularWeight,XLogP,TPSA/JSON"
+    }
+  ],
+  "local_calibration_applied": false,
+  "calibration_reason": "No independent calibration measurements for the selected complete method; offsets from other methods cannot be transferred.",
+  "predicted_delta_tr_min": 2.1578690167269947,
+  "predicted_Rs": null,
+  "separation_confirmed": false,
+  "validated_for_customer_method": false,
+  "status": "research_prediction_requires_experiment",
+  "external_target_diagnostics_other_methods": [
+    {
+      "observation_id": "report:0391_012294",
+      "system_id": "report:0391",
+      "compound_id": "XQSPYNMVSIKCOC-NTSWFWBYSA-N",
+      "observed_tr_min": 0.6455,
+      "absolute_tr_min": 4.1953118975753805,
+      "scaled_tr_min": 2.2429887338356123,
+      "molecule_seen_in_mcmrt": false,
+      "outside_program_window": false,
+      "unclipped_tr_min": 1.4687058776380917,
+      "calibrated_tr_min": 1.4687058776380917
+    }
+  ],
+  "limitations": [
+    "Frozen research model trained on MCMRT; not a replacement of the production model.",
+    "No measured TFV/FTC validation for report:0386 in this run.",
+    "No calibrated uncertainty, measured t0, peak widths or Rs.",
+    "Predicted time gap does not establish separation or elution order.",
+    "External FTC diagnostic is a different column/program; no transfer of its offset."
+  ]
+}

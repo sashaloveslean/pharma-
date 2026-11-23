@@ -1,0 +1,310 @@
+{
+  "rows": 217,
+  "molecule_connectivity_groups": 75,
+  "pairs": 4,
+  "skipped_ambiguous": [],
+  "params": {
+    "iterations": 200,
+    "depth": 4,
+    "learning_rate": 0.04,
+    "random_seed": 42,
+    "thread_count": 4,
+    "verbose": false,
+    "allow_writing_files": false
+  },
+  "numeric_features": [
+    "column.flowrate",
+    "column.id",
+    "column.length",
+    "column.particle.size",
+    "column.temperature",
+    "eluent.A.acetic",
+    "eluent.A.acetone",
+    "eluent.A.acn",
+    "eluent.A.ch2cl2",
+    "eluent.A.chcl3",
+    "eluent.A.formic",
+    "eluent.A.h2o",
+    "eluent.A.hept",
+    "eluent.A.heptafluorobutyric",
+    "eluent.A.hex",
+    "eluent.A.iproh",
+    "eluent.A.medronic",
+    "eluent.A.meoh",
+    "eluent.A.nh4ac",
+    "eluent.A.nh4bicarb",
+    "eluent.A.nh4carb",
+    "eluent.A.nh4f",
+    "eluent.A.nh4form",
+    "eluent.A.nh4oh",
+    "eluent.A.nndimethylhex",
+    "eluent.A.phosphor",
+    "eluent.A.tribut",
+    "eluent.A.trieth",
+    "eluent.A.trifluoroacetic",
+    "eluent.A.triprop",
+    "eluent.B.acetic",
+    "eluent.B.acetone",
+    "eluent.B.acn",
+    "eluent.B.ch2cl2",
+    "eluent.B.chcl3",
+    "eluent.B.formic",
+    "eluent.B.h2o",
+    "eluent.B.hept",
+    "eluent.B.heptafluorobutyric",
+    "eluent.B.hex",
+    "eluent.B.iproh",
+    "eluent.B.medronic",
+    "eluent.B.meoh",
+    "eluent.B.nh4ac",
+    "eluent.B.nh4bicarb",
+    "eluent.B.nh4carb",
+    "eluent.B.nh4f",
+    "eluent.B.nh4form",
+    "eluent.B.nh4oh",
+    "eluent.B.nndimethylhex",
+    "eluent.B.phosphor",
+    "eluent.B.tribut",
+    "eluent.B.trieth",
+    "eluent.B.trifluoroacetic",
+    "eluent.B.triprop",
+    "eluent.C.acetic",
+    "eluent.C.acetone",
+    "eluent.C.acn",
+    "eluent.C.ch2cl2",
+    "eluent.C.chcl3",
+    "eluent.C.formic",
+    "eluent.C.h2o",
+    "eluent.C.hept",
+    "eluent.C.heptafluorobutyric",
+    "eluent.C.hex",
+    "eluent.C.iproh",
+    "eluent.C.medronic",
+    "eluent.C.meoh",
+    "eluent.C.nh4ac",
+    "eluent.C.nh4bicarb",
+    "eluent.C.nh4carb",
+    "eluent.C.nh4f",
+    "eluent.C.nh4form",
+    "eluent.C.nh4oh",
+    "eluent.C.nndimethylhex",
+    "eluent.C.phosphor",
+    "eluent.C.tribut",
+    "eluent.C.trieth",
+    "eluent.C.trifluoroacetic",
+    "eluent.C.triprop",
+    "eluent.D.acetic",
+    "eluent.D.acetone",
+    "eluent.D.acn",
+    "eluent.D.ch2cl2",
+    "eluent.D.chcl3",
+    "eluent.D.formic",
+    "eluent.D.h2o",
+    "eluent.D.hept",
+    "eluent.D.heptafluorobutyric",
+    "eluent.D.hex",
+    "eluent.D.iproh",
+    "eluent.D.medronic",
+    "eluent.D.meoh",
+    "eluent.D.nh4ac",
+    "eluent.D.nh4bicarb",
+    "eluent.D.nh4carb",
+    "eluent.D.nh4f",
+    "eluent.D.nh4form",
+    "eluent.D.nh4oh",
+    "eluent.D.nndimethylhex",
+    "eluent.D.phosphor",
+    "eluent.D.tribut",
+    "eluent.D.trieth",
+    "eluent.D.trifluoroacetic",
+    "eluent.D.triprop",
+    "gradient.end.A",
+    "gradient.end.B",
+    "gradient.end.C",
+    "gradient.end.D",
+    "gradient.start.A",
+    "gradient.start.B",
+    "gradient.start.C",
+    "gradient.start.D"
+  ],
+  "target": "tR_pH8_minus_tR_pH5_min",
+  "response_features_used": false,
+  "split": "5-fold molecule-connectivity-disjoint; familiar method pairs",
+  "summary": {
+    "zero_change": {
+      "mae_min": 0.49412069347004617,
+      "median_absolute_error_min": 0.08599999999999852
+    },
+    "train_median": {
+      "mae_min": 0.4943810621336406,
+      "median_absolute_error_min": 0.08399999999999963
+    },
+    "catboost": {
+      "mae_min": 0.5262824038116477,
+      "median_absolute_error_min": 0.19934785039259617
+    }
+  },
+  "per_pair": {
+    "report:0286__report:0292": {
+      "zero_change": {
+        "mae_min": 0.5768356164383561,
+        "median_absolute_error_min": 0.023999999999999133
+      },
+      "train_median": {
+        "mae_min": 0.5766438356164382,
+        "median_absolute_error_min": 0.023999999999999133
+      },
+      "catboost": {
+        "mae_min": 0.7038250586040637,
+        "median_absolute_error_min": 0.19269949362402503
+      }
+    },
+    "report:0287__report:0293": {
+      "zero_change": {
+        "mae_min": 0.45030821908219193,
+        "median_absolute_error_min": 0.030000000000001137
+      },
+      "train_median": {
+        "mae_min": 0.45010273963013725,
+        "median_absolute_error_min": 0.0265000000000013
+      },
+      "catboost": {
+        "mae_min": 0.5659417524294947,
+        "median_absolute_error_min": 0.18149252129305804
+      }
+    },
+    "report:0290__report:0294": {
+      "zero_change": {
+        "mae_min": 0.4429625854285716,
+        "median_absolute_error_min": 0.3849999999999998
+      },
+      "train_median": {
+        "mae_min": 0.4435911568571429,
+        "median_absolute_error_min": 0.3884999999999996
+      },
+      "catboost": {
+        "mae_min": 0.35975576425615813,
+        "median_absolute_error_min": 0.30778853438079745
+      }
+    },
+    "report:0291__report:0295": {
+      "zero_change": {
+        "mae_min": 0.46497222222222234,
+        "median_absolute_error_min": 0.46875
+      },
+      "train_median": {
+        "mae_min": 0.46673611111111096,
+        "median_absolute_error_min": 0.46875
+      },
+      "catboost": {
+        "mae_min": 0.2477459075753405,
+        "median_absolute_error_min": 0.1734580220057245
+      }
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "test_rows": 44,
+      "metrics": {
+        "zero_change": {
+          "mae_min": 0.5493436146363635,
+          "median_absolute_error_min": 0.14900000000000002
+        },
+        "train_median": {
+          "mae_min": 0.5493436146363635,
+          "median_absolute_error_min": 0.14900000000000002
+        },
+        "catboost": {
+          "mae_min": 0.5615563501707327,
+          "median_absolute_error_min": 0.21477687958723998
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "test_rows": 44,
+      "metrics": {
+        "zero_change": {
+          "mae_min": 0.6666558440681819,
+          "median_absolute_error_min": 0.13999999999999946
+        },
+        "train_median": {
+          "mae_min": 0.6673831167954546,
+          "median_absolute_error_min": 0.14399999999999902
+        },
+        "catboost": {
+          "mae_min": 0.6238287912788806,
+          "median_absolute_error_min": 0.20661512441995034
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "test_rows": 43,
+      "metrics": {
+        "zero_change": {
+          "mae_min": 0.33500000000000024,
+          "median_absolute_error_min": 0.0259999999999998
+        },
+        "train_median": {
+          "mae_min": 0.33500000000000024,
+          "median_absolute_error_min": 0.0259999999999998
+        },
+        "catboost": {
+          "mae_min": 0.38286186905886616,
+          "median_absolute_error_min": 0.17341716469948282
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "test_rows": 43,
+      "metrics": {
+        "zero_change": {
+          "mae_min": 0.4698266890697677,
+          "median_absolute_error_min": 0.05200000000000138
+        },
+        "train_median": {
+          "mae_min": 0.4703964565116281,
+          "median_absolute_error_min": 0.04850000000000154
+        },
+        "catboost": {
+          "mae_min": 0.6312923863785603,
+          "median_absolute_error_min": 0.32226489474545106
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "test_rows": 43,
+      "metrics": {
+        "zero_change": {
+          "mae_min": 0.44448062023255813,
+          "median_absolute_error_min": 0.09200000000000053
+        },
+        "train_median": {
+          "mae_min": 0.44448062023255813,
+          "median_absolute_error_min": 0.09200000000000053
+        },
+        "catboost": {
+          "mae_min": 0.4287837771984935,
+          "median_absolute_error_min": 0.17824245741471773
+        }
+      }
+    }
+  ],
+  "mae_gain_vs_zero_cluster_bootstrap_95": [
+    -0.09492409908513039,
+    0.024605161787712045
+  ],
+  "production_updated": false,
+  "customer_prediction_supported": false,
+  "limitations": [
+    "Single publication, four method pairs: no external validation.",
+    "Only transition 5 to 8: no learned continuous pH response or interpolation to pH 3.",
+    "Recipe/titrant details not verified against original supplement; recorded metadata match only.",
+    "No TFV/FTC evaluation; predicts a difference, not absolute tR, peak shape or Rs.",
+    "Baseline measured tR is not a feature. Absolute prediction would require separately validated baseline."
+  ]
+}

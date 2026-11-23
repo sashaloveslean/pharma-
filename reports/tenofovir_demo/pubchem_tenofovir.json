@@ -1,0 +1,17 @@
+{
+  "source_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/tenofovir/property/SMILES,InChIKey,MolecularWeight,XLogP,TPSA/JSON",
+  "payload": {
+    "PropertyTable": {
+      "Properties": [
+        {
+          "CID": 464205,
+          "MolecularWeight": "287.21",
+          "SMILES": "C[C@H](CN1C=NC2=C(N=CN=C21)N)OCP(=O)(O)O",
+          "InChIKey": "SGOIRFVFHAKUTI-ZCFIWIBFSA-N",
+          "XLogP": -1.6,
+          "TPSA": 136
+        }
+      ]
+    }
+  }
+}

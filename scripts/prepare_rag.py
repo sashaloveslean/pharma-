@@ -258,7 +258,7 @@ def read_document(
             for paragraph in paragraphs:
                 if paragraph.page is not None:
                     text_by_page[paragraph.page] = text_by_page.get(paragraph.page, 0) + len(paragraph.text)
-            sparse_pages = {page for page in all_pages if text_by_page.get(page, 0) < 80}
+            sparse_pages = {page for page in all_pages if text_by_page.get(page, 0) < 80} # calling OCR only for pages with little text
             if sparse_pages:
                 ocr_paragraphs = read_pdf_ocr(
                     path,
@@ -311,13 +311,14 @@ def select_relevant(paragraphs: list[Paragraph], context: int) -> list[Paragraph
             dissolution_section = bool(hits)
 
         if hits or section_hits or dissolution_section:
-            start = max(0, index - context)
+            start = max(0, index - context) # берется и заданный обзац, и абзац выше, и ниже
             end = min(len(paragraphs), index + context + 1)
             selected_indexes.update(range(start, end))
 
     return [paragraphs[index] for index in sorted(selected_indexes)]
 
 
+# объединение в чанки до 1800 симпволов
 def merge_into_chunks(paragraphs: list[Paragraph], max_chars: int, overlap_chars: int) -> list[dict]:
     chunks: list[dict] = []
     current: list[Paragraph] = []

@@ -1,0 +1,35 @@
+{
+  "2": {
+    "nominal_ph": 2.7,
+    "components": [
+      "formic acid"
+    ]
+  },
+  "3.5": {
+    "nominal_ph": 3.5,
+    "components": [
+      "ammonium formate",
+      "formic acid"
+    ]
+  },
+  "5": {
+    "nominal_ph": 5.0,
+    "components": [
+      "ammonium acetate",
+      "acetic acid"
+    ]
+  },
+  "6.5": {
+    "nominal_ph": 6.5,
+    "components": [
+      "ammonium bicarbonate",
+      "formic acid"
+    ]
+  },
+  "8": {
+    "nominal_ph": 8.0,
+    "components": [
+      "ammonium bicarbonate"
+    ]
+  }
+}

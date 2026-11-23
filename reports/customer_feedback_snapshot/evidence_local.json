@@ -1,0 +1,57 @@
+{
+  "overall": {
+    "n": 17444,
+    "before_mae_min": 1.286471340794558,
+    "after_mae_min": 0.8455353583182118,
+    "clipped_to_zero": 4
+  },
+  "by_system": {
+    "report:0390": {
+      "n": 7326,
+      "before_mae_min": 0.9524385060249515,
+      "after_mae_min": 0.6466063109464514,
+      "clipped_to_zero": 1
+    },
+    "report:0391": {
+      "n": 9660,
+      "before_mae_min": 1.561176600309303,
+      "after_mae_min": 0.9958845482910171,
+      "clipped_to_zero": 3
+    },
+    "report:0400": {
+      "n": 458,
+      "before_mae_min": 0.835536276623586,
+      "after_mae_min": 0.8564109607379057,
+      "clipped_to_zero": 0
+    }
+  },
+  "offsets_min": {
+    "602ac04f8283cf8b0977a0006f771251db4d73fb1dcc7495ea641de3c7c199b9": -0.7742828561975206,
+    "535e47cc49c991e007aad7907c23d6741de18738e9d2a1988b14598c4510a544": -0.12969306488494825
+  },
+  "calibration_rows": 52,
+  "excluded_from_test_rows": 54,
+  "target_diagnostics": [
+    {
+      "observation_id": "report:0391_012294",
+      "system_id": "report:0391",
+      "compound_id": "XQSPYNMVSIKCOC-NTSWFWBYSA-N",
+      "observed_tr_min": 0.6455,
+      "absolute_tr_min": 4.1953118975753805,
+      "scaled_tr_min": 2.2429887338356123,
+      "molecule_seen_in_mcmrt": false,
+      "outside_program_window": false,
+      "unclipped_tr_min": 1.4687058776380917,
+      "calibrated_tr_min": 1.4687058776380917
+    }
+  ],
+  "production_approved": false,
+  "limitations": [
+    "Retrospective adaptation on previously inspected public sources; not a fresh blind test.",
+    "Same complete method only. Does not calibrate arbitrary gradients, columns or the customer instrument.",
+    "No TFV/FTC labels enter calibration; target results are diagnostics, not selection criteria.",
+    "One fixed structure-based calibration panel; sensitivity to panel choice remains untested.",
+    "No measured t0, peak widths, Rs or validated prediction intervals.",
+    "Zero-clipped predictions are boundary failures, not evidence of correct retention."
+  ]
+}

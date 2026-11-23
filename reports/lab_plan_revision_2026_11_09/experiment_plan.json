@@ -1,0 +1,501 @@
+{
+  "version": "customer_feedback_v1",
+  "date": "2026-11-09",
+  "assumptions": {
+    "sample": "pure standards TFV and FTC, no matrix",
+    "detector": "UV/DAD, assumed pending customer confirmation"
+  },
+  "targets": [
+    "TFV, not TDF or TAF",
+    "FTC"
+  ],
+  "fixed": {
+    "column": "Acclaim RSLC 120 C18",
+    "length_mm": 100,
+    "id_mm": 2.1,
+    "particle_um": 2.2,
+    "temperature_C": 30,
+    "flow_ml_min": 0.2,
+    "injection_uL": 1,
+    "DAD_range_nm": [
+      200,
+      320
+    ],
+    "common_channel_nm": 260,
+    "additional_FTC_channel_nm": 280
+  },
+  "phases": [
+    {
+      "id": "P0",
+      "kind": "source_control",
+      "salt": null,
+      "salt_added_mM": 0,
+      "aqueous_target_pH": null,
+      "A": "Water + 0.1% v/v formic acid",
+      "B": "Methanol + 0.1% v/v formic acid",
+      "source_pH": 2.6
+    },
+    {
+      "id": "P1",
+      "kind": "proposed_buffer",
+      "salt": "ammonium formate",
+      "salt_added_mM": 10,
+      "aqueous_target_pH": 3.0,
+      "A": "10 mM added ammonium formate in water, adjust with formic acid to pH 3.0",
+      "B": "Methanol without added salt or acid"
+    },
+    {
+      "id": "P2",
+      "kind": "proposed_buffer",
+      "salt": "ammonium formate",
+      "salt_added_mM": 10,
+      "aqueous_target_pH": 4.0,
+      "A": "10 mM added ammonium formate in water, adjust with formic acid to pH 4.0",
+      "B": "Methanol without added salt or acid"
+    },
+    {
+      "id": "P3",
+      "kind": "proposed_buffer",
+      "salt": "ammonium acetate",
+      "salt_added_mM": 10,
+      "aqueous_target_pH": 5.0,
+      "A": "10 mM added ammonium acetate in water, adjust with acetic acid to pH 5.0",
+      "B": "Methanol without added salt or acid"
+    }
+  ],
+  "stage1_candidates": [
+    {
+      "id": "P0_G0",
+      "phase_id": "P0",
+      "gradient_program": [
+        {
+          "t [min]": "0",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "4",
+          "A [%]": "50",
+          "B [%]": "50",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "17",
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "25",
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "25.1",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "30",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        }
+      ],
+      "origin": "source_control",
+      "predicted_tr_min": null,
+      "predicted_Rs": null,
+      "model_rank": null,
+      "pH_effect_model_validated": false,
+      "training_approved": false
+    },
+    {
+      "id": "P1_G0",
+      "phase_id": "P1",
+      "gradient_program": [
+        {
+          "t [min]": "0",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "4",
+          "A [%]": "50",
+          "B [%]": "50",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "17",
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "25",
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "25.1",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "30",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        }
+      ],
+      "origin": "proposed_buffer",
+      "predicted_tr_min": null,
+      "predicted_Rs": null,
+      "model_rank": null,
+      "pH_effect_model_validated": false,
+      "training_approved": false
+    },
+    {
+      "id": "P2_G0",
+      "phase_id": "P2",
+      "gradient_program": [
+        {
+          "t [min]": "0",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "4",
+          "A [%]": "50",
+          "B [%]": "50",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "17",
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "25",
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "25.1",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "30",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        }
+      ],
+      "origin": "proposed_buffer",
+      "predicted_tr_min": null,
+      "predicted_Rs": null,
+      "model_rank": null,
+      "pH_effect_model_validated": false,
+      "training_approved": false
+    },
+    {
+      "id": "P3_G0",
+      "phase_id": "P3",
+      "gradient_program": [
+        {
+          "t [min]": "0",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "4",
+          "A [%]": "50",
+          "B [%]": "50",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "17",
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "25",
+          "A [%]": "5",
+          "B [%]": "95",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "25.1",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        },
+        {
+          "t [min]": "30",
+          "A [%]": "90",
+          "B [%]": "10",
+          "C [%]": "0",
+          "D [%]": "0",
+          "flow rate [ml/min]": "0.2"
+        }
+      ],
+      "origin": "proposed_buffer",
+      "predicted_tr_min": null,
+      "predicted_Rs": null,
+      "model_rank": null,
+      "pH_effect_model_validated": false,
+      "training_approved": false
+    }
+  ],
+  "stage2": {
+    "phase": "selected from measured stage1 results",
+    "gradients": [
+      [
+        {
+          "t [min]": 0,
+          "A [%]": 90,
+          "B [%]": 10,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 2.0,
+          "A [%]": 90,
+          "B [%]": 10,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 4.0,
+          "A [%]": 35,
+          "B [%]": 65,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 12.0,
+          "A [%]": 5,
+          "B [%]": 95,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 20.0,
+          "A [%]": 5,
+          "B [%]": 95,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 20.1,
+          "A [%]": 90,
+          "B [%]": 10,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 25.0,
+          "A [%]": 90,
+          "B [%]": 10,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        }
+      ],
+      [
+        {
+          "t [min]": 0,
+          "A [%]": 90,
+          "B [%]": 10,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 0.5,
+          "A [%]": 90,
+          "B [%]": 10,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 4.0,
+          "A [%]": 50,
+          "B [%]": 50,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 12.0,
+          "A [%]": 5,
+          "B [%]": 95,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 20.0,
+          "A [%]": 5,
+          "B [%]": 95,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 20.1,
+          "A [%]": 90,
+          "B [%]": 10,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        },
+        {
+          "t [min]": 25.0,
+          "A [%]": 90,
+          "B [%]": 10,
+          "C [%]": 0.0,
+          "D [%]": 0.0,
+          "flow rate [ml/min]": 0.2
+        }
+      ]
+    ],
+    "selection_rule": "Pass measured criteria, then minimize cycle time; do not select by predicted gap alone"
+  },
+  "concentration_followup": {
+    "same_salt_same_pH": true,
+    "salt_added_mM": [
+      5,
+      10,
+      20
+    ],
+    "only_if_needed": true,
+    "do_not_change_gradient_simultaneously": true
+  },
+  "criteria": {
+    "status": "proposed_RnD_targets_not_compendial_validation",
+    "resolution_half_height_min": 1.5,
+    "preferred_resolution_min": 2.0,
+    "tailing_at_5pct_range": [
+      0.8,
+      2.0
+    ],
+    "retention_time_rsd_pct_max": 1.0,
+    "peak_area_rsd_pct_max": 2.0,
+    "confirmation_injections": 6,
+    "signal_to_noise_min": 10,
+    "carryover_pct_of_10ug_ml_peak_area_max": 0.1,
+    "blank_interference_pct_of_10ug_ml_peak_area_max": 0.1,
+    "require_unsaturated_signal": true,
+    "require_identified_peaks": true,
+    "no_missing_measurement_pass": true
+  },
+  "prep": {
+    "diluent": "For each phase, pre-mix its A:B 90:10 v/v; verify clarity",
+    "stocks_ug_ml": 100,
+    "stock_mass_mg_at_100pct_purity": 10,
+    "stock_final_volume_ml": 100,
+    "purity_correction": "mass = 10 / certified_analyte_mass_fraction; account for salt/hydrate basis",
+    "single_standard_ug_ml": 10,
+    "mixture_levels_ug_ml_each": [
+      5,
+      10,
+      20
+    ],
+    "mixture_stock_aliquots_ml_each": [
+      0.5,
+      1,
+      2
+    ],
+    "mixture_final_volume_ml": 10,
+    "stock_release": "Fully dissolved and stable over working period; do not silently change diluent or filter away undissolved analyte",
+    "stability": "Fresh on day of experiment; storage and matrix extraction not validated"
+  },
+  "sequence": {
+    "per_phase_stage1": [
+      "diluent blank",
+      "TFV 10 ug/mL",
+      "FTC 10 ug/mL",
+      "mixture 10 each, repeat 3 times",
+      "post-mixture blank"
+    ],
+    "stage1_injections": 28,
+    "stage1_cycle_time_min_excluding_equilibration": 840,
+    "confirmation": "Best phase/gradient: 6 consecutive mixture injections at 10 ug/mL each; then 5 and 20 levels and a carryover blank after 20",
+    "equilibration": "Do not assume fixed return time sufficient; require stable pressure/baseline and reproducible standard tR"
+  },
+  "buffer_notes": [
+    "10 mM denotes added salt in reservoir A, not total conjugate acid+base after titration.",
+    "Salt varies with A fraction: 9 mM at 10%B to 0.5 mM at 95%B; aqueous pH is not constant mixed-solvent pH.",
+    "Check clarity at A:B 90:10, 50:50 and 5:95, including transitions, before connecting column.",
+    "Remove salts with compatible aqueous-organic flush before strong-organic cleaning; do not introduce pure water into column beyond its aqueous limit.",
+    "Phase P0 has acid in both reservoirs; buffer candidates differ in additives as well as pH. This is screening, not isolation of pH effect."
+  ],
+  "instrument_execution_authorized": false,
+  "ML_limit": "Current model has no validated pH response or peak shape predictor. New phase candidates are rules-based experiments, not a trained optimum."
+}

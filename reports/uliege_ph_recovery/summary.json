@@ -1,0 +1,29 @@
+{
+  "raw_rows": 2720,
+  "qc_rows": 915,
+  "non_qc_rows": 1805,
+  "non_qc_compound_names": 97,
+  "non_qc_by_ph_label": {
+    "2": 404,
+    "8": 402,
+    "3.5": 330,
+    "6.5": 332,
+    "5": 337
+  },
+  "non_qc_with_measured_ph": 1805,
+  "non_qc_resolved_structure": 1803,
+  "systems": [
+    "System 1",
+    "System 2",
+    "System 3"
+  ],
+  "nominal_gradient_durations": [
+    20,
+    60
+  ],
+  "training_ready_rows": 0,
+  "production_updated": false,
+  "independent_of_previous_paired_study": true,
+  "not_newly_downloaded": true,
+  "original_pair_recipes_status": "MultiConditionRT supplementary recipes still unverified"
+}

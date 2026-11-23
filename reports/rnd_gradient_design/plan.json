@@ -1,0 +1,41 @@
+{
+  "model_sha256": "3b11211a097fb3c6cb9bed53bb36dcc1429fb40f464cefd1afaf151577bcdece",
+  "systems_sha256": "2a84bc3980c1774cacbcc1f955324686f9d83fd09dad495de7c344e935f3338b",
+  "fixed_system": "report:0386",
+  "targets": {
+    "tenofovir": "SGOIRFVFHAKUTI-ZCFIWIBFSA-N",
+    "emtricitabine": "XQSPYNMVSIKCOC-NTSWFWBYSA-N"
+  },
+  "generated_count": 162,
+  "source_programs_uncomparable": 66,
+  "search_space": {
+    "start_B": [
+      10,
+      15,
+      20
+    ],
+    "hold_min": [
+      0.5,
+      1,
+      2
+    ],
+    "middle_B": [
+      35,
+      50,
+      65
+    ],
+    "knee_min": [
+      4,
+      6,
+      8
+    ],
+    "end_min": [
+      12,
+      17
+    ]
+  },
+  "selection": "Exploratory roles: gap/analytical-time, short program, largest gap; at least two design parameters differ.",
+  "constraints": "Same column, phase recipes, flow, temperature; existing column checks; wash 8 min, return .1 min, equilibration 4.9 min.",
+  "uncertainty": "Unknown for generated programs; no calibrated interval or claimed Rs.",
+  "production_approved": false
+}

@@ -1,0 +1,57 @@
+{
+  "prediction_sha256": "361b08265be5a72ed12c28afdaf87ebbe4a808d421c7f0e7f8b860e3c850b3bd",
+  "source_plan_sha256": "bb76be9aedf3d64b6f64ed80bc36823896ddc216ea6ba1a8d0fca2593f7b5bd1",
+  "pairs": [
+    [
+      "mcmrt:01",
+      "mcmrt:06"
+    ],
+    [
+      "mcmrt:01",
+      "mcmrt:13"
+    ],
+    [
+      "mcmrt:01",
+      "mcmrt:16"
+    ],
+    [
+      "mcmrt:06",
+      "mcmrt:13"
+    ],
+    [
+      "mcmrt:06",
+      "mcmrt:16"
+    ],
+    [
+      "mcmrt:13",
+      "mcmrt:16"
+    ],
+    [
+      "mcmrt:02",
+      "mcmrt:08"
+    ],
+    [
+      "mcmrt:02",
+      "mcmrt:12"
+    ],
+    [
+      "mcmrt:08",
+      "mcmrt:12"
+    ],
+    [
+      "mcmrt:25",
+      "mcmrt:27"
+    ],
+    [
+      "mcmrt:26",
+      "mcmrt:28"
+    ]
+  ],
+  "scenarios": [
+    "unseen_column_known_molecules",
+    "unseen_column_and_molecules"
+  ],
+  "direction_threshold_min": 0.1,
+  "scope": "Same metadata, instrument and constant flow; differing full gradient programs.",
+  "note": "Retrospective diagnostic on existing development folds; no new model tuning."
+}

@@ -1,0 +1,81 @@
+{
+  "status": "external_research_comparison_not_promoted",
+  "plan_sha256": "d09b15cbcb8030f33d76fcd852294064619f1cdfd354c6d3c62e7e75004871e7",
+  "overall": {
+    "n": 17498,
+    "absolute_mae_min": 4.324555691123635,
+    "scaled_mae_min": 1.285438470703618,
+    "scaled_p90_error_min": 2.4894512078851196,
+    "scaled_bias_min": 1.1357831486606227
+  },
+  "by_system": {
+    "report:0390": {
+      "n": 7333,
+      "absolute_mae_min": 3.7346702455089487,
+      "scaled_mae_min": 0.9524990766499631,
+      "scaled_p90_error_min": 1.7939882525939634,
+      "scaled_bias_min": 0.7710165305231342
+    },
+    "report:0391": {
+      "n": 9685,
+      "absolute_mae_min": 4.88085109149366,
+      "scaled_mae_min": 1.5600335099201514,
+      "scaled_p90_error_min": 2.77167916663416,
+      "scaled_bias_min": 1.4877716349041816
+    },
+    "report:0400": {
+      "n": 480,
+      "absolute_mae_min": 2.1118661496836744,
+      "scaled_mae_min": 0.8312543494188831,
+      "scaled_p90_error_min": 1.8109146797071258,
+      "scaled_bias_min": -0.3937478481449363
+    }
+  },
+  "unseen_molecules": {
+    "n": 17330,
+    "absolute_mae_min": 4.3276284735895825,
+    "scaled_mae_min": 1.2874421529240139,
+    "scaled_p90_error_min": 2.4939990967135475,
+    "scaled_bias_min": 1.137712466843154
+  },
+  "seen_molecules": {
+    "n": 168,
+    "absolute_mae_min": 4.00758354746382,
+    "scaled_mae_min": 1.0787491083258618,
+    "scaled_p90_error_min": 1.447505707274326,
+    "scaled_bias_min": 0.9367647909030749
+  },
+  "excluded_systems": {
+    "report:0401": "metadata_program_flow_conflict",
+    "report:0402": "unrepresented_additive_or_solvent",
+    "report:0403": "unrepresented_additive_or_solvent"
+  },
+  "data_issues": {
+    "duplicate_external_measurement_candidate": 1
+  },
+  "train_overlap_excluded": 0,
+  "production_approved": false,
+  "limitations": [
+    "RepoRT has appeared in earlier project research; this is external to the current MCMRT models, not a global final holdout.",
+    "Fixed configurations; no tuning on external errors.",
+    "Source column labels preserved without post-hoc alias optimization.",
+    "Conservative structure+rounded RT exclusions can remove coincidental matches; their IDs are retained.",
+    "No independent widths/Rs or calibrated prediction intervals. No claim of TFV/FTC accuracy."
+  ],
+  "observations_outside_program_window": 0,
+  "target_diagnostics": {
+    "TFV": [],
+    "FTC": [
+      {
+        "observation_id": "report:0391_012294",
+        "system_id": "report:0391",
+        "compound_id": "XQSPYNMVSIKCOC-NTSWFWBYSA-N",
+        "observed_tr_min": 0.6455,
+        "absolute_tr_min": 4.1953118975753805,
+        "scaled_tr_min": 2.2429887338356123,
+        "molecule_seen_in_mcmrt": false,
+        "outside_program_window": false
+      }
+    ]
+  }
+}

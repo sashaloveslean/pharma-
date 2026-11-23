@@ -1,0 +1,41 @@
+{
+  "report_target_observations": 21,
+  "by_analyte": {
+    "emtricitabine": 9,
+    "tenofovir": 12
+  },
+  "identity_status_counts": {
+    "exact_full_inchikey": 17,
+    "connectivity_only_stereochemistry_unresolved_or_different": 4
+  },
+  "same_method_pair_candidates": 7,
+  "verified_same_injection_pairs": 0,
+  "verified_target_pair_rs_labels": 0,
+  "doe_rows_quarantined": 13,
+  "target_article_with_conflicting_rt": {
+    "pmcid": "PMC12114340",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12114340/fullTextXML",
+    "source_sha256": "3083c30283446facf99a54d78f7cab410faf13cf2134c58fadfa34682c2017e8",
+    "license_evidence": "© 2025 by the authors. 2025 https://creativecommons.org/licenses/by/4.0/ Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license ( https://creativecommons.org/licenses/by/4.0/ ). textmining ccbylicense uri https://creativecommons.org/licenses/by/4.0/",
+    "issue": "contradictory_author_reported_retention_times",
+    "narrative_tr_min": {
+      "tenofovir": 5.08,
+      "emtricitabine": 6.21
+    },
+    "table_tr_min": {
+      "emtricitabine": 0.78,
+      "tenofovir": 0.8
+    },
+    "source_table": "molecules-30-02204-t005",
+    "narrative_evidence": "To assess selectivity, analyses of six blank samples of plasma and six lower limit of quantification (LLOQ) samples were conducted, with these samples being from different individuals. Representative chromatograms of both sample types are illustrated in Figure 1 . The retention times for lamivudine, telbivudine, emtricitabine, entecavir, tenofovir, nedaplatin, oxaliplatin, and adefovir dipivoxil, along with the internal standard (IS), were found to be 5.60, 5.97, 6.21, 5.84, 5.08, 7.91, 8.74, 7.19, and 7.70 min, respectively. The carryover of high standard concentrations to the blanks was below the proscribed limits of 20% of the LLOQ or 5% of the IS [ 27 ], indicating minimal residual effects and confirming the absence of analytical interference from any endogenous plasma components.",
+    "table_evidence": "molecules-30-02204-t005_Table 5 Table 5 MS conditions for compounds and internal standards. Compound Precursor ( m / z ) Product ( m / z ) Collision Voltage (V) RF Lens Voltage (V) Retention Time (min) Lamivudine 230.05 95.0 a /112.0 13/38 30 0.77 Carbamazepine 237.1 192.1 a /194.2 20/24 68 0.69 Telbivudine 243.088 127.0 a /225.0 5/10 44 0.78 Emtricitabine 248 113.0 a /130.0 12/38 30 0.78 Entecavir 278.088 135.0 a /152.0 19/36 59 0.79 Tenofovir 288.1 176.0 a /270.0 19/26 90 0.80 Nedaplatin 304.125 212.3 a /287.0 12/22 61 0.73 Oxaliplatin 398.038 304.1 a /378.0 5/27 71 0.77 Adefovir dipivoxil 502.2 256.0 a /442.1 19/30 69 0.88 a Quantification ion.",
+    "conflicting_analytes": [
+      "tenofovir",
+      "emtricitabine"
+    ],
+    "action": "quarantine_both_claims_pending_author_or_raw_signal_verification",
+    "training_ready": false
+  },
+  "new_training_approved": 0,
+  "dataset_role": "curation_and_development_not_untouched_final_validation"
+}

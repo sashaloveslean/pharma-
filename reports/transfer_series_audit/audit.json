@@ -1,0 +1,3055 @@
+{
+  "groups": [
+    {
+      "group_id": "039ad1ad9e527631",
+      "systems": [
+        "report:0071",
+        "report:0072",
+        "report:0073",
+        "report:0074",
+        "report:0075",
+        "report:0076",
+        "report:0077",
+        "report:0128",
+        "report:0129",
+        "report:0130",
+        "report:0131",
+        "report:0132",
+        "report:0133",
+        "report:0134"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1016/j.jchromb.2020.122105"
+      ],
+      "column": "Waters ACQUITY UPLC BEH C18",
+      "modifier_B": {
+        "methanol_percent": "100",
+        "acetonitrile_percent": "0"
+      },
+      "distinct_full_programs": 3,
+      "context": {
+        "column.flowrate": "0.1",
+        "column.id": "2.1",
+        "column.length": "100",
+        "column.name": "Waters ACQUITY UPLC BEH C18",
+        "column.particle.size": "1.7",
+        "column.temperature": "",
+        "column.usp.code": "L1",
+        "eluent.A.acetic": "0",
+        "eluent.A.acetic.unit": "",
+        "eluent.A.acetone": "0",
+        "eluent.A.acn": "0",
+        "eluent.A.ch2cl2": "0",
+        "eluent.A.chcl3": "0",
+        "eluent.A.formic": "0.1",
+        "eluent.A.formic.unit": "%",
+        "eluent.A.h2o": "100",
+        "eluent.A.hept": "0",
+        "eluent.A.heptafluorobutyric": "0",
+        "eluent.A.heptafluorobutyric.unit": "",
+        "eluent.A.hex": "0",
+        "eluent.A.iproh": "0",
+        "eluent.A.medronic": "0",
+        "eluent.A.medronic.unit": "",
+        "eluent.A.meoh": "0",
+        "eluent.A.nh4ac": "0",
+        "eluent.A.nh4ac.unit": "",
+        "eluent.A.nh4bicarb": "0",
+        "eluent.A.nh4bicarb.unit": "",
+        "eluent.A.nh4carb": "0",
+        "eluent.A.nh4carb.unit": "",
+        "eluent.A.nh4f": "0",
+        "eluent.A.nh4f.unit": "",
+        "eluent.A.nh4form": "0",
+        "eluent.A.nh4form.unit": "",
+        "eluent.A.nh4oh": "0",
+        "eluent.A.nh4oh.unit": "",
+        "eluent.A.nndimethylhex": "0",
+        "eluent.A.nndimethylhex.unit": "",
+        "eluent.A.pH": "3",
+        "eluent.A.phosphor": "0",
+        "eluent.A.phosphor.unit": "",
+        "eluent.A.tribut": "0",
+        "eluent.A.tribut.unit": "",
+        "eluent.A.trieth": "0",
+        "eluent.A.trieth.unit": "",
+        "eluent.A.trifluoroacetic": "0",
+        "eluent.A.trifluoroacetic.unit": "",
+        "eluent.A.triprop": "0",
+        "eluent.A.triprop.unit": "",
+        "eluent.B.acetic": "0",
+        "eluent.B.acetic.unit": "",
+        "eluent.B.acetone": "0",
+        "eluent.B.acn": "0",
+        "eluent.B.ch2cl2": "0",
+        "eluent.B.chcl3": "0",
+        "eluent.B.formic": "0.1",
+        "eluent.B.formic.unit": "%",
+        "eluent.B.h2o": "0",
+        "eluent.B.hept": "0",
+        "eluent.B.heptafluorobutyric": "0",
+        "eluent.B.heptafluorobutyric.unit": "",
+        "eluent.B.hex": "0",
+        "eluent.B.iproh": "0",
+        "eluent.B.medronic": "0",
+        "eluent.B.medronic.unit": "",
+        "eluent.B.meoh": "100",
+        "eluent.B.nh4ac": "0",
+        "eluent.B.nh4ac.unit": "",
+        "eluent.B.nh4bicarb": "0",
+        "eluent.B.nh4bicarb.unit": "",
+        "eluent.B.nh4carb": "0",
+        "eluent.B.nh4carb.unit": "",
+        "eluent.B.nh4f": "0",
+        "eluent.B.nh4f.unit": "",
+        "eluent.B.nh4form": "0",
+        "eluent.B.nh4form.unit": "",
+        "eluent.B.nh4oh": "0",
+        "eluent.B.nh4oh.unit": "",
+        "eluent.B.nndimethylhex": "0",
+        "eluent.B.nndimethylhex.unit": "",
+        "eluent.B.pH": "3",
+        "eluent.B.phosphor": "0",
+        "eluent.B.phosphor.unit": "",
+        "eluent.B.tribut": "0",
+        "eluent.B.tribut.unit": "",
+        "eluent.B.trieth": "0",
+        "eluent.B.trieth.unit": "",
+        "eluent.B.trifluoroacetic": "0",
+        "eluent.B.trifluoroacetic.unit": "",
+        "eluent.B.triprop": "0",
+        "eluent.B.triprop.unit": "",
+        "eluent.C.acetic": "0",
+        "eluent.C.acetic.unit": "",
+        "eluent.C.acetone": "0",
+        "eluent.C.acn": "0",
+        "eluent.C.ch2cl2": "0",
+        "eluent.C.chcl3": "0",
+        "eluent.C.formic": "0",
+        "eluent.C.formic.unit": "",
+        "eluent.C.h2o": "0",
+        "eluent.C.hept": "0",
+        "eluent.C.heptafluorobutyric": "0",
+        "eluent.C.heptafluorobutyric.unit": "",
+        "eluent.C.hex": "0",
+        "eluent.C.iproh": "0",
+        "eluent.C.medronic": "0",
+        "eluent.C.medronic.unit": "",
+        "eluent.C.meoh": "0",
+        "eluent.C.nh4ac": "0",
+        "eluent.C.nh4ac.unit": "",
+        "eluent.C.nh4bicarb": "0",
+        "eluent.C.nh4bicarb.unit": "",
+        "eluent.C.nh4carb": "0",
+        "eluent.C.nh4carb.unit": "",
+        "eluent.C.nh4f": "0",
+        "eluent.C.nh4f.unit": "",
+        "eluent.C.nh4form": "0",
+        "eluent.C.nh4form.unit": "",
+        "eluent.C.nh4oh": "0",
+        "eluent.C.nh4oh.unit": "",
+        "eluent.C.nndimethylhex": "0",
+        "eluent.C.nndimethylhex.unit": "",
+        "eluent.C.pH": null,
+        "eluent.C.phosphor": "0",
+        "eluent.C.phosphor.unit": "",
+        "eluent.C.tribut": "0",
+        "eluent.C.tribut.unit": "",
+        "eluent.C.trieth": "0",
+        "eluent.C.trieth.unit": "",
+        "eluent.C.trifluoroacetic": "0",
+        "eluent.C.trifluoroacetic.unit": "",
+        "eluent.C.triprop": "0",
+        "eluent.C.triprop.unit": "",
+        "eluent.D.acetic": "0",
+        "eluent.D.acetic.unit": "",
+        "eluent.D.acetone": "0",
+        "eluent.D.acn": "0",
+        "eluent.D.ch2cl2": "0",
+        "eluent.D.chcl3": "0",
+        "eluent.D.formic": "0",
+        "eluent.D.formic.unit": "",
+        "eluent.D.h2o": "0",
+        "eluent.D.hept": "0",
+        "eluent.D.heptafluorobutyric": "0",
+        "eluent.D.heptafluorobutyric.unit": "",
+        "eluent.D.hex": "0",
+        "eluent.D.iproh": "0",
+        "eluent.D.medronic": "0",
+        "eluent.D.medronic.unit": "",
+        "eluent.D.meoh": "0",
+        "eluent.D.nh4ac": "0",
+        "eluent.D.nh4ac.unit": "",
+        "eluent.D.nh4bicarb": "0",
+        "eluent.D.nh4bicarb.unit": "",
+        "eluent.D.nh4carb": "0",
+        "eluent.D.nh4carb.unit": "",
+        "eluent.D.nh4f": "0",
+        "eluent.D.nh4f.unit": "",
+        "eluent.D.nh4form": "0",
+        "eluent.D.nh4form.unit": "",
+        "eluent.D.nh4oh": "0",
+        "eluent.D.nh4oh.unit": "",
+        "eluent.D.nndimethylhex": "0",
+        "eluent.D.nndimethylhex.unit": "",
+        "eluent.D.pH": null,
+        "eluent.D.phosphor": "0",
+        "eluent.D.phosphor.unit": "",
+        "eluent.D.tribut": "0",
+        "eluent.D.tribut.unit": "",
+        "eluent.D.trieth": "0",
+        "eluent.D.trieth.unit": "",
+        "eluent.D.trifluoroacetic": "0",
+        "eluent.D.trifluoroacetic.unit": "",
+        "eluent.D.triprop": "0",
+        "eluent.D.triprop.unit": ""
+      },
+      "blockers": [
+        "instrument_equivalence_unreviewed",
+        "t0_origin_unverified",
+        "dwell_and_postcolumn_times_missing",
+        "program_independence_requires_review",
+        "missing_temperature"
+      ],
+      "candidate_molecules": [
+        {
+          "full_inchikey": "QQVDJLLNRSOCEL-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "SNICXCGAKADSCV-JTQLQIEISA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "PAJPWUMXBYXFCZ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "IBRKLUSXDYATLG-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LDHMAVIPBRSVRG-UHFFFAOYSA-O",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HZCBWYNLGPIQRK-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZHSOTLOTTDYIIK-ZDUSSCGKSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NYPYHUZRZVSYKL-ZETCQYMHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "BBZCPUCZKLTAJQ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "CPAGZVLINCPJEH-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "TUHVEAJXIMEOSA-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HCZHHEIFKROPDY-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LRSASMSXMSNRBT-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "WUUGFSXJNOTRMR-IOSLPCCCSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "BLHCMGRVFXRYRN-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "GFFGJBXGBJISGV-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "QYPPJABKJHAVHS-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RCNSAJSGRJSBKK-NSQVQWHSSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "YBJHBAHKTGYVGT-ZKWXMUAHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "OTBHHUPVCYLGQO-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RYYVLZVUVIJVGH-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "CQOVPNPJLQNMDC-ZETCQYMHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "OEYIOHPDSNJKLS-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "JYGXADMDTFJGBT-VWUMJDOOSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "MFYSYFVPBJMHGN-ZPOLXVRWSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DDRJAANPRJIHGJ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NMPZCCZXCOMSDQ-XVFCMESISA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RZZPDXZPRHQOCG-OJAKKHQRSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "OPTASPLRGRRNAP-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "VPGRYOFKCNULNK-ACXQXYJUSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZBCBWPMODOFKDW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LJUQGASMPRMWIW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UFYKDFXCZBTLOO-TXICZTDVSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "BPMFZUMJYQTVII-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UYTPUPDQBNUYGX-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZOOGRGPOEVQQDX-UUOKFMHZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NTYJJOPFIAHURM-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "FDGQSTZJBFJUBT-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZOAMBXDOGPRZLP-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "SEOVTRFCIGRIMH-UHFFFAOYSA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "MBBOMCVGYCRMEA-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "MYYIAHXIVFADCU-QMMMGPOBSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ODKSFYDXXFIFQN-BYPYZUCNSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "FUJLYHJROOYKRA-QGZVFWFLSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "PHIQHXFUZVPYII-ZCFIWIBFSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ILRYLPWNYFXEMH-WHFBIAKZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LEVWYRKDKASIDU-IMJSIDKUSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HNDVDQJCIGZPNO-YFKPBYRVSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZQISRDCJNBUVMM-YFKPBYRVSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "GMKMEZVLHJARHF-WHFBIAKZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZJTJUVIJVLLGSP-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "CHJJGSNFBQVOTG-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "JDHILDINMRGULE-LURJTMIESA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "GUNURVWAJRRUAV-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HYVABZIGRDEKCD-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "VEYYWZRYIYDQJM-ZETCQYMHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "VVHOUVWJCQOYGG-REOHCLBHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "MXNRLFUSFKVQSK-QMMMGPOBSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DFPAKSUCGFBDDF-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "JCMUOFQHZLPHQP-BQBZGAKWSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "YHHSONZFOIEMCP-UHFFFAOYSA-O",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZCFFYALKHPIRKJ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KDCGOANMDULRCW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "AUNGANRZJHBGPY-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "QZAYGJVTTNCVMB-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HXJDWCWJDCOHDG-RYUDHWBXSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "SUHOQUVVVLNYQR-MRVPVSSYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ATHGHQPFGPMSJY-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "OTKJDMGTUTTYMP-ZWKOTPCHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HZSAJDVWZRBGIF-UHFFFAOYSA-O",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UIJIQXGRFSPYQW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "XNSAINXGIQZQOO-SRVKXCTJSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "XUIIKFGFIJCVMT-LBPRGKRZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ISAKRJDGNUQOIC-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LEHOTFFKMJEONL-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LOIYMIARKYCTBW-OWOJBTEDSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LRFVTYWOQMYALW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "FBZONXHGGPHHIY-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UBQKCCHYAOITMY-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZPBYVFQJHWLTFB-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "FBTSQILOGYXGMD-LURJTMIESA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ALEXXDVDDISNDU-JZYPGELDSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "GHOKWGTUZJEAQD-ZETCQYMHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KDXKERNSBIXSRK-YFKPBYRVSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "COLNVLDHVKWLRT-QMMMGPOBSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "JLSKPBDKNIXMBS-VIFPVBQESA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DRLFMBDRBRZALE-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KTHADMDGDNYQRX-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DZTHIGRZJZPRDV-GFCCVEGCSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "CBQJSKKFNMDLON-JTQLQIEISA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "MVAWJSIDNICKHF-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NCIKQJBVUNUXLW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "GNISQJGXJIDKDJ-YFKPBYRVSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HNXQXTQTPAJEJL-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZJUKTBDSGOFHSH-WFMPWKQPSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UDYDDOATBNVEES-UUOKFMHZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KHWCHTKSEGGWEX-RRKCRQDMSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "PFNFFQXMRSDOHW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "AUTOLBMXDDTRRT-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KSEBMYQBYZTDHS-HWKANZROSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KRCSEEITTBNSQS-SLPGGIOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NYHBQMYGNKIUIF-UUOKFMHZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "XVOYSCVBGLVSOL-REOHCLBHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZDXPYRJPNDTMRX-VKHMYHEASA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "SJJCQDRGABAVBB-UHFFFAOYSA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NCMVOABPESMRCP-SHYZEUOFSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "CJBDUOMQLFKVQC-UHFFFAOYSA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HXACOUQIXZGNBF-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "WLJVNTCWHIRURA-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZMCHBSMFKQYNKA-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "BDJRBEYXGGNYIS-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RGHNJXZEOKUKBD-SQOUGZDYSA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "BXFFHSIDQOFMLE-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UGQMRVRMYYASKQ-KQYNXXCUSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "XUYPXLNMDZIRQH-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "AAWZDTNXLSGCEK-LNVDRNJUSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "TYFQFVWCELRYAO-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "XOAAWQZATWQOTB-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RWOAVOYBVRQNIZ-BFHYXJOUSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UZTFMUBKZQVKLK-UHFFFAOYSA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "XFTRTWQBIOMVPK-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "PYUSHNKNPOHWEZ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RFMMMVDNIPUKGG-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "WXNXCEHXYPACJF-ZETCQYMHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HXFOXFJUNFFYMO-BYPYZUCNSA-N",
+          "distinct_programs": 3
+        }
+      ],
+      "training_ready": false,
+      "molecules_with_at_least_three_programs": 125
+    },
+    {
+      "group_id": "66769c501561a8a7",
+      "systems": [
+        "report:0083",
+        "report:0084",
+        "report:0085",
+        "report:0140",
+        "report:0141",
+        "report:0142"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1016/j.jchromb.2020.122105"
+      ],
+      "column": "Waters CORTECS T3",
+      "modifier_B": {
+        "methanol_percent": "100",
+        "acetonitrile_percent": "0"
+      },
+      "distinct_full_programs": 3,
+      "context": {
+        "column.flowrate": "0.1",
+        "column.id": "2.1",
+        "column.length": "100",
+        "column.name": "Waters CORTECS T3",
+        "column.particle.size": "2.7",
+        "column.temperature": "",
+        "column.usp.code": "L1",
+        "eluent.A.acetic": "0",
+        "eluent.A.acetic.unit": "",
+        "eluent.A.acetone": "0",
+        "eluent.A.acn": "0",
+        "eluent.A.ch2cl2": "0",
+        "eluent.A.chcl3": "0",
+        "eluent.A.formic": "0.1",
+        "eluent.A.formic.unit": "%",
+        "eluent.A.h2o": "100",
+        "eluent.A.hept": "0",
+        "eluent.A.heptafluorobutyric": "0",
+        "eluent.A.heptafluorobutyric.unit": "",
+        "eluent.A.hex": "0",
+        "eluent.A.iproh": "0",
+        "eluent.A.medronic": "0",
+        "eluent.A.medronic.unit": "",
+        "eluent.A.meoh": "0",
+        "eluent.A.nh4ac": "0",
+        "eluent.A.nh4ac.unit": "",
+        "eluent.A.nh4bicarb": "0",
+        "eluent.A.nh4bicarb.unit": "",
+        "eluent.A.nh4carb": "0",
+        "eluent.A.nh4carb.unit": "",
+        "eluent.A.nh4f": "0",
+        "eluent.A.nh4f.unit": "",
+        "eluent.A.nh4form": "0",
+        "eluent.A.nh4form.unit": "",
+        "eluent.A.nh4oh": "0",
+        "eluent.A.nh4oh.unit": "",
+        "eluent.A.nndimethylhex": "0",
+        "eluent.A.nndimethylhex.unit": "",
+        "eluent.A.pH": "3",
+        "eluent.A.phosphor": "0",
+        "eluent.A.phosphor.unit": "",
+        "eluent.A.tribut": "0",
+        "eluent.A.tribut.unit": "",
+        "eluent.A.trieth": "0",
+        "eluent.A.trieth.unit": "",
+        "eluent.A.trifluoroacetic": "0",
+        "eluent.A.trifluoroacetic.unit": "",
+        "eluent.A.triprop": "0",
+        "eluent.A.triprop.unit": "",
+        "eluent.B.acetic": "0",
+        "eluent.B.acetic.unit": "",
+        "eluent.B.acetone": "0",
+        "eluent.B.acn": "0",
+        "eluent.B.ch2cl2": "0",
+        "eluent.B.chcl3": "0",
+        "eluent.B.formic": "0.1",
+        "eluent.B.formic.unit": "%",
+        "eluent.B.h2o": "0",
+        "eluent.B.hept": "0",
+        "eluent.B.heptafluorobutyric": "0",
+        "eluent.B.heptafluorobutyric.unit": "",
+        "eluent.B.hex": "0",
+        "eluent.B.iproh": "0",
+        "eluent.B.medronic": "0",
+        "eluent.B.medronic.unit": "",
+        "eluent.B.meoh": "100",
+        "eluent.B.nh4ac": "0",
+        "eluent.B.nh4ac.unit": "",
+        "eluent.B.nh4bicarb": "0",
+        "eluent.B.nh4bicarb.unit": "",
+        "eluent.B.nh4carb": "0",
+        "eluent.B.nh4carb.unit": "",
+        "eluent.B.nh4f": "0",
+        "eluent.B.nh4f.unit": "",
+        "eluent.B.nh4form": "0",
+        "eluent.B.nh4form.unit": "",
+        "eluent.B.nh4oh": "0",
+        "eluent.B.nh4oh.unit": "",
+        "eluent.B.nndimethylhex": "0",
+        "eluent.B.nndimethylhex.unit": "",
+        "eluent.B.pH": "3",
+        "eluent.B.phosphor": "0",
+        "eluent.B.phosphor.unit": "",
+        "eluent.B.tribut": "0",
+        "eluent.B.tribut.unit": "",
+        "eluent.B.trieth": "0",
+        "eluent.B.trieth.unit": "",
+        "eluent.B.trifluoroacetic": "0",
+        "eluent.B.trifluoroacetic.unit": "",
+        "eluent.B.triprop": "0",
+        "eluent.B.triprop.unit": "",
+        "eluent.C.acetic": "0",
+        "eluent.C.acetic.unit": "",
+        "eluent.C.acetone": "0",
+        "eluent.C.acn": "0",
+        "eluent.C.ch2cl2": "0",
+        "eluent.C.chcl3": "0",
+        "eluent.C.formic": "0",
+        "eluent.C.formic.unit": "",
+        "eluent.C.h2o": "0",
+        "eluent.C.hept": "0",
+        "eluent.C.heptafluorobutyric": "0",
+        "eluent.C.heptafluorobutyric.unit": "",
+        "eluent.C.hex": "0",
+        "eluent.C.iproh": "0",
+        "eluent.C.medronic": "0",
+        "eluent.C.medronic.unit": "",
+        "eluent.C.meoh": "0",
+        "eluent.C.nh4ac": "0",
+        "eluent.C.nh4ac.unit": "",
+        "eluent.C.nh4bicarb": "0",
+        "eluent.C.nh4bicarb.unit": "",
+        "eluent.C.nh4carb": "0",
+        "eluent.C.nh4carb.unit": "",
+        "eluent.C.nh4f": "0",
+        "eluent.C.nh4f.unit": "",
+        "eluent.C.nh4form": "0",
+        "eluent.C.nh4form.unit": "",
+        "eluent.C.nh4oh": "0",
+        "eluent.C.nh4oh.unit": "",
+        "eluent.C.nndimethylhex": "0",
+        "eluent.C.nndimethylhex.unit": "",
+        "eluent.C.pH": null,
+        "eluent.C.phosphor": "0",
+        "eluent.C.phosphor.unit": "",
+        "eluent.C.tribut": "0",
+        "eluent.C.tribut.unit": "",
+        "eluent.C.trieth": "0",
+        "eluent.C.trieth.unit": "",
+        "eluent.C.trifluoroacetic": "0",
+        "eluent.C.trifluoroacetic.unit": "",
+        "eluent.C.triprop": "0",
+        "eluent.C.triprop.unit": "",
+        "eluent.D.acetic": "0",
+        "eluent.D.acetic.unit": "",
+        "eluent.D.acetone": "0",
+        "eluent.D.acn": "0",
+        "eluent.D.ch2cl2": "0",
+        "eluent.D.chcl3": "0",
+        "eluent.D.formic": "0",
+        "eluent.D.formic.unit": "",
+        "eluent.D.h2o": "0",
+        "eluent.D.hept": "0",
+        "eluent.D.heptafluorobutyric": "0",
+        "eluent.D.heptafluorobutyric.unit": "",
+        "eluent.D.hex": "0",
+        "eluent.D.iproh": "0",
+        "eluent.D.medronic": "0",
+        "eluent.D.medronic.unit": "",
+        "eluent.D.meoh": "0",
+        "eluent.D.nh4ac": "0",
+        "eluent.D.nh4ac.unit": "",
+        "eluent.D.nh4bicarb": "0",
+        "eluent.D.nh4bicarb.unit": "",
+        "eluent.D.nh4carb": "0",
+        "eluent.D.nh4carb.unit": "",
+        "eluent.D.nh4f": "0",
+        "eluent.D.nh4f.unit": "",
+        "eluent.D.nh4form": "0",
+        "eluent.D.nh4form.unit": "",
+        "eluent.D.nh4oh": "0",
+        "eluent.D.nh4oh.unit": "",
+        "eluent.D.nndimethylhex": "0",
+        "eluent.D.nndimethylhex.unit": "",
+        "eluent.D.pH": null,
+        "eluent.D.phosphor": "0",
+        "eluent.D.phosphor.unit": "",
+        "eluent.D.tribut": "0",
+        "eluent.D.tribut.unit": "",
+        "eluent.D.trieth": "0",
+        "eluent.D.trieth.unit": "",
+        "eluent.D.trifluoroacetic": "0",
+        "eluent.D.trifluoroacetic.unit": "",
+        "eluent.D.triprop": "0",
+        "eluent.D.triprop.unit": ""
+      },
+      "blockers": [
+        "instrument_equivalence_unreviewed",
+        "t0_origin_unverified",
+        "dwell_and_postcolumn_times_missing",
+        "program_independence_requires_review",
+        "missing_temperature"
+      ],
+      "candidate_molecules": [
+        {
+          "full_inchikey": "QQVDJLLNRSOCEL-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "SNICXCGAKADSCV-JTQLQIEISA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "PAJPWUMXBYXFCZ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "IBRKLUSXDYATLG-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "GFYLSDSUCHVORB-IOSLPCCCSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LDHMAVIPBRSVRG-UHFFFAOYSA-O",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RUFPHBVGCFYCNW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UBQKCCHYAOITMY-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HZCBWYNLGPIQRK-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "WTDRDQBEARUVNC-LURJTMIESA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZHSOTLOTTDYIIK-ZDUSSCGKSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NYPYHUZRZVSYKL-ZETCQYMHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "PFDUUKDQEHURQC-ZETCQYMHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "BBZCPUCZKLTAJQ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZPBYVFQJHWLTFB-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "CPAGZVLINCPJEH-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "FBTSQILOGYXGMD-LURJTMIESA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "TUHVEAJXIMEOSA-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HCZHHEIFKROPDY-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UDYDDOATBNVEES-UUOKFMHZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DUUGKQCEGZLZNO-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LRSASMSXMSNRBT-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "WUUGFSXJNOTRMR-IOSLPCCCSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "BLHCMGRVFXRYRN-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "GFFGJBXGBJISGV-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "QYPPJABKJHAVHS-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "YBJHBAHKTGYVGT-ZKWXMUAHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "OTBHHUPVCYLGQO-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RYYVLZVUVIJVGH-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "CQOVPNPJLQNMDC-ZETCQYMHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "OEYIOHPDSNJKLS-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "JYGXADMDTFJGBT-VWUMJDOOSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ALEXXDVDDISNDU-JZYPGELDSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "MFYSYFVPBJMHGN-ZPOLXVRWSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DDRJAANPRJIHGJ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NMPZCCZXCOMSDQ-XVFCMESISA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RZZPDXZPRHQOCG-OJAKKHQRSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "OPTASPLRGRRNAP-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KHWCHTKSEGGWEX-RRKCRQDMSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "VPGRYOFKCNULNK-ACXQXYJUSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "AUTOLBMXDDTRRT-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZBCBWPMODOFKDW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LJUQGASMPRMWIW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "GHOKWGTUZJEAQD-ZETCQYMHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "OVBPIULPVIDEAO-LBPRGKRZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UFYKDFXCZBTLOO-TXICZTDVSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "BPMFZUMJYQTVII-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UYTPUPDQBNUYGX-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NYHBQMYGNKIUIF-UUOKFMHZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZOOGRGPOEVQQDX-UUOKFMHZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RQFCJASXJCIDSX-UUOKFMHZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NTYJJOPFIAHURM-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZTVZLYBCZNMWCF-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "WHOOUMGHGSPMGR-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZOAMBXDOGPRZLP-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "SEOVTRFCIGRIMH-UHFFFAOYSA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "MBBOMCVGYCRMEA-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "MYYIAHXIVFADCU-QMMMGPOBSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ODKSFYDXXFIFQN-BYPYZUCNSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "FUJLYHJROOYKRA-QGZVFWFLSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "PHIQHXFUZVPYII-ZCFIWIBFSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ILRYLPWNYFXEMH-WHFBIAKZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "XVOYSCVBGLVSOL-REOHCLBHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LEVWYRKDKASIDU-IMJSIDKUSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZDXPYRJPNDTMRX-VKHMYHEASA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HNDVDQJCIGZPNO-YFKPBYRVSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZQISRDCJNBUVMM-YFKPBYRVSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "GMKMEZVLHJARHF-WHFBIAKZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KDXKERNSBIXSRK-YFKPBYRVSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "SXTAYKAGBXMACB-DPVSGNNYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "COLNVLDHVKWLRT-QMMMGPOBSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "JLSKPBDKNIXMBS-VIFPVBQESA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZJTJUVIJVLLGSP-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DRLFMBDRBRZALE-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KTHADMDGDNYQRX-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "CHJJGSNFBQVOTG-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "JDHILDINMRGULE-LURJTMIESA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "GUNURVWAJRRUAV-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HYVABZIGRDEKCD-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RFMMMVDNIPUKGG-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DZTHIGRZJZPRDV-GFCCVEGCSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "CBQJSKKFNMDLON-JTQLQIEISA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KLZGKIDSEJWEDW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "MVAWJSIDNICKHF-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "VEYYWZRYIYDQJM-ZETCQYMHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "VVHOUVWJCQOYGG-REOHCLBHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "MXNRLFUSFKVQSK-QMMMGPOBSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DFPAKSUCGFBDDF-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NCIKQJBVUNUXLW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "JCMUOFQHZLPHQP-BQBZGAKWSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "GNISQJGXJIDKDJ-YFKPBYRVSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "YHHSONZFOIEMCP-UHFFFAOYSA-O",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZCFFYALKHPIRKJ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HNXQXTQTPAJEJL-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "AUNGANRZJHBGPY-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZJUKTBDSGOFHSH-WFMPWKQPSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HXJDWCWJDCOHDG-RYUDHWBXSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "SUHOQUVVVLNYQR-MRVPVSSYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "PFNFFQXMRSDOHW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "OTKJDMGTUTTYMP-ZWKOTPCHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "JZRWCGZRTZMZEH-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HZSAJDVWZRBGIF-UHFFFAOYSA-O",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UIJIQXGRFSPYQW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "XNSAINXGIQZQOO-SRVKXCTJSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ISAKRJDGNUQOIC-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LEHOTFFKMJEONL-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DJJCXFVJDGTHFX-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LOIYMIARKYCTBW-OWOJBTEDSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LRFVTYWOQMYALW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "FBZONXHGGPHHIY-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "YJCJVMMDTBEITC-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "SJJCQDRGABAVBB-UHFFFAOYSA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NCMVOABPESMRCP-SHYZEUOFSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "JSRLJPSBLDHEIO-SHYZEUOFSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "CJBDUOMQLFKVQC-UHFFFAOYSA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UZTFMUBKZQVKLK-UHFFFAOYSA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HXACOUQIXZGNBF-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "WLJVNTCWHIRURA-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZMCHBSMFKQYNKA-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "BDJRBEYXGGNYIS-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "BHQCQFFYRZLCQQ-OELDTZBJSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "XFTRTWQBIOMVPK-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RGHNJXZEOKUKBD-SQOUGZDYSA-M",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "PYUSHNKNPOHWEZ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "BXFFHSIDQOFMLE-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UGQMRVRMYYASKQ-KQYNXXCUSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HHRWZMFMIFMUOO-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "XUYPXLNMDZIRQH-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "OTCCIMWXFLJLIA-BYPYZUCNSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "WXNXCEHXYPACJF-ZETCQYMHSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "HXFOXFJUNFFYMO-BYPYZUCNSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "AAWZDTNXLSGCEK-LNVDRNJUSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "TYFQFVWCELRYAO-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DCTLYFZHFGENCW-UUOKFMHZSA-N",
+          "distinct_programs": 3
+        }
+      ],
+      "training_ready": false,
+      "molecules_with_at_least_three_programs": 134
+    },
+    {
+      "group_id": "e52f9b61e3ba7565",
+      "systems": [
+        "report:0086",
+        "report:0087",
+        "report:0143",
+        "report:0144"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1016/j.jchromb.2020.122105"
+      ],
+      "column": "Waters CORTECS T3",
+      "modifier_B": {
+        "methanol_percent": "100",
+        "acetonitrile_percent": "0"
+      },
+      "distinct_full_programs": 2,
+      "context": {
+        "column.flowrate": "0.15",
+        "column.id": "2.1",
+        "column.length": "100",
+        "column.name": "Waters CORTECS T3",
+        "column.particle.size": "2.7",
+        "column.temperature": "",
+        "column.usp.code": "L1",
+        "eluent.A.acetic": "0",
+        "eluent.A.acetic.unit": "",
+        "eluent.A.acetone": "0",
+        "eluent.A.acn": "0",
+        "eluent.A.ch2cl2": "0",
+        "eluent.A.chcl3": "0",
+        "eluent.A.formic": "0.1",
+        "eluent.A.formic.unit": "%",
+        "eluent.A.h2o": "100",
+        "eluent.A.hept": "0",
+        "eluent.A.heptafluorobutyric": "0",
+        "eluent.A.heptafluorobutyric.unit": "",
+        "eluent.A.hex": "0",
+        "eluent.A.iproh": "0",
+        "eluent.A.medronic": "0",
+        "eluent.A.medronic.unit": "",
+        "eluent.A.meoh": "0",
+        "eluent.A.nh4ac": "0",
+        "eluent.A.nh4ac.unit": "",
+        "eluent.A.nh4bicarb": "0",
+        "eluent.A.nh4bicarb.unit": "",
+        "eluent.A.nh4carb": "0",
+        "eluent.A.nh4carb.unit": "",
+        "eluent.A.nh4f": "0",
+        "eluent.A.nh4f.unit": "",
+        "eluent.A.nh4form": "0",
+        "eluent.A.nh4form.unit": "",
+        "eluent.A.nh4oh": "0",
+        "eluent.A.nh4oh.unit": "",
+        "eluent.A.nndimethylhex": "0",
+        "eluent.A.nndimethylhex.unit": "",
+        "eluent.A.pH": "3",
+        "eluent.A.phosphor": "0",
+        "eluent.A.phosphor.unit": "",
+        "eluent.A.tribut": "0",
+        "eluent.A.tribut.unit": "",
+        "eluent.A.trieth": "0",
+        "eluent.A.trieth.unit": "",
+        "eluent.A.trifluoroacetic": "0",
+        "eluent.A.trifluoroacetic.unit": "",
+        "eluent.A.triprop": "0",
+        "eluent.A.triprop.unit": "",
+        "eluent.B.acetic": "0",
+        "eluent.B.acetic.unit": "",
+        "eluent.B.acetone": "0",
+        "eluent.B.acn": "0",
+        "eluent.B.ch2cl2": "0",
+        "eluent.B.chcl3": "0",
+        "eluent.B.formic": "0.1",
+        "eluent.B.formic.unit": "%",
+        "eluent.B.h2o": "0",
+        "eluent.B.hept": "0",
+        "eluent.B.heptafluorobutyric": "0",
+        "eluent.B.heptafluorobutyric.unit": "",
+        "eluent.B.hex": "0",
+        "eluent.B.iproh": "0",
+        "eluent.B.medronic": "0",
+        "eluent.B.medronic.unit": "",
+        "eluent.B.meoh": "100",
+        "eluent.B.nh4ac": "0",
+        "eluent.B.nh4ac.unit": "",
+        "eluent.B.nh4bicarb": "0",
+        "eluent.B.nh4bicarb.unit": "",
+        "eluent.B.nh4carb": "0",
+        "eluent.B.nh4carb.unit": "",
+        "eluent.B.nh4f": "0",
+        "eluent.B.nh4f.unit": "",
+        "eluent.B.nh4form": "0",
+        "eluent.B.nh4form.unit": "",
+        "eluent.B.nh4oh": "0",
+        "eluent.B.nh4oh.unit": "",
+        "eluent.B.nndimethylhex": "0",
+        "eluent.B.nndimethylhex.unit": "",
+        "eluent.B.pH": "3",
+        "eluent.B.phosphor": "0",
+        "eluent.B.phosphor.unit": "",
+        "eluent.B.tribut": "0",
+        "eluent.B.tribut.unit": "",
+        "eluent.B.trieth": "0",
+        "eluent.B.trieth.unit": "",
+        "eluent.B.trifluoroacetic": "0",
+        "eluent.B.trifluoroacetic.unit": "",
+        "eluent.B.triprop": "0",
+        "eluent.B.triprop.unit": "",
+        "eluent.C.acetic": "0",
+        "eluent.C.acetic.unit": "",
+        "eluent.C.acetone": "0",
+        "eluent.C.acn": "0",
+        "eluent.C.ch2cl2": "0",
+        "eluent.C.chcl3": "0",
+        "eluent.C.formic": "0",
+        "eluent.C.formic.unit": "",
+        "eluent.C.h2o": "0",
+        "eluent.C.hept": "0",
+        "eluent.C.heptafluorobutyric": "0",
+        "eluent.C.heptafluorobutyric.unit": "",
+        "eluent.C.hex": "0",
+        "eluent.C.iproh": "0",
+        "eluent.C.medronic": "0",
+        "eluent.C.medronic.unit": "",
+        "eluent.C.meoh": "0",
+        "eluent.C.nh4ac": "0",
+        "eluent.C.nh4ac.unit": "",
+        "eluent.C.nh4bicarb": "0",
+        "eluent.C.nh4bicarb.unit": "",
+        "eluent.C.nh4carb": "0",
+        "eluent.C.nh4carb.unit": "",
+        "eluent.C.nh4f": "0",
+        "eluent.C.nh4f.unit": "",
+        "eluent.C.nh4form": "0",
+        "eluent.C.nh4form.unit": "",
+        "eluent.C.nh4oh": "0",
+        "eluent.C.nh4oh.unit": "",
+        "eluent.C.nndimethylhex": "0",
+        "eluent.C.nndimethylhex.unit": "",
+        "eluent.C.pH": null,
+        "eluent.C.phosphor": "0",
+        "eluent.C.phosphor.unit": "",
+        "eluent.C.tribut": "0",
+        "eluent.C.tribut.unit": "",
+        "eluent.C.trieth": "0",
+        "eluent.C.trieth.unit": "",
+        "eluent.C.trifluoroacetic": "0",
+        "eluent.C.trifluoroacetic.unit": "",
+        "eluent.C.triprop": "0",
+        "eluent.C.triprop.unit": "",
+        "eluent.D.acetic": "0",
+        "eluent.D.acetic.unit": "",
+        "eluent.D.acetone": "0",
+        "eluent.D.acn": "0",
+        "eluent.D.ch2cl2": "0",
+        "eluent.D.chcl3": "0",
+        "eluent.D.formic": "0",
+        "eluent.D.formic.unit": "",
+        "eluent.D.h2o": "0",
+        "eluent.D.hept": "0",
+        "eluent.D.heptafluorobutyric": "0",
+        "eluent.D.heptafluorobutyric.unit": "",
+        "eluent.D.hex": "0",
+        "eluent.D.iproh": "0",
+        "eluent.D.medronic": "0",
+        "eluent.D.medronic.unit": "",
+        "eluent.D.meoh": "0",
+        "eluent.D.nh4ac": "0",
+        "eluent.D.nh4ac.unit": "",
+        "eluent.D.nh4bicarb": "0",
+        "eluent.D.nh4bicarb.unit": "",
+        "eluent.D.nh4carb": "0",
+        "eluent.D.nh4carb.unit": "",
+        "eluent.D.nh4f": "0",
+        "eluent.D.nh4f.unit": "",
+        "eluent.D.nh4form": "0",
+        "eluent.D.nh4form.unit": "",
+        "eluent.D.nh4oh": "0",
+        "eluent.D.nh4oh.unit": "",
+        "eluent.D.nndimethylhex": "0",
+        "eluent.D.nndimethylhex.unit": "",
+        "eluent.D.pH": null,
+        "eluent.D.phosphor": "0",
+        "eluent.D.phosphor.unit": "",
+        "eluent.D.tribut": "0",
+        "eluent.D.tribut.unit": "",
+        "eluent.D.trieth": "0",
+        "eluent.D.trieth.unit": "",
+        "eluent.D.trifluoroacetic": "0",
+        "eluent.D.trifluoroacetic.unit": "",
+        "eluent.D.triprop": "0",
+        "eluent.D.triprop.unit": ""
+      },
+      "blockers": [
+        "instrument_equivalence_unreviewed",
+        "t0_origin_unverified",
+        "dwell_and_postcolumn_times_missing",
+        "program_independence_requires_review",
+        "missing_temperature"
+      ],
+      "candidate_molecules": [],
+      "training_ready": false,
+      "molecules_with_at_least_three_programs": 0
+    },
+    {
+      "group_id": "82b08f42ad8c6898",
+      "systems": [
+        "report:0088",
+        "report:0089",
+        "report:0090",
+        "report:0091",
+        "report:0092",
+        "report:0093",
+        "report:0094",
+        "report:0145",
+        "report:0146",
+        "report:0147",
+        "report:0148",
+        "report:0149",
+        "report:0150",
+        "report:0151"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1016/j.jchromb.2020.122105"
+      ],
+      "column": "Waters CORTECS T3",
+      "modifier_B": {
+        "methanol_percent": "100",
+        "acetonitrile_percent": "0"
+      },
+      "distinct_full_programs": 2,
+      "context": {
+        "column.flowrate": "0.2",
+        "column.id": "2.1",
+        "column.length": "100",
+        "column.name": "Waters CORTECS T3",
+        "column.particle.size": "2.7",
+        "column.temperature": "",
+        "column.usp.code": "L1",
+        "eluent.A.acetic": "0",
+        "eluent.A.acetic.unit": "",
+        "eluent.A.acetone": "0",
+        "eluent.A.acn": "0",
+        "eluent.A.ch2cl2": "0",
+        "eluent.A.chcl3": "0",
+        "eluent.A.formic": "0.1",
+        "eluent.A.formic.unit": "%",
+        "eluent.A.h2o": "100",
+        "eluent.A.hept": "0",
+        "eluent.A.heptafluorobutyric": "0",
+        "eluent.A.heptafluorobutyric.unit": "",
+        "eluent.A.hex": "0",
+        "eluent.A.iproh": "0",
+        "eluent.A.medronic": "0",
+        "eluent.A.medronic.unit": "",
+        "eluent.A.meoh": "0",
+        "eluent.A.nh4ac": "0",
+        "eluent.A.nh4ac.unit": "",
+        "eluent.A.nh4bicarb": "0",
+        "eluent.A.nh4bicarb.unit": "",
+        "eluent.A.nh4carb": "0",
+        "eluent.A.nh4carb.unit": "",
+        "eluent.A.nh4f": "0",
+        "eluent.A.nh4f.unit": "",
+        "eluent.A.nh4form": "0",
+        "eluent.A.nh4form.unit": "",
+        "eluent.A.nh4oh": "0",
+        "eluent.A.nh4oh.unit": "",
+        "eluent.A.nndimethylhex": "0",
+        "eluent.A.nndimethylhex.unit": "",
+        "eluent.A.pH": "3",
+        "eluent.A.phosphor": "0",
+        "eluent.A.phosphor.unit": "",
+        "eluent.A.tribut": "0",
+        "eluent.A.tribut.unit": "",
+        "eluent.A.trieth": "0",
+        "eluent.A.trieth.unit": "",
+        "eluent.A.trifluoroacetic": "0",
+        "eluent.A.trifluoroacetic.unit": "",
+        "eluent.A.triprop": "0",
+        "eluent.A.triprop.unit": "",
+        "eluent.B.acetic": "0",
+        "eluent.B.acetic.unit": "",
+        "eluent.B.acetone": "0",
+        "eluent.B.acn": "0",
+        "eluent.B.ch2cl2": "0",
+        "eluent.B.chcl3": "0",
+        "eluent.B.formic": "0.1",
+        "eluent.B.formic.unit": "%",
+        "eluent.B.h2o": "0",
+        "eluent.B.hept": "0",
+        "eluent.B.heptafluorobutyric": "0",
+        "eluent.B.heptafluorobutyric.unit": "",
+        "eluent.B.hex": "0",
+        "eluent.B.iproh": "0",
+        "eluent.B.medronic": "0",
+        "eluent.B.medronic.unit": "",
+        "eluent.B.meoh": "100",
+        "eluent.B.nh4ac": "0",
+        "eluent.B.nh4ac.unit": "",
+        "eluent.B.nh4bicarb": "0",
+        "eluent.B.nh4bicarb.unit": "",
+        "eluent.B.nh4carb": "0",
+        "eluent.B.nh4carb.unit": "",
+        "eluent.B.nh4f": "0",
+        "eluent.B.nh4f.unit": "",
+        "eluent.B.nh4form": "0",
+        "eluent.B.nh4form.unit": "",
+        "eluent.B.nh4oh": "0",
+        "eluent.B.nh4oh.unit": "",
+        "eluent.B.nndimethylhex": "0",
+        "eluent.B.nndimethylhex.unit": "",
+        "eluent.B.pH": "3",
+        "eluent.B.phosphor": "0",
+        "eluent.B.phosphor.unit": "",
+        "eluent.B.tribut": "0",
+        "eluent.B.tribut.unit": "",
+        "eluent.B.trieth": "0",
+        "eluent.B.trieth.unit": "",
+        "eluent.B.trifluoroacetic": "0",
+        "eluent.B.trifluoroacetic.unit": "",
+        "eluent.B.triprop": "0",
+        "eluent.B.triprop.unit": "",
+        "eluent.C.acetic": "0",
+        "eluent.C.acetic.unit": "",
+        "eluent.C.acetone": "0",
+        "eluent.C.acn": "0",
+        "eluent.C.ch2cl2": "0",
+        "eluent.C.chcl3": "0",
+        "eluent.C.formic": "0",
+        "eluent.C.formic.unit": "",
+        "eluent.C.h2o": "0",
+        "eluent.C.hept": "0",
+        "eluent.C.heptafluorobutyric": "0",
+        "eluent.C.heptafluorobutyric.unit": "",
+        "eluent.C.hex": "0",
+        "eluent.C.iproh": "0",
+        "eluent.C.medronic": "0",
+        "eluent.C.medronic.unit": "",
+        "eluent.C.meoh": "0",
+        "eluent.C.nh4ac": "0",
+        "eluent.C.nh4ac.unit": "",
+        "eluent.C.nh4bicarb": "0",
+        "eluent.C.nh4bicarb.unit": "",
+        "eluent.C.nh4carb": "0",
+        "eluent.C.nh4carb.unit": "",
+        "eluent.C.nh4f": "0",
+        "eluent.C.nh4f.unit": "",
+        "eluent.C.nh4form": "0",
+        "eluent.C.nh4form.unit": "",
+        "eluent.C.nh4oh": "0",
+        "eluent.C.nh4oh.unit": "",
+        "eluent.C.nndimethylhex": "0",
+        "eluent.C.nndimethylhex.unit": "",
+        "eluent.C.pH": null,
+        "eluent.C.phosphor": "0",
+        "eluent.C.phosphor.unit": "",
+        "eluent.C.tribut": "0",
+        "eluent.C.tribut.unit": "",
+        "eluent.C.trieth": "0",
+        "eluent.C.trieth.unit": "",
+        "eluent.C.trifluoroacetic": "0",
+        "eluent.C.trifluoroacetic.unit": "",
+        "eluent.C.triprop": "0",
+        "eluent.C.triprop.unit": "",
+        "eluent.D.acetic": "0",
+        "eluent.D.acetic.unit": "",
+        "eluent.D.acetone": "0",
+        "eluent.D.acn": "0",
+        "eluent.D.ch2cl2": "0",
+        "eluent.D.chcl3": "0",
+        "eluent.D.formic": "0",
+        "eluent.D.formic.unit": "",
+        "eluent.D.h2o": "0",
+        "eluent.D.hept": "0",
+        "eluent.D.heptafluorobutyric": "0",
+        "eluent.D.heptafluorobutyric.unit": "",
+        "eluent.D.hex": "0",
+        "eluent.D.iproh": "0",
+        "eluent.D.medronic": "0",
+        "eluent.D.medronic.unit": "",
+        "eluent.D.meoh": "0",
+        "eluent.D.nh4ac": "0",
+        "eluent.D.nh4ac.unit": "",
+        "eluent.D.nh4bicarb": "0",
+        "eluent.D.nh4bicarb.unit": "",
+        "eluent.D.nh4carb": "0",
+        "eluent.D.nh4carb.unit": "",
+        "eluent.D.nh4f": "0",
+        "eluent.D.nh4f.unit": "",
+        "eluent.D.nh4form": "0",
+        "eluent.D.nh4form.unit": "",
+        "eluent.D.nh4oh": "0",
+        "eluent.D.nh4oh.unit": "",
+        "eluent.D.nndimethylhex": "0",
+        "eluent.D.nndimethylhex.unit": "",
+        "eluent.D.pH": null,
+        "eluent.D.phosphor": "0",
+        "eluent.D.phosphor.unit": "",
+        "eluent.D.tribut": "0",
+        "eluent.D.tribut.unit": "",
+        "eluent.D.trieth": "0",
+        "eluent.D.trieth.unit": "",
+        "eluent.D.trifluoroacetic": "0",
+        "eluent.D.trifluoroacetic.unit": "",
+        "eluent.D.triprop": "0",
+        "eluent.D.triprop.unit": ""
+      },
+      "blockers": [
+        "instrument_equivalence_unreviewed",
+        "t0_origin_unverified",
+        "dwell_and_postcolumn_times_missing",
+        "program_independence_requires_review",
+        "missing_temperature"
+      ],
+      "candidate_molecules": [],
+      "training_ready": false,
+      "molecules_with_at_least_three_programs": 0
+    },
+    {
+      "group_id": "7306368a9acff09d",
+      "systems": [
+        "report:0095",
+        "report:0096",
+        "report:0152",
+        "report:0153"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1016/j.jchromb.2020.122105"
+      ],
+      "column": "Waters CORTECS T3",
+      "modifier_B": {
+        "methanol_percent": "100",
+        "acetonitrile_percent": "0"
+      },
+      "distinct_full_programs": 2,
+      "context": {
+        "column.flowrate": "0.25",
+        "column.id": "2.1",
+        "column.length": "100",
+        "column.name": "Waters CORTECS T3",
+        "column.particle.size": "2.7",
+        "column.temperature": "",
+        "column.usp.code": "L1",
+        "eluent.A.acetic": "0",
+        "eluent.A.acetic.unit": "",
+        "eluent.A.acetone": "0",
+        "eluent.A.acn": "0",
+        "eluent.A.ch2cl2": "0",
+        "eluent.A.chcl3": "0",
+        "eluent.A.formic": "0.1",
+        "eluent.A.formic.unit": "%",
+        "eluent.A.h2o": "100",
+        "eluent.A.hept": "0",
+        "eluent.A.heptafluorobutyric": "0",
+        "eluent.A.heptafluorobutyric.unit": "",
+        "eluent.A.hex": "0",
+        "eluent.A.iproh": "0",
+        "eluent.A.medronic": "0",
+        "eluent.A.medronic.unit": "",
+        "eluent.A.meoh": "0",
+        "eluent.A.nh4ac": "0",
+        "eluent.A.nh4ac.unit": "",
+        "eluent.A.nh4bicarb": "0",
+        "eluent.A.nh4bicarb.unit": "",
+        "eluent.A.nh4carb": "0",
+        "eluent.A.nh4carb.unit": "",
+        "eluent.A.nh4f": "0",
+        "eluent.A.nh4f.unit": "",
+        "eluent.A.nh4form": "0",
+        "eluent.A.nh4form.unit": "",
+        "eluent.A.nh4oh": "0",
+        "eluent.A.nh4oh.unit": "",
+        "eluent.A.nndimethylhex": "0",
+        "eluent.A.nndimethylhex.unit": "",
+        "eluent.A.pH": "3",
+        "eluent.A.phosphor": "0",
+        "eluent.A.phosphor.unit": "",
+        "eluent.A.tribut": "0",
+        "eluent.A.tribut.unit": "",
+        "eluent.A.trieth": "0",
+        "eluent.A.trieth.unit": "",
+        "eluent.A.trifluoroacetic": "0",
+        "eluent.A.trifluoroacetic.unit": "",
+        "eluent.A.triprop": "0",
+        "eluent.A.triprop.unit": "",
+        "eluent.B.acetic": "0",
+        "eluent.B.acetic.unit": "",
+        "eluent.B.acetone": "0",
+        "eluent.B.acn": "0",
+        "eluent.B.ch2cl2": "0",
+        "eluent.B.chcl3": "0",
+        "eluent.B.formic": "0.1",
+        "eluent.B.formic.unit": "%",
+        "eluent.B.h2o": "0",
+        "eluent.B.hept": "0",
+        "eluent.B.heptafluorobutyric": "0",
+        "eluent.B.heptafluorobutyric.unit": "",
+        "eluent.B.hex": "0",
+        "eluent.B.iproh": "0",
+        "eluent.B.medronic": "0",
+        "eluent.B.medronic.unit": "",
+        "eluent.B.meoh": "100",
+        "eluent.B.nh4ac": "0",
+        "eluent.B.nh4ac.unit": "",
+        "eluent.B.nh4bicarb": "0",
+        "eluent.B.nh4bicarb.unit": "",
+        "eluent.B.nh4carb": "0",
+        "eluent.B.nh4carb.unit": "",
+        "eluent.B.nh4f": "0",
+        "eluent.B.nh4f.unit": "",
+        "eluent.B.nh4form": "0",
+        "eluent.B.nh4form.unit": "",
+        "eluent.B.nh4oh": "0",
+        "eluent.B.nh4oh.unit": "",
+        "eluent.B.nndimethylhex": "0",
+        "eluent.B.nndimethylhex.unit": "",
+        "eluent.B.pH": "3",
+        "eluent.B.phosphor": "0",
+        "eluent.B.phosphor.unit": "",
+        "eluent.B.tribut": "0",
+        "eluent.B.tribut.unit": "",
+        "eluent.B.trieth": "0",
+        "eluent.B.trieth.unit": "",
+        "eluent.B.trifluoroacetic": "0",
+        "eluent.B.trifluoroacetic.unit": "",
+        "eluent.B.triprop": "0",
+        "eluent.B.triprop.unit": "",
+        "eluent.C.acetic": "0",
+        "eluent.C.acetic.unit": "",
+        "eluent.C.acetone": "0",
+        "eluent.C.acn": "0",
+        "eluent.C.ch2cl2": "0",
+        "eluent.C.chcl3": "0",
+        "eluent.C.formic": "0",
+        "eluent.C.formic.unit": "",
+        "eluent.C.h2o": "0",
+        "eluent.C.hept": "0",
+        "eluent.C.heptafluorobutyric": "0",
+        "eluent.C.heptafluorobutyric.unit": "",
+        "eluent.C.hex": "0",
+        "eluent.C.iproh": "0",
+        "eluent.C.medronic": "0",
+        "eluent.C.medronic.unit": "",
+        "eluent.C.meoh": "0",
+        "eluent.C.nh4ac": "0",
+        "eluent.C.nh4ac.unit": "",
+        "eluent.C.nh4bicarb": "0",
+        "eluent.C.nh4bicarb.unit": "",
+        "eluent.C.nh4carb": "0",
+        "eluent.C.nh4carb.unit": "",
+        "eluent.C.nh4f": "0",
+        "eluent.C.nh4f.unit": "",
+        "eluent.C.nh4form": "0",
+        "eluent.C.nh4form.unit": "",
+        "eluent.C.nh4oh": "0",
+        "eluent.C.nh4oh.unit": "",
+        "eluent.C.nndimethylhex": "0",
+        "eluent.C.nndimethylhex.unit": "",
+        "eluent.C.pH": null,
+        "eluent.C.phosphor": "0",
+        "eluent.C.phosphor.unit": "",
+        "eluent.C.tribut": "0",
+        "eluent.C.tribut.unit": "",
+        "eluent.C.trieth": "0",
+        "eluent.C.trieth.unit": "",
+        "eluent.C.trifluoroacetic": "0",
+        "eluent.C.trifluoroacetic.unit": "",
+        "eluent.C.triprop": "0",
+        "eluent.C.triprop.unit": "",
+        "eluent.D.acetic": "0",
+        "eluent.D.acetic.unit": "",
+        "eluent.D.acetone": "0",
+        "eluent.D.acn": "0",
+        "eluent.D.ch2cl2": "0",
+        "eluent.D.chcl3": "0",
+        "eluent.D.formic": "0",
+        "eluent.D.formic.unit": "",
+        "eluent.D.h2o": "0",
+        "eluent.D.hept": "0",
+        "eluent.D.heptafluorobutyric": "0",
+        "eluent.D.heptafluorobutyric.unit": "",
+        "eluent.D.hex": "0",
+        "eluent.D.iproh": "0",
+        "eluent.D.medronic": "0",
+        "eluent.D.medronic.unit": "",
+        "eluent.D.meoh": "0",
+        "eluent.D.nh4ac": "0",
+        "eluent.D.nh4ac.unit": "",
+        "eluent.D.nh4bicarb": "0",
+        "eluent.D.nh4bicarb.unit": "",
+        "eluent.D.nh4carb": "0",
+        "eluent.D.nh4carb.unit": "",
+        "eluent.D.nh4f": "0",
+        "eluent.D.nh4f.unit": "",
+        "eluent.D.nh4form": "0",
+        "eluent.D.nh4form.unit": "",
+        "eluent.D.nh4oh": "0",
+        "eluent.D.nh4oh.unit": "",
+        "eluent.D.nndimethylhex": "0",
+        "eluent.D.nndimethylhex.unit": "",
+        "eluent.D.pH": null,
+        "eluent.D.phosphor": "0",
+        "eluent.D.phosphor.unit": "",
+        "eluent.D.tribut": "0",
+        "eluent.D.tribut.unit": "",
+        "eluent.D.trieth": "0",
+        "eluent.D.trieth.unit": "",
+        "eluent.D.trifluoroacetic": "0",
+        "eluent.D.trifluoroacetic.unit": "",
+        "eluent.D.triprop": "0",
+        "eluent.D.triprop.unit": ""
+      },
+      "blockers": [
+        "instrument_equivalence_unreviewed",
+        "t0_origin_unverified",
+        "dwell_and_postcolumn_times_missing",
+        "program_independence_requires_review",
+        "missing_temperature"
+      ],
+      "candidate_molecules": [],
+      "training_ready": false,
+      "molecules_with_at_least_three_programs": 0
+    },
+    {
+      "group_id": "4a7d1e47004ca79f",
+      "systems": [
+        "report:0097",
+        "report:0098",
+        "report:0099",
+        "report:0100",
+        "report:0154",
+        "report:0155",
+        "report:0156",
+        "report:0157"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1016/j.jchromb.2020.122105"
+      ],
+      "column": "Waters CORTECS T3",
+      "modifier_B": {
+        "methanol_percent": "100",
+        "acetonitrile_percent": "0"
+      },
+      "distinct_full_programs": 4,
+      "context": {
+        "column.flowrate": "0.3",
+        "column.id": "2.1",
+        "column.length": "100",
+        "column.name": "Waters CORTECS T3",
+        "column.particle.size": "2.7",
+        "column.temperature": "",
+        "column.usp.code": "L1",
+        "eluent.A.acetic": "0",
+        "eluent.A.acetic.unit": "",
+        "eluent.A.acetone": "0",
+        "eluent.A.acn": "0",
+        "eluent.A.ch2cl2": "0",
+        "eluent.A.chcl3": "0",
+        "eluent.A.formic": "0.1",
+        "eluent.A.formic.unit": "%",
+        "eluent.A.h2o": "100",
+        "eluent.A.hept": "0",
+        "eluent.A.heptafluorobutyric": "0",
+        "eluent.A.heptafluorobutyric.unit": "",
+        "eluent.A.hex": "0",
+        "eluent.A.iproh": "0",
+        "eluent.A.medronic": "0",
+        "eluent.A.medronic.unit": "",
+        "eluent.A.meoh": "0",
+        "eluent.A.nh4ac": "0",
+        "eluent.A.nh4ac.unit": "",
+        "eluent.A.nh4bicarb": "0",
+        "eluent.A.nh4bicarb.unit": "",
+        "eluent.A.nh4carb": "0",
+        "eluent.A.nh4carb.unit": "",
+        "eluent.A.nh4f": "0",
+        "eluent.A.nh4f.unit": "",
+        "eluent.A.nh4form": "0",
+        "eluent.A.nh4form.unit": "",
+        "eluent.A.nh4oh": "0",
+        "eluent.A.nh4oh.unit": "",
+        "eluent.A.nndimethylhex": "0",
+        "eluent.A.nndimethylhex.unit": "",
+        "eluent.A.pH": "3",
+        "eluent.A.phosphor": "0",
+        "eluent.A.phosphor.unit": "",
+        "eluent.A.tribut": "0",
+        "eluent.A.tribut.unit": "",
+        "eluent.A.trieth": "0",
+        "eluent.A.trieth.unit": "",
+        "eluent.A.trifluoroacetic": "0",
+        "eluent.A.trifluoroacetic.unit": "",
+        "eluent.A.triprop": "0",
+        "eluent.A.triprop.unit": "",
+        "eluent.B.acetic": "0",
+        "eluent.B.acetic.unit": "",
+        "eluent.B.acetone": "0",
+        "eluent.B.acn": "0",
+        "eluent.B.ch2cl2": "0",
+        "eluent.B.chcl3": "0",
+        "eluent.B.formic": "0.1",
+        "eluent.B.formic.unit": "%",
+        "eluent.B.h2o": "0",
+        "eluent.B.hept": "0",
+        "eluent.B.heptafluorobutyric": "0",
+        "eluent.B.heptafluorobutyric.unit": "",
+        "eluent.B.hex": "0",
+        "eluent.B.iproh": "0",
+        "eluent.B.medronic": "0",
+        "eluent.B.medronic.unit": "",
+        "eluent.B.meoh": "100",
+        "eluent.B.nh4ac": "0",
+        "eluent.B.nh4ac.unit": "",
+        "eluent.B.nh4bicarb": "0",
+        "eluent.B.nh4bicarb.unit": "",
+        "eluent.B.nh4carb": "0",
+        "eluent.B.nh4carb.unit": "",
+        "eluent.B.nh4f": "0",
+        "eluent.B.nh4f.unit": "",
+        "eluent.B.nh4form": "0",
+        "eluent.B.nh4form.unit": "",
+        "eluent.B.nh4oh": "0",
+        "eluent.B.nh4oh.unit": "",
+        "eluent.B.nndimethylhex": "0",
+        "eluent.B.nndimethylhex.unit": "",
+        "eluent.B.pH": "3",
+        "eluent.B.phosphor": "0",
+        "eluent.B.phosphor.unit": "",
+        "eluent.B.tribut": "0",
+        "eluent.B.tribut.unit": "",
+        "eluent.B.trieth": "0",
+        "eluent.B.trieth.unit": "",
+        "eluent.B.trifluoroacetic": "0",
+        "eluent.B.trifluoroacetic.unit": "",
+        "eluent.B.triprop": "0",
+        "eluent.B.triprop.unit": "",
+        "eluent.C.acetic": "0",
+        "eluent.C.acetic.unit": "",
+        "eluent.C.acetone": "0",
+        "eluent.C.acn": "0",
+        "eluent.C.ch2cl2": "0",
+        "eluent.C.chcl3": "0",
+        "eluent.C.formic": "0",
+        "eluent.C.formic.unit": "",
+        "eluent.C.h2o": "0",
+        "eluent.C.hept": "0",
+        "eluent.C.heptafluorobutyric": "0",
+        "eluent.C.heptafluorobutyric.unit": "",
+        "eluent.C.hex": "0",
+        "eluent.C.iproh": "0",
+        "eluent.C.medronic": "0",
+        "eluent.C.medronic.unit": "",
+        "eluent.C.meoh": "0",
+        "eluent.C.nh4ac": "0",
+        "eluent.C.nh4ac.unit": "",
+        "eluent.C.nh4bicarb": "0",
+        "eluent.C.nh4bicarb.unit": "",
+        "eluent.C.nh4carb": "0",
+        "eluent.C.nh4carb.unit": "",
+        "eluent.C.nh4f": "0",
+        "eluent.C.nh4f.unit": "",
+        "eluent.C.nh4form": "0",
+        "eluent.C.nh4form.unit": "",
+        "eluent.C.nh4oh": "0",
+        "eluent.C.nh4oh.unit": "",
+        "eluent.C.nndimethylhex": "0",
+        "eluent.C.nndimethylhex.unit": "",
+        "eluent.C.pH": null,
+        "eluent.C.phosphor": "0",
+        "eluent.C.phosphor.unit": "",
+        "eluent.C.tribut": "0",
+        "eluent.C.tribut.unit": "",
+        "eluent.C.trieth": "0",
+        "eluent.C.trieth.unit": "",
+        "eluent.C.trifluoroacetic": "0",
+        "eluent.C.trifluoroacetic.unit": "",
+        "eluent.C.triprop": "0",
+        "eluent.C.triprop.unit": "",
+        "eluent.D.acetic": "0",
+        "eluent.D.acetic.unit": "",
+        "eluent.D.acetone": "0",
+        "eluent.D.acn": "0",
+        "eluent.D.ch2cl2": "0",
+        "eluent.D.chcl3": "0",
+        "eluent.D.formic": "0",
+        "eluent.D.formic.unit": "",
+        "eluent.D.h2o": "0",
+        "eluent.D.hept": "0",
+        "eluent.D.heptafluorobutyric": "0",
+        "eluent.D.heptafluorobutyric.unit": "",
+        "eluent.D.hex": "0",
+        "eluent.D.iproh": "0",
+        "eluent.D.medronic": "0",
+        "eluent.D.medronic.unit": "",
+        "eluent.D.meoh": "0",
+        "eluent.D.nh4ac": "0",
+        "eluent.D.nh4ac.unit": "",
+        "eluent.D.nh4bicarb": "0",
+        "eluent.D.nh4bicarb.unit": "",
+        "eluent.D.nh4carb": "0",
+        "eluent.D.nh4carb.unit": "",
+        "eluent.D.nh4f": "0",
+        "eluent.D.nh4f.unit": "",
+        "eluent.D.nh4form": "0",
+        "eluent.D.nh4form.unit": "",
+        "eluent.D.nh4oh": "0",
+        "eluent.D.nh4oh.unit": "",
+        "eluent.D.nndimethylhex": "0",
+        "eluent.D.nndimethylhex.unit": "",
+        "eluent.D.pH": null,
+        "eluent.D.phosphor": "0",
+        "eluent.D.phosphor.unit": "",
+        "eluent.D.tribut": "0",
+        "eluent.D.tribut.unit": "",
+        "eluent.D.trieth": "0",
+        "eluent.D.trieth.unit": "",
+        "eluent.D.trifluoroacetic": "0",
+        "eluent.D.trifluoroacetic.unit": "",
+        "eluent.D.triprop": "0",
+        "eluent.D.triprop.unit": ""
+      },
+      "blockers": [
+        "instrument_equivalence_unreviewed",
+        "t0_origin_unverified",
+        "dwell_and_postcolumn_times_missing",
+        "program_independence_requires_review",
+        "missing_temperature"
+      ],
+      "candidate_molecules": [
+        {
+          "full_inchikey": "SNICXCGAKADSCV-JTQLQIEISA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "IBRKLUSXDYATLG-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "GFYLSDSUCHVORB-IOSLPCCCSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "LDHMAVIPBRSVRG-UHFFFAOYSA-O",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "RUFPHBVGCFYCNW-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "RZRNAYUHWVFMIP-KTKRTIGZSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "UBQKCCHYAOITMY-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "HZCBWYNLGPIQRK-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "WTDRDQBEARUVNC-LURJTMIESA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ZHSOTLOTTDYIIK-ZDUSSCGKSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "NYPYHUZRZVSYKL-ZETCQYMHSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "PFDUUKDQEHURQC-ZETCQYMHSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "BBZCPUCZKLTAJQ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZPBYVFQJHWLTFB-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "CPAGZVLINCPJEH-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "FBTSQILOGYXGMD-LURJTMIESA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "TUHVEAJXIMEOSA-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "HCZHHEIFKROPDY-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "DUUGKQCEGZLZNO-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "LRSASMSXMSNRBT-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "WUUGFSXJNOTRMR-IOSLPCCCSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "BLHCMGRVFXRYRN-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "GFFGJBXGBJISGV-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "QYPPJABKJHAVHS-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "YBJHBAHKTGYVGT-ZKWXMUAHSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "BJQHLKABXJIVAM-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "OTBHHUPVCYLGQO-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "VHRGRCVQAFMJIZ-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "RYYVLZVUVIJVGH-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "CQOVPNPJLQNMDC-ZETCQYMHSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "OEYIOHPDSNJKLS-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "JYGXADMDTFJGBT-VWUMJDOOSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ALEXXDVDDISNDU-JZYPGELDSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "MFYSYFVPBJMHGN-ZPOLXVRWSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "DDRJAANPRJIHGJ-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "NMPZCCZXCOMSDQ-XVFCMESISA-M",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "OPTASPLRGRRNAP-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "VPGRYOFKCNULNK-ACXQXYJUSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "AUTOLBMXDDTRRT-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ZBCBWPMODOFKDW-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "LJUQGASMPRMWIW-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "GHOKWGTUZJEAQD-ZETCQYMHSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "HUDBDWIQSIGUDI-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "OVBPIULPVIDEAO-LBPRGKRZSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "UFYKDFXCZBTLOO-TXICZTDVSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "NTYJJOPFIAHURM-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ZOAMBXDOGPRZLP-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "SEOVTRFCIGRIMH-UHFFFAOYSA-M",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "MBBOMCVGYCRMEA-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "MYYIAHXIVFADCU-QMMMGPOBSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ODKSFYDXXFIFQN-BYPYZUCNSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "FUJLYHJROOYKRA-QGZVFWFLSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "PHIQHXFUZVPYII-ZCFIWIBFSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ILRYLPWNYFXEMH-WHFBIAKZSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "LEVWYRKDKASIDU-IMJSIDKUSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "HNDVDQJCIGZPNO-YFKPBYRVSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ZQISRDCJNBUVMM-YFKPBYRVSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "GMKMEZVLHJARHF-WHFBIAKZSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "KDXKERNSBIXSRK-YFKPBYRVSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "COLNVLDHVKWLRT-QMMMGPOBSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "JLSKPBDKNIXMBS-VIFPVBQESA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "ZJTJUVIJVLLGSP-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "DRLFMBDRBRZALE-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "KTHADMDGDNYQRX-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "CHJJGSNFBQVOTG-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "JDHILDINMRGULE-LURJTMIESA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "GUNURVWAJRRUAV-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "HYVABZIGRDEKCD-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "DZTHIGRZJZPRDV-GFCCVEGCSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "CBQJSKKFNMDLON-JTQLQIEISA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "MVAWJSIDNICKHF-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "VEYYWZRYIYDQJM-ZETCQYMHSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "VVHOUVWJCQOYGG-REOHCLBHSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "MXNRLFUSFKVQSK-QMMMGPOBSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "DFPAKSUCGFBDDF-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "NCIKQJBVUNUXLW-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "JCMUOFQHZLPHQP-BQBZGAKWSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "GNISQJGXJIDKDJ-YFKPBYRVSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "YHHSONZFOIEMCP-UHFFFAOYSA-O",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ZCFFYALKHPIRKJ-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "HNXQXTQTPAJEJL-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "AUNGANRZJHBGPY-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "HXJDWCWJDCOHDG-RYUDHWBXSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ATHGHQPFGPMSJY-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "OTKJDMGTUTTYMP-ZWKOTPCHSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "JZRWCGZRTZMZEH-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "HZSAJDVWZRBGIF-UHFFFAOYSA-O",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "UIJIQXGRFSPYQW-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "XNSAINXGIQZQOO-SRVKXCTJSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "XUIIKFGFIJCVMT-LBPRGKRZSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "LOIYMIARKYCTBW-OWOJBTEDSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "LRFVTYWOQMYALW-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "FBZONXHGGPHHIY-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "MLKLDGSYMHFAOC-AREMUKBSSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KHWCHTKSEGGWEX-RRKCRQDMSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ZOOGRGPOEVQQDX-UUOKFMHZSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "RQFCJASXJCIDSX-UUOKFMHZSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ZTVZLYBCZNMWCF-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "WHOOUMGHGSPMGR-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "PFNFFQXMRSDOHW-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "LEHOTFFKMJEONL-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "UDYDDOATBNVEES-UUOKFMHZSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "QQVDJLLNRSOCEL-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "SJJCQDRGABAVBB-UHFFFAOYSA-M",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "NCMVOABPESMRCP-SHYZEUOFSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "CJBDUOMQLFKVQC-UHFFFAOYSA-M",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "UZTFMUBKZQVKLK-UHFFFAOYSA-M",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "HXACOUQIXZGNBF-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "WLJVNTCWHIRURA-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "WFPZSXYXPSUOPY-ROYWQJLOSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ZMCHBSMFKQYNKA-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "BDJRBEYXGGNYIS-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "BHQCQFFYRZLCQQ-OELDTZBJSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "XFTRTWQBIOMVPK-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "RGHNJXZEOKUKBD-SQOUGZDYSA-M",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "PYUSHNKNPOHWEZ-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "BXFFHSIDQOFMLE-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "HHRWZMFMIFMUOO-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "XVOYSCVBGLVSOL-REOHCLBHSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "ZDXPYRJPNDTMRX-VKHMYHEASA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "RFMMMVDNIPUKGG-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "XUYPXLNMDZIRQH-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "OTCCIMWXFLJLIA-BYPYZUCNSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "WXNXCEHXYPACJF-ZETCQYMHSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "HXFOXFJUNFFYMO-BYPYZUCNSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "KDCGOANMDULRCW-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "AAWZDTNXLSGCEK-LNVDRNJUSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "TYFQFVWCELRYAO-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "XOAAWQZATWQOTB-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "RWOAVOYBVRQNIZ-BFHYXJOUSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "DJJCXFVJDGTHFX-UHFFFAOYSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "DCTLYFZHFGENCW-UUOKFMHZSA-N",
+          "distinct_programs": 4
+        },
+        {
+          "full_inchikey": "JSRLJPSBLDHEIO-SHYZEUOFSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "JDBGXEHEIRGOBU-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "VWWQXMAJTJZDQX-UYBVJOGSSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "NYHBQMYGNKIUIF-UUOKFMHZSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "UGQMRVRMYYASKQ-KQYNXXCUSA-N",
+          "distinct_programs": 3
+        },
+        {
+          "full_inchikey": "OKJIRPAQVSHGFK-UHFFFAOYSA-N",
+          "distinct_programs": 3
+        }
+      ],
+      "training_ready": false,
+      "molecules_with_at_least_three_programs": 138
+    },
+    {
+      "group_id": "45e31414fd6cbf4e",
+      "systems": [
+        "report:0382",
+        "report:0385"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1021/acs.analchem.2c02893"
+      ],
+      "column": "Thermo Scientific Acclaim RSLC 120 C18",
+      "modifier_B": {
+        "methanol_percent": "100",
+        "acetonitrile_percent": "0"
+      },
+      "distinct_full_programs": 2,
+      "context": {
+        "column.flowrate": "0.2",
+        "column.id": "2.1",
+        "column.length": "100",
+        "column.name": "Thermo Scientific Acclaim RSLC 120 C18",
+        "column.particle.size": "2.2",
+        "column.temperature": "30",
+        "column.usp.code": "L1",
+        "eluent.A.acetic": "0",
+        "eluent.A.acetic.unit": "",
+        "eluent.A.acetone": "0",
+        "eluent.A.acn": "0",
+        "eluent.A.ch2cl2": "0",
+        "eluent.A.chcl3": "0",
+        "eluent.A.formic": "0.01",
+        "eluent.A.formic.unit": "%",
+        "eluent.A.h2o": "90",
+        "eluent.A.hept": "0",
+        "eluent.A.heptafluorobutyric": "0",
+        "eluent.A.heptafluorobutyric.unit": "",
+        "eluent.A.hex": "0",
+        "eluent.A.iproh": "0",
+        "eluent.A.medronic": "0",
+        "eluent.A.medronic.unit": "",
+        "eluent.A.meoh": "10",
+        "eluent.A.nh4ac": "0",
+        "eluent.A.nh4ac.unit": "",
+        "eluent.A.nh4bicarb": "0",
+        "eluent.A.nh4bicarb.unit": "",
+        "eluent.A.nh4carb": "0",
+        "eluent.A.nh4carb.unit": "",
+        "eluent.A.nh4f": "0",
+        "eluent.A.nh4f.unit": "",
+        "eluent.A.nh4form": "5",
+        "eluent.A.nh4form.unit": "mM",
+        "eluent.A.nh4oh": "0",
+        "eluent.A.nh4oh.unit": "",
+        "eluent.A.nndimethylhex": "0",
+        "eluent.A.nndimethylhex.unit": "",
+        "eluent.A.pH": "3.61",
+        "eluent.A.phosphor": "0",
+        "eluent.A.phosphor.unit": "",
+        "eluent.A.tribut": "0",
+        "eluent.A.tribut.unit": "",
+        "eluent.A.trieth": "0",
+        "eluent.A.trieth.unit": "",
+        "eluent.A.trifluoroacetic": "0",
+        "eluent.A.trifluoroacetic.unit": "",
+        "eluent.A.triprop": "0",
+        "eluent.A.triprop.unit": "",
+        "eluent.B.acetic": "0",
+        "eluent.B.acetic.unit": "",
+        "eluent.B.acetone": "0",
+        "eluent.B.acn": "0",
+        "eluent.B.ch2cl2": "0",
+        "eluent.B.chcl3": "0",
+        "eluent.B.formic": "0.01",
+        "eluent.B.formic.unit": "%",
+        "eluent.B.h2o": "0",
+        "eluent.B.hept": "0",
+        "eluent.B.heptafluorobutyric": "0",
+        "eluent.B.heptafluorobutyric.unit": "",
+        "eluent.B.hex": "0",
+        "eluent.B.iproh": "0",
+        "eluent.B.medronic": "0",
+        "eluent.B.medronic.unit": "",
+        "eluent.B.meoh": "100",
+        "eluent.B.nh4ac": "0",
+        "eluent.B.nh4ac.unit": "",
+        "eluent.B.nh4bicarb": "0",
+        "eluent.B.nh4bicarb.unit": "",
+        "eluent.B.nh4carb": "0",
+        "eluent.B.nh4carb.unit": "",
+        "eluent.B.nh4f": "0",
+        "eluent.B.nh4f.unit": "",
+        "eluent.B.nh4form": "5",
+        "eluent.B.nh4form.unit": "mM",
+        "eluent.B.nh4oh": "0",
+        "eluent.B.nh4oh.unit": "",
+        "eluent.B.nndimethylhex": "0",
+        "eluent.B.nndimethylhex.unit": "",
+        "eluent.B.pH": "3.61",
+        "eluent.B.phosphor": "0",
+        "eluent.B.phosphor.unit": "",
+        "eluent.B.tribut": "0",
+        "eluent.B.tribut.unit": "",
+        "eluent.B.trieth": "0",
+        "eluent.B.trieth.unit": "",
+        "eluent.B.trifluoroacetic": "0",
+        "eluent.B.trifluoroacetic.unit": "",
+        "eluent.B.triprop": "0",
+        "eluent.B.triprop.unit": "",
+        "eluent.C.acetic": "0",
+        "eluent.C.acetic.unit": "",
+        "eluent.C.acetone": "0",
+        "eluent.C.acn": "0",
+        "eluent.C.ch2cl2": "0",
+        "eluent.C.chcl3": "0",
+        "eluent.C.formic": "0",
+        "eluent.C.formic.unit": "",
+        "eluent.C.h2o": "0",
+        "eluent.C.hept": "0",
+        "eluent.C.heptafluorobutyric": "0",
+        "eluent.C.heptafluorobutyric.unit": "",
+        "eluent.C.hex": "0",
+        "eluent.C.iproh": "0",
+        "eluent.C.medronic": "0",
+        "eluent.C.medronic.unit": "",
+        "eluent.C.meoh": "0",
+        "eluent.C.nh4ac": "0",
+        "eluent.C.nh4ac.unit": "",
+        "eluent.C.nh4bicarb": "0",
+        "eluent.C.nh4bicarb.unit": "",
+        "eluent.C.nh4carb": "0",
+        "eluent.C.nh4carb.unit": "",
+        "eluent.C.nh4f": "0",
+        "eluent.C.nh4f.unit": "",
+        "eluent.C.nh4form": "0",
+        "eluent.C.nh4form.unit": "",
+        "eluent.C.nh4oh": "0",
+        "eluent.C.nh4oh.unit": "",
+        "eluent.C.nndimethylhex": "0",
+        "eluent.C.nndimethylhex.unit": "",
+        "eluent.C.pH": null,
+        "eluent.C.phosphor": "0",
+        "eluent.C.phosphor.unit": "",
+        "eluent.C.tribut": "0",
+        "eluent.C.tribut.unit": "",
+        "eluent.C.trieth": "0",
+        "eluent.C.trieth.unit": "",
+        "eluent.C.trifluoroacetic": "0",
+        "eluent.C.trifluoroacetic.unit": "",
+        "eluent.C.triprop": "0",
+        "eluent.C.triprop.unit": "",
+        "eluent.D.acetic": "0",
+        "eluent.D.acetic.unit": "",
+        "eluent.D.acetone": "0",
+        "eluent.D.acn": "0",
+        "eluent.D.ch2cl2": "0",
+        "eluent.D.chcl3": "0",
+        "eluent.D.formic": "0",
+        "eluent.D.formic.unit": "",
+        "eluent.D.h2o": "0",
+        "eluent.D.hept": "0",
+        "eluent.D.heptafluorobutyric": "0",
+        "eluent.D.heptafluorobutyric.unit": "",
+        "eluent.D.hex": "0",
+        "eluent.D.iproh": "0",
+        "eluent.D.medronic": "0",
+        "eluent.D.medronic.unit": "",
+        "eluent.D.meoh": "0",
+        "eluent.D.nh4ac": "0",
+        "eluent.D.nh4ac.unit": "",
+        "eluent.D.nh4bicarb": "0",
+        "eluent.D.nh4bicarb.unit": "",
+        "eluent.D.nh4carb": "0",
+        "eluent.D.nh4carb.unit": "",
+        "eluent.D.nh4f": "0",
+        "eluent.D.nh4f.unit": "",
+        "eluent.D.nh4form": "0",
+        "eluent.D.nh4form.unit": "",
+        "eluent.D.nh4oh": "0",
+        "eluent.D.nh4oh.unit": "",
+        "eluent.D.nndimethylhex": "0",
+        "eluent.D.nndimethylhex.unit": "",
+        "eluent.D.pH": null,
+        "eluent.D.phosphor": "0",
+        "eluent.D.phosphor.unit": "",
+        "eluent.D.tribut": "0",
+        "eluent.D.tribut.unit": "",
+        "eluent.D.trieth": "0",
+        "eluent.D.trieth.unit": "",
+        "eluent.D.trifluoroacetic": "0",
+        "eluent.D.trifluoroacetic.unit": "",
+        "eluent.D.triprop": "0",
+        "eluent.D.triprop.unit": ""
+      },
+      "blockers": [
+        "instrument_equivalence_unreviewed",
+        "t0_origin_unverified",
+        "dwell_and_postcolumn_times_missing",
+        "program_independence_requires_review"
+      ],
+      "candidate_molecules": [],
+      "training_ready": false,
+      "molecules_with_at_least_three_programs": 0
+    }
+  ],
+  "source_sha256": "2a84bc3980c1774cacbcc1f955324686f9d83fd09dad495de7c344e935f3338b",
+  "status": "candidates_only_no_parameter_labels_approved"
+}

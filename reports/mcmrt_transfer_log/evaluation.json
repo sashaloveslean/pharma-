@@ -1,0 +1,353 @@
+{
+  "status": "research_evaluation_not_promoted",
+  "scenarios": {
+    "unseen_column_and_molecules": {
+      "test_rows": 1871,
+      "mae_min": 2.5959724957960923,
+      "baseline_mae_min": 5.671557939245211,
+      "macro_fold_mae_min": 2.496015878080468,
+      "by_modifier": {
+        "acetonitrile": 3.0192663096120564,
+        "methanol": 2.509624916015101
+      }
+    },
+    "unseen_column_known_molecules": {
+      "test_rows": 9443,
+      "mae_min": 1.728087067017531,
+      "baseline_mae_min": 2.4829410603742694,
+      "macro_fold_mae_min": 1.6304314323175386,
+      "by_modifier": {
+        "acetonitrile": 2.0189769705813,
+        "methanol": 1.6687444881953926
+      }
+    },
+    "unseen_method": {
+      "test_rows": 9443,
+      "mae_min": 1.438137861123722,
+      "baseline_mae_min": 2.367759342651399,
+      "macro_fold_mae_min": 1.454665525074992,
+      "by_modifier": {
+        "acetonitrile": 1.7127812298738416,
+        "methanol": 1.3821096334047127
+      }
+    }
+  },
+  "folds": [
+    {
+      "scenario": "unseen_method",
+      "fold": "0",
+      "train_rows": 7807,
+      "test_rows": 1636,
+      "mae_min": 1.9434751611847971,
+      "baseline_mae_min": 2.9711414843065755,
+      "median_absolute_error_min": 1.7866543190914412
+    },
+    {
+      "scenario": "unseen_method",
+      "fold": "1",
+      "train_rows": 7490,
+      "test_rows": 1953,
+      "mae_min": 1.211897105348847,
+      "baseline_mae_min": 1.8989246561078614,
+      "median_absolute_error_min": 0.8992720587657885
+    },
+    {
+      "scenario": "unseen_method",
+      "fold": "2",
+      "train_rows": 7490,
+      "test_rows": 1953,
+      "mae_min": 1.074605019543194,
+      "baseline_mae_min": 2.743933419409549,
+      "median_absolute_error_min": 0.7511440571938195
+    },
+    {
+      "scenario": "unseen_method",
+      "fold": "3",
+      "train_rows": 7490,
+      "test_rows": 1953,
+      "mae_min": 1.3650696052166194,
+      "baseline_mae_min": 1.5856167942929194,
+      "median_absolute_error_min": 1.3649228967432272
+    },
+    {
+      "scenario": "unseen_method",
+      "fold": "4",
+      "train_rows": 7495,
+      "test_rows": 1948,
+      "mae_min": 1.678280734081503,
+      "baseline_mae_min": 2.738066008004122,
+      "median_absolute_error_min": 1.2508246953046704
+    },
+    {
+      "scenario": "unseen_column_known_molecules",
+      "fold": "ACQUITY BEH C18",
+      "train_rows": 8798,
+      "test_rows": 645,
+      "mae_min": 0.8952196872847993,
+      "baseline_mae_min": 2.0502279159353143,
+      "median_absolute_error_min": 0.6269762921436275
+    },
+    {
+      "scenario": "unseen_column_and_molecules",
+      "fold": "ACQUITY BEH C18",
+      "train_rows": 7048,
+      "test_rows": 129,
+      "mae_min": 1.5683945988112906,
+      "baseline_mae_min": 4.528383167220377,
+      "median_absolute_error_min": 1.1938125555963062
+    },
+    {
+      "scenario": "unseen_column_known_molecules",
+      "fold": "ACQUITY PRIMER HSS T3 with VanGuard",
+      "train_rows": 6837,
+      "test_rows": 2606,
+      "mae_min": 2.4815882827646725,
+      "baseline_mae_min": 2.7199868328208,
+      "median_absolute_error_min": 1.7070831863153422
+    },
+    {
+      "scenario": "unseen_column_and_molecules",
+      "fold": "ACQUITY PRIMER HSS T3 with VanGuard",
+      "train_rows": 5531,
+      "test_rows": 498,
+      "mae_min": 3.695439489835134,
+      "baseline_mae_min": 6.215070610980806,
+      "median_absolute_error_min": 2.5341167521798793
+    },
+    {
+      "scenario": "unseen_column_known_molecules",
+      "fold": "ACQUITY UPLC HSS T3",
+      "train_rows": 8132,
+      "test_rows": 1311,
+      "mae_min": 2.118730874795062,
+      "baseline_mae_min": 4.2295670036127415,
+      "median_absolute_error_min": 1.7790545240454572
+    },
+    {
+      "scenario": "unseen_column_and_molecules",
+      "fold": "ACQUITY UPLC HSS T3",
+      "train_rows": 6529,
+      "test_rows": 259,
+      "mae_min": 2.8710020600771133,
+      "baseline_mae_min": 7.8207528957528964,
+      "median_absolute_error_min": 2.209459967137785
+    },
+    {
+      "scenario": "unseen_column_known_molecules",
+      "fold": "Acclaim 120 C18",
+      "train_rows": 8465,
+      "test_rows": 978,
+      "mae_min": 2.0226796198534336,
+      "baseline_mae_min": 2.9432442033881876,
+      "median_absolute_error_min": 1.6903685219202624
+    },
+    {
+      "scenario": "unseen_column_and_molecules",
+      "fold": "Acclaim 120 C18",
+      "train_rows": 6630,
+      "test_rows": 213,
+      "mae_min": 3.49790481965353,
+      "baseline_mae_min": 7.843524480214621,
+      "median_absolute_error_min": 2.4256100923618895
+    },
+    {
+      "scenario": "unseen_column_known_molecules",
+      "fold": "Acclaim RSLC 120 C18",
+      "train_rows": 7160,
+      "test_rows": 2283,
+      "mae_min": 1.28171034128863,
+      "baseline_mae_min": 1.9938676971726146,
+      "median_absolute_error_min": 1.1862554618513848
+    },
+    {
+      "scenario": "unseen_column_and_molecules",
+      "fold": "Acclaim RSLC 120 C18",
+      "train_rows": 5758,
+      "test_rows": 448,
+      "mae_min": 1.955828363463721,
+      "baseline_mae_min": 4.710862686547549,
+      "median_absolute_error_min": 1.5200392112730094
+    },
+    {
+      "scenario": "unseen_column_known_molecules",
+      "fold": "Thermo Hypersil GOLD",
+      "train_rows": 7823,
+      "test_rows": 1620,
+      "mae_min": 0.9826597879186342,
+      "baseline_mae_min": 1.2717744541419225,
+      "median_absolute_error_min": 0.766192902082067
+    },
+    {
+      "scenario": "unseen_column_and_molecules",
+      "fold": "Thermo Hypersil GOLD",
+      "train_rows": 6268,
+      "test_rows": 324,
+      "mae_min": 1.3875259366420196,
+      "baseline_mae_min": 3.473784301323779,
+      "median_absolute_error_min": 1.0431272490909431
+    }
+  ],
+  "target_mode": "analytical_log",
+  "overlap_candidates_with_report": [
+    {
+      "mcmrt_system": "mcmrt:14",
+      "report_system": "report:0019",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:23",
+      "report_system": "report:0025",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:21",
+      "report_system": "report:0063",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:16",
+      "report_system": "report:0078",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:16",
+      "report_system": "report:0090",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:01",
+      "report_system": "report:0092",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:13",
+      "report_system": "report:0092",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:16",
+      "report_system": "report:0094",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:13",
+      "report_system": "report:0098",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:29",
+      "report_system": "report:0180",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:05",
+      "report_system": "report:0181",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:18",
+      "report_system": "report:0182",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:17",
+      "report_system": "report:0197",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:17",
+      "report_system": "report:0200",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:29",
+      "report_system": "report:0227",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:27",
+      "report_system": "report:0267",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:30",
+      "report_system": "report:0271",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:07",
+      "report_system": "report:0291",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:09",
+      "report_system": "report:0291",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:16",
+      "report_system": "report:0382",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:13",
+      "report_system": "report:0382",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:01",
+      "report_system": "report:0383",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:05",
+      "report_system": "report:0383",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:16",
+      "report_system": "report:0383",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:13",
+      "report_system": "report:0383",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:23",
+      "report_system": "report:0401",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:02",
+      "report_system": "report:0412",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:02",
+      "report_system": "report:0414",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:12",
+      "report_system": "report:0414",
+      "matching_structure_rt_rows": 1
+    },
+    {
+      "mcmrt_system": "mcmrt:23",
+      "report_system": "report:0414",
+      "matching_structure_rt_rows": 1
+    }
+  ],
+  "plan_sha256": "f59fb686219f7f1b690fbfb44e327cf853b074f1a7f1f03eb9c3b5b5500f5a7f",
+  "baseline": "Median training tR/cycle for the same molecular connectivity; global median for unseen molecules.",
+  "limitations": [
+    "Single laboratory/publication; held-out column is not held-out laboratory.",
+    "No TFV or FTC observations in this dataset.",
+    "pH, measured void time and dwell volume absent in the downloaded supplementary methods.",
+    "No widths, pressure or resolution forecast. RT classification and author predictions excluded.",
+    "Only method CMs without metadata conflicts and molecules with agreeing SMILES/InChI were used.",
+    "Matching structure+rounded RT across sources is a duplicate candidate, not proof; no cross-source pooling."
+  ]
+}

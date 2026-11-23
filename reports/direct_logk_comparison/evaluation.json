@@ -1,0 +1,403 @@
+{
+  "status": "research_comparison_not_promoted",
+  "cases": 1640,
+  "mae_log10_k": 0.1608541726074587,
+  "lss_mae_log10_k": 0.1826497468199871,
+  "training_compositions": "all observed compositions of training molecules; no test molecule measurements",
+  "params": {
+    "iterations": 500,
+    "depth": 5,
+    "learning_rate": 0.04,
+    "loss_function": "RMSE",
+    "random_seed": 42,
+    "thread_count": 4,
+    "verbose": false,
+    "allow_writing_files": false
+  },
+  "dataset_sha256": "5cf2d878f52c8dd08082a0b030bcbcbe1170a0bb377b31d796ca8e80c98cd449",
+  "production_approved": false,
+  "by_molecule": {
+    "1,3-dichlorobenzene": {
+      "direct_mae": 0.0508026389310284,
+      "lss_mae": 0.059627540674568914
+    },
+    "1,3-difluorobenzene": {
+      "direct_mae": 0.09039221001576364,
+      "lss_mae": 0.08706987511394679
+    },
+    "2,6-dichloropyridine": {
+      "direct_mae": 0.1166982652541887,
+      "lss_mae": 0.22078879382605332
+    },
+    "2-chloroquinoline": {
+      "direct_mae": 0.27914325914150306,
+      "lss_mae": 0.24411027271153465
+    },
+    "2-fluorobiphenyl": {
+      "direct_mae": 0.045851438443454275,
+      "lss_mae": 0.07017471354933918
+    },
+    "2-methoxynaphthalene": {
+      "direct_mae": 0.08587935748384257,
+      "lss_mae": 0.09458681486243743
+    },
+    "2-methylhippuric acid": {
+      "direct_mae": 0.22341412376954697,
+      "lss_mae": 0.27258513627749703
+    },
+    "2-naphthaleneacetic acid": {
+      "direct_mae": 0.030034418432127754,
+      "lss_mae": 0.06550756754206957
+    },
+    "2-phenylpropionic acid": {
+      "direct_mae": 0.2138185472595527,
+      "lss_mae": 0.12226330266130642
+    },
+    "4-hydroxybenzaldehyde": {
+      "direct_mae": 0.26559863607024453,
+      "lss_mae": 0.34401498788627605
+    },
+    "4-hydroxybenzoic acid": {
+      "direct_mae": 0.5963462242981581,
+      "lss_mae": 0.5939494115823526
+    },
+    "4-hydroxyphenylacetic acid": {
+      "direct_mae": 0.7040165994528066,
+      "lss_mae": 0.6233210042579982
+    },
+    "4-methoxybenzonitrile": {
+      "direct_mae": 0.20845630816402866,
+      "lss_mae": 0.10141294025140368
+    },
+    "4-methoxyphenol": {
+      "direct_mae": 0.26188165091812904,
+      "lss_mae": 0.18358736948542054
+    },
+    "4-methylhippuric acid": {
+      "direct_mae": 0.3563347306993315,
+      "lss_mae": 0.15250982626670617
+    },
+    "5-hydroxyindole": {
+      "direct_mae": 0.8710781260134226,
+      "lss_mae": 0.6550201902986297
+    },
+    "6-methoxy-8-nitroquinoline": {
+      "direct_mae": 0.25649350097691087,
+      "lss_mae": 0.1602245442615105
+    },
+    "aceclofenac": {
+      "direct_mae": 0.1322595350202407,
+      "lss_mae": 0.2704288646803104
+    },
+    "acetanilide": {
+      "direct_mae": 0.17622678961236013,
+      "lss_mae": 0.23808176865247785
+    },
+    "acetophenone": {
+      "direct_mae": 0.09597009230710091,
+      "lss_mae": 0.14506411566140062
+    },
+    "anisole": {
+      "direct_mae": 0.019886527038518228,
+      "lss_mae": 0.044581643582613885
+    },
+    "aspirin": {
+      "direct_mae": 0.09867551042250618,
+      "lss_mae": 0.11503889130513352
+    },
+    "benzaldehyde": {
+      "direct_mae": 0.23657045439615865,
+      "lss_mae": 0.3288752683300609
+    },
+    "benzamide": {
+      "direct_mae": 0.30702613919746724,
+      "lss_mae": 0.30132617381852816
+    },
+    "benzanilide": {
+      "direct_mae": 0.04952445072453806,
+      "lss_mae": 0.047105378626691966
+    },
+    "benzene": {
+      "direct_mae": 0.05669678224873544,
+      "lss_mae": 0.06826260236084776
+    },
+    "benzensulfonamide": {
+      "direct_mae": 0.3479166003569884,
+      "lss_mae": 0.20014562615719048
+    },
+    "benzoic acid": {
+      "direct_mae": 0.23277333963995994,
+      "lss_mae": 0.09015230641604213
+    },
+    "benzoin": {
+      "direct_mae": 0.10992855640564739,
+      "lss_mae": 0.1916731014411487
+    },
+    "benzophenone": {
+      "direct_mae": 0.016861816441519503,
+      "lss_mae": 0.08204242412749402
+    },
+    "biphenyl": {
+      "direct_mae": 0.02380964921361578,
+      "lss_mae": 0.055678381250821224
+    },
+    "butylbenzene": {
+      "direct_mae": 0.02007042482448882,
+      "lss_mae": 0.1229510271637895
+    },
+    "butyrophenone": {
+      "direct_mae": 0.04339003844900781,
+      "lss_mae": 0.06521842134469247
+    },
+    "caffeine": {
+      "direct_mae": 0.3681372430708876,
+      "lss_mae": 0.4420071913778574
+    },
+    "carbazole": {
+      "direct_mae": 0.08991769389059377,
+      "lss_mae": 0.06673711678613596
+    },
+    "chlorobenzene": {
+      "direct_mae": 0.060647368027777836,
+      "lss_mae": 0.11964708477865378
+    },
+    "diclofenac acid": {
+      "direct_mae": 0.012132246405831448,
+      "lss_mae": 0.09587254706345992
+    },
+    "diflunisal": {
+      "direct_mae": 0.026829281549665907,
+      "lss_mae": 0.1842296381776043
+    },
+    "diphenyl sulfone": {
+      "direct_mae": 0.023317416171186187,
+      "lss_mae": 0.08332665937165264
+    },
+    "diphenylamine": {
+      "direct_mae": 0.1241577826744685,
+      "lss_mae": 0.24618508699576033
+    },
+    "diphenylether": {
+      "direct_mae": 0.01823620774931162,
+      "lss_mae": 0.05688944010743656
+    },
+    "diphenylmethane": {
+      "direct_mae": 0.06889025739845563,
+      "lss_mae": 0.06627009178608735
+    },
+    "diphenylmethanol": {
+      "direct_mae": 0.15703695762963393,
+      "lss_mae": 0.0574072403197843
+    },
+    "ethoxybenzene": {
+      "direct_mae": 0.03335858377534204,
+      "lss_mae": 0.059622963505955175
+    },
+    "ethylbenzene": {
+      "direct_mae": 0.06970357213548865,
+      "lss_mae": 0.09504628796958131
+    },
+    "ethylbenzoate": {
+      "direct_mae": 0.2088630947109768,
+      "lss_mae": 0.3307413320587119
+    },
+    "ethylparaben": {
+      "direct_mae": 0.05134932865739093,
+      "lss_mae": 0.11506873001888211
+    },
+    "etodolac": {
+      "direct_mae": 0.41318117098978047,
+      "lss_mae": 0.33530369173623675
+    },
+    "fenbufen": {
+      "direct_mae": 0.2683087950652431,
+      "lss_mae": 0.25493463118246734
+    },
+    "fenoprofen": {
+      "direct_mae": 0.10269729471333901,
+      "lss_mae": 0.07222528301918257
+    },
+    "flufenamic acid": {
+      "direct_mae": 0.10393117806892471,
+      "lss_mae": 0.18581963144602123
+    },
+    "fluorobenzene": {
+      "direct_mae": 0.020297447945593863,
+      "lss_mae": 0.10675807571944125
+    },
+    "flurbiprofen": {
+      "direct_mae": 0.15168364010983038,
+      "lss_mae": 0.08798187401273064
+    },
+    "heptanophenone": {
+      "direct_mae": 0.2167715717151768,
+      "lss_mae": 0.26464830628535807
+    },
+    "hexanophenone": {
+      "direct_mae": 0.08060245867324642,
+      "lss_mae": 0.06816242326493475
+    },
+    "ibuprofen": {
+      "direct_mae": 0.3417811625455232,
+      "lss_mae": 0.41439534942343026
+    },
+    "indene": {
+      "direct_mae": 0.09508004114599686,
+      "lss_mae": 0.12354519203980399
+    },
+    "indole": {
+      "direct_mae": 0.1782593447539337,
+      "lss_mae": 0.21717019061670711
+    },
+    "indometacin": {
+      "direct_mae": 0.2415680602507447,
+      "lss_mae": 0.3794773549195226
+    },
+    "indoprofen": {
+      "direct_mae": 0.3002428059649162,
+      "lss_mae": 0.3403342449425316
+    },
+    "isobutylbenzene": {
+      "direct_mae": 0.11232938685532075,
+      "lss_mae": 0.2074066390721591
+    },
+    "ketoprofen": {
+      "direct_mae": 0.20379661239841063,
+      "lss_mae": 0.14481555744508853
+    },
+    "loxoprofen": {
+      "direct_mae": 0.22284311225556794,
+      "lss_mae": 0.16698982113526575
+    },
+    "mefenamic acid": {
+      "direct_mae": 0.20701385226779548,
+      "lss_mae": 0.3985027957059148
+    },
+    "meloxicam": {
+      "direct_mae": 0.2998811776476765,
+      "lss_mae": 0.2903625098631327
+    },
+    "methylbenzoate": {
+      "direct_mae": 0.20456171958044905,
+      "lss_mae": 0.18211571590955683
+    },
+    "methylparaben": {
+      "direct_mae": 0.16852284104602144,
+      "lss_mae": 0.23624311633560913
+    },
+    "n-methylbenzamide": {
+      "direct_mae": 0.47276000797595136,
+      "lss_mae": 0.43735752235216985
+    },
+    "n-phenylanthranilic acid": {
+      "direct_mae": 0.12935798218233532,
+      "lss_mae": 0.17381908415564104
+    },
+    "n-propylbenzene": {
+      "direct_mae": 0.05641191156746136,
+      "lss_mae": 0.11787208848133851
+    },
+    "n-propylparaben": {
+      "direct_mae": 0.08270258120113595,
+      "lss_mae": 0.1868967499266276
+    },
+    "naphthalene": {
+      "direct_mae": 0.025160717448951025,
+      "lss_mae": 0.04837288220746196
+    },
+    "naproxen": {
+      "direct_mae": 0.026034882049405326,
+      "lss_mae": 0.07787578856204157
+    },
+    "nimesulide": {
+      "direct_mae": 0.222737409288266,
+      "lss_mae": 0.15508644006482383
+    },
+    "nitrobenzene": {
+      "direct_mae": 0.217261184212149,
+      "lss_mae": 0.21640999123080742
+    },
+    "oxaprozin": {
+      "direct_mae": 0.08981533634279353,
+      "lss_mae": 0.08768886668078855
+    },
+    "p-hydroxyacetophenone": {
+      "direct_mae": 0.28195854500168266,
+      "lss_mae": 0.2843480944107603
+    },
+    "p-hydroxybutyrophenone": {
+      "direct_mae": 0.16655370396057834,
+      "lss_mae": 0.23540417458576046
+    },
+    "pentylbenzene": {
+      "direct_mae": 0.1508458963056026,
+      "lss_mae": 0.24218817013295718
+    },
+    "phenacetin": {
+      "direct_mae": 0.2501554013223102,
+      "lss_mae": 0.20638752969023605
+    },
+    "phenol": {
+      "direct_mae": 0.13751973083592936,
+      "lss_mae": 0.22764509259808902
+    },
+    "phenyl acetate": {
+      "direct_mae": 0.21981083902440632,
+      "lss_mae": 0.2108197736134528
+    },
+    "phenyl acetic acid": {
+      "direct_mae": 0.09018044811653637,
+      "lss_mae": 0.058086849140613545
+    },
+    "phenylbutazone": {
+      "direct_mae": 0.13130612333949238,
+      "lss_mae": 0.06759301794115877
+    },
+    "piroxicam": {
+      "direct_mae": 0.06867702550462726,
+      "lss_mae": 0.18907976622559863
+    },
+    "propiophenone": {
+      "direct_mae": 0.15089801629622207,
+      "lss_mae": 0.20152877323862559
+    },
+    "salicylic acid": {
+      "direct_mae": 0.5217734319277988,
+      "lss_mae": 0.6745889610911592
+    },
+    "salsalate": {
+      "direct_mae": 0.09194184906438066,
+      "lss_mae": 0.08578306050770028
+    },
+    "sulindac": {
+      "direct_mae": 0.7302675954847601,
+      "lss_mae": 0.5603450073166947
+    },
+    "tolfenamic acid": {
+      "direct_mae": 0.38792208792815563,
+      "lss_mae": 0.34398842094340043
+    },
+    "toluene": {
+      "direct_mae": 0.1029280461489525,
+      "lss_mae": 0.13833258902050585
+    },
+    "trifluorotoluene": {
+      "direct_mae": 0.0801557789415374,
+      "lss_mae": 0.05693704848362032
+    },
+    "valerophenone": {
+      "direct_mae": 0.09083970083611115,
+      "lss_mae": 0.08654147777403252
+    },
+    "vanillic acid": {
+      "direct_mae": 0.4211736230537127,
+      "lss_mae": 0.5051462362714352
+    }
+  },
+  "limitations": [
+    "One fixed BEH C18/ACN system; no methanol or new-column validation.",
+    "Research folds already inspected; not a new final holdout.",
+    "Direct model does not impose monotonicity, and is not a calibrated gradient simulator.",
+    "Provisional PubChem name resolution; source substance identity remains unverified."
+  ]
+}

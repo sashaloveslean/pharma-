@@ -1,0 +1,77 @@
+{
+  "overall": {
+    "n": 440,
+    "catboost_mae_min": 3.640489482588556,
+    "constant_offset_mae_min": 2.6888431085839732,
+    "local_slope_mae_min": 2.8736962527215972,
+    "shape_model_mae_min": 2.668944333716079,
+    "shape_clipped_to_zero": 18
+  },
+  "by_program": {
+    "mcmrt:01": {
+      "n": 62,
+      "catboost_mae_min": 2.947665260892037,
+      "constant_offset_mae_min": 2.441938125682808,
+      "local_slope_mae_min": 5.0178448424255375,
+      "shape_model_mae_min": 4.646115118879632,
+      "shape_clipped_to_zero": 14
+    },
+    "mcmrt:02": {
+      "n": 64,
+      "catboost_mae_min": 1.9254257610762304,
+      "constant_offset_mae_min": 1.4428575957248162,
+      "local_slope_mae_min": 1.2563627900434278,
+      "shape_model_mae_min": 1.2565514234090318,
+      "shape_clipped_to_zero": 2
+    },
+    "mcmrt:06": {
+      "n": 62,
+      "catboost_mae_min": 1.7893314109000815,
+      "constant_offset_mae_min": 2.9389971045928203,
+      "local_slope_mae_min": 2.696235384159713,
+      "shape_model_mae_min": 2.277326984318806,
+      "shape_clipped_to_zero": 0
+    },
+    "mcmrt:08": {
+      "n": 64,
+      "catboost_mae_min": 1.8450232635115733,
+      "constant_offset_mae_min": 0.7273859702040525,
+      "local_slope_mae_min": 0.7251750865341404,
+      "shape_model_mae_min": 0.72452092766219,
+      "shape_clipped_to_zero": 0
+    },
+    "mcmrt:12": {
+      "n": 64,
+      "catboost_mae_min": 3.022005155048892,
+      "constant_offset_mae_min": 1.5024382845385678,
+      "local_slope_mae_min": 1.1008081656488722,
+      "shape_model_mae_min": 1.1005958471790227,
+      "shape_clipped_to_zero": 0
+    },
+    "mcmrt:13": {
+      "n": 62,
+      "catboost_mae_min": 4.21289289502591,
+      "constant_offset_mae_min": 2.3266564346308285,
+      "local_slope_mae_min": 3.2784452013945216,
+      "shape_model_mae_min": 2.765731074288168,
+      "shape_clipped_to_zero": 2
+    },
+    "mcmrt:16": {
+      "n": 62,
+      "catboost_mae_min": 9.874276640314484,
+      "constant_offset_mae_min": 7.583365260045678,
+      "local_slope_mae_min": 6.219671418713946,
+      "shape_model_mae_min": 6.070645244240153,
+      "shape_clipped_to_zero": 0
+    }
+  },
+  "production_approved": false,
+  "target_pair_validated": false,
+  "limitations": [
+    "Only 2\u20133 local programs per molecule; high dimensional shape is heavily regularized.",
+    "Same 440 retrospective cases, no new blind validation or hyperparameter tuning.",
+    "Known measured molecule on new program; not prediction for unmeasured TFV/FTC.",
+    "Shape grids are approximations, not a mechanistic column simulator.",
+    "No peak width, Rs or calibrated uncertainty. Negative predictions counted and clipped."
+  ]
+}

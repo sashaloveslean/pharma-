@@ -1,0 +1,39 @@
+{
+  "indexed_raw_signals": 2870,
+  "indexed_raw_bytes": 13467195300,
+  "qc_signals_verified": 306,
+  "qc_bytes_verified": 1861489872,
+  "qc_download_failures": 0,
+  "signals_parsed": 306,
+  "derived_peak_width_candidates": 917,
+  "derived_rs_candidates": 611,
+  "signals_linked_to_author_runs": 282,
+  "approved_peak_training_rows": 0,
+  "licensed_full_texts": 15,
+  "papers_excluded_license": 11,
+  "evidence_candidates": 227,
+  "target_specific_evidence": 22,
+  "article_tables": 67,
+  "reported_resolution_values": 2,
+  "signal_benchmarks": [
+    {
+      "source": "zenodo_10082436",
+      "status": "downloaded_not_normalized",
+      "files": 1,
+      "archive_members": 844
+    },
+    {
+      "source": "zenodo_14236878",
+      "status": "downloaded_not_normalized",
+      "files": 1,
+      "archive_members": 17
+    },
+    {
+      "source": "figshare_22182694",
+      "status": "downloaded_not_normalized",
+      "files": 1,
+      "archive_members": 75
+    }
+  ],
+  "status": "Data collection and provisional signal-derived measurements; not a trained Rs predictor"
+}

@@ -1,0 +1,35 @@
+{
+  "condition_id": null,
+  "phase_id": null,
+  "actual_aqueous_pH": null,
+  "salt_added_mM": null,
+  "actual_gradient_program": null,
+  "sample_id": null,
+  "injection_number": null,
+  "detector_channel_nm": 260,
+  "concentration_ug_ml_each": null,
+  "injection_uL": null,
+  "pressure_max_bar": null,
+  "TFV": {
+    "identity_confirmed": null,
+    "tr_min": null,
+    "width_half_height_min": null,
+    "tailing_5pct": null,
+    "area": null,
+    "snr": null
+  },
+  "FTC": {
+    "identity_confirmed": null,
+    "tr_min": null,
+    "width_half_height_min": null,
+    "tailing_5pct": null,
+    "area": null,
+    "snr": null
+  },
+  "Rs_measured": null,
+  "raw_chromatogram_path": null,
+  "outcome": null,
+  "label_origin": "experiment",
+  "reviewed": false,
+  "training_approved": false
+}
